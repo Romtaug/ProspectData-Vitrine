@@ -1,0 +1,87 @@
+[
+ {
+  "theme": "ape",
+  "question": "Je ne connais pas mes codes APE, c'est un probleme ?",
+  "answer": "Non, et c'est le cas de presque tous les clients. Vous decrivez le metier que vous visez avec vos mots, par exemple les garages de moins de 20 salaries en Auvergne-Rhone-Alpes. La traduction dans la nomenclature officielle de l'INSEE est faite pour vous, et les codes retenus vous sont soumis avant la construction du CRM. Vous validez, ou vous corrigez."
+ },
+ {
+  "theme": "produit",
+  "question": "Qu'est-ce que je recois exactement ?",
+  "answer": "Un CRM en ligne deja rempli de toutes les entreprises francaises qui portent vos codes APE, avec pour chacune plus de quarante informations : telephone, email verifie, site, dirigeant, taille, finances, adresse, labels, et un score de priorite. Vos commerciaux y travaillent directement : statuts, relances, notes, attribution."
+ },
+ {
+  "theme": "maj",
+  "question": "Comment le CRM se met-il a jour tout seul ?",
+  "answer": "Le lien avec les sources publiques reste actif. Chaque mois le systeme recherche les entreprises qui portent vos codes APE, repere les nouvelles, complete les contacts qui manquaient et signale celles qui ont ferme. Tout est automatise, cela ne demande aucun travail manuel, c'est pour cette raison que ce n'est pas facture."
+ },
+ {
+  "theme": "maj",
+  "question": "Mes statuts et mes notes sont-ils ecrases a chaque mise a jour ?",
+  "answer": "Jamais. La fusion se fait par identifiant d'entreprise. Votre suivi commercial est conserve integralement, seules les informations manquantes sont completees et les nouvelles entreprises ajoutees."
+ },
+ {
+  "theme": "prix",
+  "question": "Combien ca coute ?",
+  "answer": "Trois formules en paiement unique, sans abonnement et sans limite de volume. Une cible a 490 euros avec 2 utilisateurs. Equipe a 990 euros avec cibles et utilisateurs illimites, c'est la formule la plus demandee. Sur mesure des 2 400 euros avec colonnes et scoring propres a votre metier. A titre de comparaison, une annee d'abonnement a une plateforme de prospection francaise coute entre 1 200 et 2 800 euros, chaque annee."
+ },
+ {
+  "theme": "prix",
+  "question": "Y a-t-il un abonnement ?",
+  "answer": "Non, aucun. Vous payez une seule fois, a partir de 490 euros. La mise a jour mensuelle est automatisee et incluse, sans rien payer ensuite. Aucun engagement, aucune reconduction tacite, aucun preavis de resiliation. Si vous arretez, le CRM et la base restent a vous."
+ },
+ {
+  "theme": "volume",
+  "question": "Y a-t-il une limite au nombre de lignes ?",
+  "answer": "Non. Que la cible fasse 300 entreprises ou 40 000, le prix est le meme. C'est la difference principale avec les plateformes qui fonctionnent par credits mensuels."
+ },
+ {
+  "theme": "volume",
+  "question": "Combien d'entreprises vais-je obtenir ?",
+  "answer": "Cela depend de la cible. Le comptage est gratuit et sans engagement : decrivez votre cible et le volume exact vous est annonce avant toute commande, avec le detail par departement. Si le resultat est trop faible pour justifier la depense, cela vous sera dit franchement."
+ },
+ {
+  "theme": "delais",
+  "question": "Combien de temps avant de recevoir mon CRM ?",
+  "answer": "Environ dix jours ouvres a partir de la validation des codes APE. Sur une cible tres large, l'acces est ouvert sur une premiere tranche exploitable plus tot pour que les commerciaux commencent sans attendre."
+ },
+ {
+  "theme": "qualite",
+  "question": "Les emails et telephones fonctionnent-ils vraiment ?",
+  "answer": "Le domaine de chaque adresse est verifie techniquement avant livraison. Ce sont des adresses de contact d'entreprise du type contact@ ou accueil@, publiees par l'entreprise elle-meme. Aucune adresse nominative n'est fabriquee en devinant un prenom et un nom : ce sont celles qui rebondissent et qui font blacklister un domaine d'envoi."
+ },
+ {
+  "theme": "sav",
+  "question": "Que se passe-t-il si quelque chose ne marche pas ?",
+  "answer": "Toute correction est prise en charge sans supplement pendant 60 jours. Ensuite, corrections et evolutions se font au forfait a partir de 90 euros, systematiquement chiffre et valide par vous avant de commencer. Aucune facture ne tombe sans votre accord."
+ },
+ {
+  "theme": "crm",
+  "question": "C'est un CRM complet comme HubSpot ?",
+  "answer": "Non, et c'est volontaire. Il ne gere ni devis, ni factures, ni campagnes marketing. Il sert a une seule chose : derouler une liste de prospects qualifies sans doublons d'appels, avec statuts, relances, attribution et notes. C'est ce qui fait qu'il reste utilise."
+ },
+ {
+  "theme": "outils",
+  "question": "Puis-je garder mon CRM actuel ?",
+  "answer": "Oui. Si vous avez deja un outil qui vous convient, la base peut etre livree au format qu'il attend et rafraichie de la meme maniere. Cela releve de la formule Sur mesure quand la connexion doit etre automatique."
+ },
+ {
+  "theme": "sources",
+  "question": "D'ou viennent les donnees ?",
+  "answer": "De bases publiques officielles sous licence Etalab : annuaire des entreprises SIRENE, INPI pour les comptes deposes, BODACC pour les annonces legales, nomenclature APE de l'INSEE, plus des sources sectorielles comme l'ADEME ou FINESS. Les contacts ne figurent dans aucune base publique : ils sont reconstitues depuis le site officiel de chaque entreprise, puis verifies."
+ },
+ {
+  "theme": "rgpd",
+  "question": "Est-ce legal ?",
+  "answer": "Oui. Ciblage strictement B2B sur la base de l'interet legitime, a partir de sources publiques sous licence Etalab. L'origine de chaque information est tracee, ce qui permet de la justifier, et une liste de suppression est integree puis respectee a chaque mise a jour."
+ },
+ {
+  "theme": "zone",
+  "question": "Travaillez-vous partout en France ?",
+  "answer": "Oui, les sources sont nationales. Base a Lyon, ce qui facilite les rendez-vous en Auvergne-Rhone-Alpes, mais tout se fait tres bien a distance."
+ },
+ {
+  "theme": "prix",
+  "question": "Pourquoi est-ce moins cher qu'une plateforme de prospection ?",
+  "answer": "Parce que le modele est different. Une plateforme vous loue un acces et doit facturer chaque mois pour vivre. Ici le travail est fait une fois, la mise a jour est entierement automatisee et ne coute presque rien a faire tourner. Il n'y a donc aucune raison de facturer un abonnement. En echange, vous n'avez pas les fonctions annexes d'une grosse plateforme, comme les sequences d'emails ou les contacts nominatifs LinkedIn."
+ }
+]

@@ -1,0 +1,45 @@
+# ProspectData
+
+Creation de CRM de prospection sur mesure pour TPE et petites PME francaises.
+Base a Lyon, intervention France entiere. SIREN 882 813 660.
+
+## Le principe
+Le client decrit sa cible commerciale avec ses propres mots (par exemple : les
+garages de moins de 20 salaries en Auvergne-Rhone-Alpes). ProspectData traduit
+cette description en codes APE officiels de la nomenclature INSEE, puis construit
+un CRM en ligne deja rempli de toutes les entreprises francaises portant ces
+codes, avec leurs contacts reconstitues et verifies.
+
+Ensuite, le CRM s'enrichit et se met a jour automatiquement chaque mois : les
+entreprises nouvellement creees dans la cible sont ajoutees, les contacts
+manquants sont completes, les societes radiees ou en procedure collective sont
+signalees. Les statuts et notes du client ne sont jamais ecrases.
+
+## Ce que contient chaque ligne
+Plus de 40 informations : identite (raison sociale, SIREN, SIRET, forme
+juridique, anciennete, code APE), taille (effectif, categorie, etablissements
+ouverts), finances (CA, CA n-1, resultat net), dirigeants, contact (telephone,
+email verifie, site, LinkedIn), adresse et GPS, labels et signaux legaux,
+score de priorite sur 100 et tier A/B/C.
+
+## Modele economique
+Paiement unique, aucun abonnement, aucune limite de volume de lignes, aucun engagement.
+Repere marche : une annee d'abonnement a une plateforme de prospection francaise
+comparable coute entre 1 200 et 2 800 EUR, chaque annee.
+- Une cible : 490 EUR, 1 cible, 2 utilisateurs
+- Equipe : 990 EUR, cibles et utilisateurs illimites (formule la plus demandee)
+- Sur mesure : des 2 400 EUR, colonnes et scoring specifiques au metier
+Corrections garanties 60 jours. Ensuite, evolutions au forfait des 90 EUR,
+toujours chiffrees et validees avant execution.
+
+## Offre d'entree
+Comptage gratuit et sans engagement : le client decrit sa cible, ProspectData
+annonce le nombre exact d'entreprises concernees avec le detail par departement.
+
+## Sources
+SIRENE / Annuaire des Entreprises, INPI, BODACC, nomenclature APE INSEE, ADEME,
+FINESS, Base Adresse Nationale. Licence Etalab. B2B uniquement, interet legitime,
+liste de suppression respectee.
+
+## Contact
+romtaug+prospectdata@gmail.com

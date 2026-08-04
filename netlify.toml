@@ -1,0 +1,7 @@
+# Netlify : la racine du depot est publiee telle quelle.
+# Aucune etape de build, le site est un fichier HTML autonome.
+# Ce fichier est simplement ignore par GitHub Pages et par Streamlit.
+
+[build]
+  publish = "."
+  command = ""
