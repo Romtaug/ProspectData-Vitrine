@@ -3,1020 +3,872 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ProspectData - Un CRM de prospection qui se remplit et se met à jour tout seul</title>
-<meta name="description" content="Vous décrivez votre cible avec vos mots. Je la traduis en codes APE, je construis votre CRM rempli de toutes les entreprises concernées, contacts retrouvés. Il se met à jour seul chaque mois. Paiement unique." />
-<meta name="keywords" content="CRM prospection sur mesure, CRM code APE, CRM qui se met a jour, base prospection TPE, fichier prospection PME, CRM sans abonnement, prospection B2B France" />
+<title>ProspectData - CRM de prospection sur mesure, rempli et mis à jour tout seul | TPE et PME</title>
+<meta name="description" content="Décrivez votre cible avec vos mots. ProspectData la traduit en codes APE, construit votre CRM rempli de toutes les entreprises concernées avec téléphones et emails vérifiés, et le met à jour tout seul chaque mois. Paiement unique." />
+<meta name="keywords" content="CRM prospection sur mesure, fichier prospection B2B, code APE, base entreprises France, email vérifié prospection, CRM sans abonnement, prospection TPE PME, SIRENE, carte prospects" />
 <meta name="author" content="ProspectData" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<link rel="canonical" href="https://romtaug.github.io/prospectdata/" />
+<link rel="canonical" href="https://prospectdata.netlify.app/" />
 <meta name="theme-color" content="#161A23" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="ProspectData" />
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:title" content="ProspectData - Un CRM de prospection qui se remplit tout seul" />
-<meta property="og:description" content="Décrivez votre cible avec vos mots. Recevez un CRM rempli de toutes les entreprises concernées, contacts compris, qui se met à jour seul chaque mois." />
-<meta property="og:url" content="https://romtaug.github.io/prospectdata/" />
-<meta property="og:image" content="https://romtaug.github.io/prospectdata/og-image.png" />
+<meta property="og:description" content="Décrivez votre cible. Recevez un CRM rempli, téléphones et emails compris, qui se met à jour seul chaque mois. Paiement unique." />
+<meta property="og:url" content="https://prospectdata.netlify.app/" />
+<meta property="og:image" content="https://prospectdata.netlify.app/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="ProspectData - CRM de prospection sur mesure" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="ProspectData - Un CRM de prospection qui se remplit tout seul" />
-<meta name="twitter:description" content="Décrivez votre cible. Recevez un CRM rempli, contacts compris, qui se met à jour seul." />
-<meta name="twitter:image" content="https://romtaug.github.io/prospectdata/og-image.png" />
+<meta name="twitter:description" content="Décrivez votre cible. Recevez un CRM rempli, emails compris, qui se met à jour seul." />
+<meta name="twitter:image" content="https://prospectdata.netlify.app/og-image.png" />
 
-<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAALn0lEQVR42u1afXBcVRX//c59u0naJqEJpR+UacEB5NNSqIDVpgxokRlHUVa0DIrYlk9BRlFxRl4ijqAjiiDVfijqOOKwfjEy6FhFMyriFLCONCijYMC2hLa06UeS3ffuPf7x3u6+3eym22Tb0srJnMm+d7/PPefcc373Aa/T6/R/TWasQt/3BYDp7+8XAIcdd3V1yVVXXYXe3l5tuHCOlI1mjfcCwK39wdo599/9rfOeffZZmnS6VGrH6NomXphaFW31Ua1JVLMTWrHNW5xy+il6w7XLn1i2bFl/YU31CEAAuIWLFn3ola077t29Z6jdOguCUABQAiw0JBQKKgCNetM6JK2JByYaaGWDUZ1pYRbQsh45qo1C4RkPrZObB0866Q23PvqLh9eo6ighSPIhk8kYAO7yKz584YsvDXxv+6uD7da6kBAL0BKwpFpCLQALhaXSKmAViOvQAoj/FxjFOoqoTYEL5aBGfRcYWta+wKWxtMSMx9bSmIRYG7pw+45d7Rv7nlt95UeWXwDAxWusqQGGpH3jaW/68bYdg+8jEABI1dSzWBvKthSAqoLkfiislqtC8bVUradaqhuNw+rqFalYoOq8Y2ce89O/Pb3+MlU1SfuqGCEDVcXmTZuahKKjyyv1uqD75ZOvXLxq+aTHTRxDgKg+FyjEGIMXnn+hqdocKhaYBQm0tbd6WtucqwuCLuKyhUdcEEhtITDabZVoB5WJ3Y/6VjioukQfiTZg7bkQsM5pZ2eHV00rKwTQRShw/NwTfmOg4pyzIC1JR6JO1iKLRBw905F0QK36cACcaokL4wJwiOvHTizqB3QEHchieYnpKGqdszYllOOPn7uuuMYxlIoAqKrmzee+5eFNW7a+MxfGviaWXlVTrcvMa7j+5MiONVQ+Vm1NviMIiTUExXIt8xdEk+dhznHH/urxP/W+h2RQaSesYWmqqqkLui667tXBXe/1mkynDayWzsI6TfMAk9Z2E2o8w9Dpjs6pHT/57bpHV8aLZ7XTtpa7UQBIpVLwPK9oewQwNDzM2HwO1dqrycJNamkpeQgS1obI54MxI4t9+Nwur8oi5TUc8sqoNXRVXcO4tJcAVIS4+urrT9qy5aUF02fNbA9zeVWtdK8OMAJYt48IXUr1sY9I2YyWO51qU1OaL2/dtuvYGdPWr1696p/OKVSVJLXeRdVbj6pqLnz7xXf/+/n+FbkgaPI8LzrnEl0pNKFvHNN6OcYUtOjHCLIwTMJ/MTouSSC0DumUyc85dtbK3t7ffIqkrR4UjCavvvVnBMjaty666I4X+vs/NpLLqYjYMAi0bhmqlKwwGS8ko72yTWNxnYUTROEq1kSoAiJkLpdL/es///34BRdePELyNr3sMoNs1u6vzdTABLJ21apVMzdt3nzTSC5nPc9TETFijCdGPDHGE/EiNuJRmGDxSONR6IlUllUwpcgi4omYYtuofWIcMR4FnjHwKDQpL6W5XN72v/jSDffcc8+0ePEyYQH09fURAJ548snTAEwREe6rXe08QOu3vGRExyq5AuNxSlGmkKS1dspfnnrq9Di5Y4NMAOhoa9tNjmVUiprZLKOwJRKOFv3E2J6pStJDTQRUWkVgkdlPYnrXhNOLUdNRTZ18yplPb9+5+zRPJK+ER5alYWN3WSMSVMe6ssNIqzSRU5ThAUogDK2mp3cetXHjM0+fRTKsJ1Ct50zXTCYjJPPnn7vg5s721pxTTTvnJAhCBmGBbcxhdbZBiRPvQxeU2BZ+hwytLXGx32iMMHQMw1KZdU6c03RH+5SRs+bNv5FkkMlkpJ5ToO44wPd96enpcdfddN2Cx//45CeGhkbOmTSppdU5q3qIIkICKiLcOzS0Z8rkyU8tPG/Bl1euvP/J22+P5trIOKAMLiMB57QJQEuZlAcHZRC7Dqgw2tGmaG93FWsYEeFI7DKqYn8NowJU/lpEfuO5NQZjqQsGUUV3dzd7enpcKuVhxYprzhgJgrn54WGdOK47GtdOt7QwJfLC2jVrngmthe/70t3drfGxq+M0owknH+4bDzww44Fvrl49MLDtEjHGFMNh1XEMpbWTUxLO2XD6tKMf+cQtN127dOnSgYmq/IQFoPqMd+abPvLYy1u3LbTqCrHq2CFDOUheI6OvcmRGKQk9IzJz2tQ/bPjr+ovi485NZAfHRQUIfcmSW9/16s4dCx1cXoRxvGrEUIyIMSLGmJhFJGYkWCqYERtELCyWGaHxDKjOBtt37HzbkiWXvKMa1H1QBJDNZgkAwyO5rtBaZ0RESBZxEgoY/6HABdCzMkCKmSqgymjMRiP4K7Z1UsjAOkeTekdyLuMhb6LOyYbBUJlO01VX9Th1jTI4GdMyGF89le4XWKUqqWoHG42g7I8JKACceOIJv2huTtNaBxBWE6htjGNHDFfkJHIcB8OOQKKOOmiE+pa1VXUgrLUOzU0pdhzV+nByLofECRoRN3/B+V/dvGXgllzewnhmn3690gVyH/WSWYYNLZrSKRw3a8Zd69f/8TZr3SE9BQiAnue5RYsW37jlla3LXhnY1q7qGEE5deLmLD/uossUVAAfqiR1+rRpO2fPmrHmscfWrbTWSr3Iz4ESQNnM0+k08vl8c8XGcvo4TW0AoyAgpNPpkXw+f+BD3nEGa3UCI/sh2ep9NCwUb3TiwoSTlGw2a1WVP/zkHfO3bt/UAQBhoK7sDCKL2iFW1KQgzgmndk7f9uGvfG4DSZvJZEw2m3X7CBdfEwIoBknZbNauveEz5+/++3P3De8ePBvOFuNDJtDjJPipiR8qRHNr61+bTzruxhvW3Pd4IR3HgdqxRmaLPT09+t3rP3Xqpj+vf1yGcm15dY469sYxvvlMwmlpGAlbJ+8+evHZ5113953P+r7PRguh4WntMb3HSB/73HmTOu8xO/ackyfyJD0KSZH4dBjNFKEmn0k6It8c2knB7uH2df3/+Okxv58mfejTRs7Xa2Rn8Y2MVafNX1707oV5a5Up4zlNwKAkJInpja2D3ogNdLK1b1Pnmkjm9ufW56ALIEGOiiD6hKradTL36c2S56jThkILjQmFa9ix+l1dHsm8azbrmlJpqmoQX6oXPhjR5BdOLsGF8jjzVUcNWrw0tSn9O5K5h5Axjdz9hgsAALB4sVOAs8+d/6X8lJbNLWqaaB0NWGSvFmvERkFaxxY1TUHr5P8ed/b8LyjAjf6p2ujpNtwJ9vb2Knxfbr7D37l8+UcfGd49PDe0bkbeOWeNCZ1IaMnQihQ4SPwOrTGBFQlaprTunTRz5rq5F557xeVf+MzzOFyOwQqHqDCCR9Z+e8ZjD/4qhRYgtI5eXjRMO6bSKQ6PAM0p64aHo3YtLdH/Sy5fmr/oyksHYB0OVAxwwClGaSdiZjIepPc1R6pKHxAfvhTgK1VNfe2Rh+bd98sfzVfVNAB0dXV5PnzxAVFV4kgj3/eFAD629qtXLL7z5r+f469wC7pXaNedN2+8ZvWXrkhozUGjgyblzEMZk31/1i5fddcH/jbQ/+CrI3sA66LLBc+wrWUyzpp+/NK1Kz79YCGXOHIEEH1gB33xxea3fveuvoHhXXNSYAhFKg54woAws6dM3fS7z379FJJ7Y1RED/TUDoq6ZbLRTe3nn/j1vBG1c2EVUKRc6QrA8xQYHNoze9nXv3gCAPW7uw/K5hwke8tEIS1oItA8CpBZ/AhKAAodgTC/9wj0AfE3phs2bJh87c+/+dz23NAMT+nAKBchJAzgZFZr+9af3XbvyR3kYKOTnkOrAYRmMhkzb968vafPmnNHW2ur5Ok8pxEFcF5H21Fy4tGzuzvIwcxDjY/5D1ooXIv6+vrU932599bu9Us+eOnOXBicAbAt7aU5tWXKS2d0zrr9O9d+9n71b5e+G1e6I8sERo+pqtp+0/fvPSFIAV+8+MrnOzo6BjGO73kPS6p2mTmRC87DNzz2ffF9/8gMe1+n1+nwoP8BBIkJW/VehfIAAAAASUVORK5CYII=" />
+<link rel="icon" type="image/png" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"ProspectData",
-  "description":"Création de CRM de prospection sur mesure pour TPE et PME. Le client décrit sa cible, ProspectData la traduit en codes APE, construit le CRM rempli des entreprises concernées avec leurs contacts, et le CRM se met à jour automatiquement chaque mois. Paiement unique, sans abonnement.",
-  "url":"https://romtaug.github.io/prospectdata/",
-  "areaServed":"FR",
-  "email":"romtaug+prospectdata@gmail.com",
-  "priceRange":"490-2400 EUR",
-  "identifier":"882813660",
-  "address":{"@type":"PostalAddress","addressLocality":"Lyon","addressCountry":"FR"}
-}
-</script>
-
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="" />
 <style>
   :root{
-    --ink:#161A23; --ink-2:#1F242F; --ink-3:#2B313D;
-    --paper:#F6F5F2; --paper-2:#EDEBE5; --white:#FFFFFF;
-    --wine:#83283A; --wine-dark:#661D2C; --wine-tint:#F2E4E8;
-    --found:#29795E; --found-bright:#379B79;
-    --empty:#C4BFB5;
-    --slate:#5C6470; --slate-2:#7B828C;
-    --line:#DDD9D0; --line-ink:#333A46;
-    --r:12px; --r-lg:18px; --maxw:1120px;
+    --ink:#161A23;--ink-soft:#20242F;--paper:#FAF9F5;--paper-2:#F1EFE7;
+    --wine:#83283A;--wine-deep:#661D2C;--green:#29795E;--green-bright:#35A17C;
+    --slate:#5A6270;--line:#E3E0D6;--line-dark:#2E3441;--radius:14px;--maxw:1100px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:"Inter",system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  h1,h2,h3{font-family:"Syne","Inter",sans-serif;line-height:1.05;letter-spacing:-0.028em;font-weight:800}
-  h3{font-weight:700;letter-spacing:-0.02em;line-height:1.2}
+  body{font-family:"Inter",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.06;letter-spacing:-0.02em;font-weight:700}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
   a{color:inherit;text-decoration:none}
-  .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:24px;padding-right:24px}
-  .band{padding-top:88px;padding-bottom:88px}
-  .band-alt{background:var(--paper-2)}
-  .band-ink{background:var(--ink);color:#E8E9E6}
-  .band-ink h2,.band-ink h3{color:#fff}
-  :focus-visible{outline:2.5px solid var(--wine);outline-offset:3px;border-radius:4px}
-  .band-ink :focus-visible{outline-color:var(--found-bright)}
   .skip{position:absolute;left:-9999px}
   .skip:focus{position:fixed;left:16px;top:16px;background:#fff;padding:10px 16px;border-radius:8px;z-index:99;border:1px solid var(--ink)}
 
-  .eyebrow{font-family:"JetBrains Mono";font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);display:flex;align-items:center;gap:10px;margin-bottom:20px}
-  .eyebrow::before{content:"";width:24px;height:2px;background:var(--wine);flex-shrink:0}
-  .band-ink .eyebrow{color:var(--found-bright)}
-  .band-ink .eyebrow::before{background:var(--found-bright)}
-  h2.big{font-size:clamp(30px,4.4vw,48px);max-width:22ch}
-  .lede{font-size:clamp(16.5px,1.9vw,19px);color:var(--slate);max-width:64ch;margin-top:20px}
-  .band-ink .lede{color:#A9AEB5}
-
-  header{position:sticky;top:0;z-index:60;background:rgba(246,245,242,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;height:70px;gap:24px}
-  .brand{display:flex;align-items:center;flex-shrink:0}
-  .brand img{height:34px;width:auto;display:block}
-  .nav-links{display:flex;gap:26px;font-size:15px;color:var(--slate);margin-left:auto}
+  header{position:sticky;top:0;z-index:50;background:rgba(250,249,245,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+  .brand{display:flex;align-items:center}
+  .brand-mark{height:36px;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;font-size:15px;color:var(--slate);margin-left:auto;margin-right:8px}
   .nav-links a:hover{color:var(--ink)}
-  .nav-cta{font-family:"Syne";font-weight:700;font-size:14.5px;background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;transition:background .2s}
-  .nav-cta:hover{background:var(--wine)}
+  .nav-cta{font-family:"Bricolage Grotesque";font-weight:600;font-size:15px;background:var(--ink);color:#fff;padding:10px 18px;border-radius:10px;transition:transform .15s ease,background .2s ease}
+  .nav-cta:hover{background:var(--wine);transform:translateY(-1px)}
 
-  .btn{font-family:"Syne";font-weight:700;font-size:16px;padding:15px 26px;border-radius:11px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:none;transition:background .2s,transform .15s,border-color .2s}
-  .btn-primary{background:var(--wine);color:#fff}
-  .btn-primary:hover{background:var(--wine-dark);transform:translateY(-2px)}
-  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-  .btn-ghost:hover{border-color:var(--ink)}
-  .band-ink .btn-ghost{color:#E8E9E6;border-color:var(--line-ink)}
-  .band-ink .btn-ghost:hover{border-color:#E8E9E6}
-  .cta-row{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
-
-  .hero{padding-top:70px;padding-bottom:62px}
-  .hero-grid{display:grid;grid-template-columns:1fr 1.04fr;gap:52px;align-items:center}
-  .hero h1{font-size:clamp(36px,5.2vw,58px)}
+  .hero{padding:76px 0 60px}
+  .eyebrow{font-family:"JetBrains Mono";font-size:13px;letter-spacing:.04em;color:var(--wine);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:9px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--wine)}
+  .hero h1{font-size:clamp(42px,7.4vw,80px);font-weight:800}
   .hero h1 em{font-style:normal;color:var(--wine)}
-  .chips{display:flex;flex-wrap:wrap;gap:9px 22px;margin-top:28px;font-size:14px;color:var(--slate)}
+  .hero .sub{font-size:clamp(17px,2.3vw,21px);color:var(--slate);max-width:560px;margin:24px 0 32px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{font-family:"Bricolage Grotesque";font-weight:600;font-size:16px;padding:14px 26px;border-radius:11px;transition:transform .15s ease,background .2s ease,box-shadow .2s ease;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none}
+  .btn-primary{background:var(--wine);color:#fff;box-shadow:0 8px 22px -10px rgba(131,40,58,.7)}
+  .btn-primary:hover{background:var(--wine-deep);transform:translateY(-2px)}
+  .btn-ghost{color:var(--ink);border:1px solid var(--line);background:transparent}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:30px;font-size:14.5px;color:var(--slate)}
   .chips span{display:flex;align-items:center;gap:8px}
-  .chips span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--found);flex-shrink:0}
+  .chips span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green-bright)}
+  .hero-grid{display:grid;grid-template-columns:1fr 1.02fr;gap:52px;align-items:center}
 
-  .machine{background:var(--ink);border-radius:var(--r-lg);padding:22px;box-shadow:0 30px 60px -34px rgba(22,26,35,.55)}
-  .m-head{display:flex;align-items:center;justify-content:space-between;font-family:"JetBrains Mono";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#6E7681;margin-bottom:15px}
-  .m-head b{color:var(--found-bright);font-weight:500;text-transform:none;letter-spacing:0}
-  .m-step{margin-bottom:14px}
-  .m-lab{font-family:"JetBrains Mono";font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6E7681;margin-bottom:7px}
-  .m-say{background:var(--ink-2);border:1px solid var(--line-ink);border-radius:10px;padding:13px 15px;font-size:14.5px;color:#fff;min-height:48px;display:flex;align-items:center;gap:3px;line-height:1.4}
-  .caret{width:8px;height:16px;background:var(--found-bright);animation:blink 1.05s steps(1) infinite;flex-shrink:0;display:inline-block}
+  /* ---- panneau demo : de vos mots au CRM ---- */
+  .demo{background:var(--ink);border-radius:20px;padding:24px;color:#ECEDEA;box-shadow:0 30px 70px -30px rgba(22,26,35,.6);position:relative;overflow:hidden}
+  .demo::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 80% -10%,rgba(53,161,124,.2),transparent 60%);pointer-events:none}
+  .demo-label{font-family:"JetBrains Mono";font-size:12px;color:#828A97;letter-spacing:.03em;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .demo-label b{color:var(--green-bright);font-weight:500}
+  .askbox{background:var(--ink-soft);border:1px solid var(--line-dark);border-radius:12px;padding:14px 16px;font-family:"JetBrains Mono";font-size:14px;min-height:54px;display:flex;align-items:center;gap:3px;line-height:1.45}
+  .askbox .q{color:#ECEDEA}
+  .cursor{display:inline-block;width:8px;height:18px;background:var(--green-bright);margin-left:2px;vertical-align:middle;animation:blink 1s steps(1) infinite;flex-shrink:0}
   @keyframes blink{50%{opacity:0}}
-  .m-ape{display:flex;flex-wrap:wrap;gap:7px;min-height:30px}
-  .ape{font-family:"JetBrains Mono";font-size:12px;font-weight:500;background:rgba(55,155,121,.13);color:var(--found-bright);border:1px solid rgba(55,155,121,.34);padding:5px 10px;border-radius:7px;opacity:0;transform:translateY(5px);transition:opacity .3s ease,transform .3s ease}
+  .demo-step{font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#6E7683;margin:16px 0 8px}
+  .apes{display:flex;flex-wrap:wrap;gap:7px;min-height:30px}
+  .ape{font-family:"JetBrains Mono";font-size:12px;background:rgba(53,161,124,.12);color:var(--green-bright);border:1px solid rgba(53,161,124,.32);padding:4px 10px;border-radius:7px;opacity:0;transform:translateY(5px);transition:opacity .3s ease,transform .3s ease}
   .ape.on{opacity:1;transform:none}
-  .m-count{font-family:"Syne";font-weight:800;font-size:30px;color:#fff;letter-spacing:-0.03em;line-height:1.1}
-  .m-count small{font-family:"Inter";font-size:14px;font-weight:400;color:#8A9199;letter-spacing:0;display:block;margin-top:5px}
-  .m-rows{border-top:1px solid var(--line-ink);margin-top:4px}
-  .mrow{display:grid;grid-template-columns:1fr 118px 46px;gap:10px;align-items:center;padding:9px 2px;border-bottom:1px solid rgba(52,58,69,.55);font-size:13px;opacity:0;transform:translateY(5px);transition:opacity .35s ease,transform .35s ease}
-  .mrow.on{opacity:1;transform:none}
-  .mrow .c1{color:#fff;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .mrow .c2{font-family:"JetBrains Mono";font-size:12px;color:var(--found-bright)}
-  .mrow .c3{text-align:right}
-  .tier{font-family:"JetBrains Mono";font-size:10.5px;font-weight:700;padding:3px 7px;border-radius:5px}
+  .count{font-family:"Bricolage Grotesque";font-weight:800;font-size:34px;color:#fff;letter-spacing:-0.02em;line-height:1.05}
+  .count small{display:block;font-family:"Inter";font-size:13px;font-weight:400;color:#8A9199;margin-top:4px;letter-spacing:0}
+  .rows{border-top:1px solid var(--line-dark);margin-top:4px}
+  .drow{padding:9px 2px;border-bottom:1px solid rgba(46,52,65,.6);opacity:0;transform:translateY(5px);transition:opacity .35s ease,transform .35s ease}
+  .drow.on{opacity:1;transform:none}
+  .drow .l1{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13.5px;font-weight:600;color:#fff}
+  .drow .l2{font-family:"JetBrains Mono";font-size:11.5px;color:#8A9199;margin-top:3px;display:flex;flex-wrap:wrap;gap:4px 12px}
+  .drow .l2 .mail{color:var(--green-bright)}
+  .tier{font-family:"JetBrains Mono";font-size:10px;font-weight:500;padding:2px 7px;border-radius:5px;flex-shrink:0}
   .tier.a{background:var(--wine);color:#fff}
-  .tier.b{background:var(--wine-tint);color:var(--wine-dark)}
-  .tier.c{background:var(--paper-2);color:var(--slate)}
-  .m-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;font-family:"JetBrains Mono";font-size:11px;color:#6E7681;flex-wrap:wrap}
-  .pill{background:rgba(55,155,121,.14);color:var(--found-bright);border:1px solid rgba(55,155,121,.3);padding:4px 10px;border-radius:99px;font-size:10.5px}
+  .tier.b{background:rgba(131,40,58,.18);color:#D98A9B;border:1px solid rgba(131,40,58,.4)}
+  .tier.c{background:rgba(255,255,255,.06);color:#8A9199;border:1px solid var(--line-dark)}
 
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
-  .stat{background:var(--paper);padding:24px 22px}
-  .stat .n{font-family:"Syne";font-weight:800;font-size:32px;letter-spacing:-0.03em;line-height:1}
-  .stat .l{font-size:13.5px;color:var(--slate);margin-top:7px}
+  section{padding:82px 0}
+  .sec-alt{background:var(--paper-2)}
+  .sec-dark{background:var(--ink);color:#ECEDEA}
+  .sec-head{max-width:660px;margin-bottom:50px}
+  .sec-head .eyebrow{margin-bottom:16px}
+  .sec-head h2{font-size:clamp(30px,4.4vw,46px)}
+  .sec-head p{color:var(--slate);font-size:18px;margin-top:16px}
+  .sec-dark .sec-head p{color:#A6ACB6}
+  .sec-dark .eyebrow{color:var(--green-bright)}
+  .sec-dark .eyebrow::before{background:var(--green-bright)}
 
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px;margin-top:44px}
-  .card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px}
-  .card h3{font-size:19px;margin-bottom:9px}
-  .card p{font-size:15px;color:var(--slate)}
-  .card .neg{font-family:"JetBrains Mono";font-size:11.5px;color:var(--wine);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
-  .band-ink .card{background:var(--ink-2);border-color:var(--line-ink)}
-  .band-ink .card p{color:#A9AEB5}
+  .strip{background:var(--ink);color:#ECEDEA}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .strip .cell{padding:26px 20px;border-right:1px solid var(--line-dark)}
+  .strip .cell:last-child{border-right:none}
+  .strip .k{font-family:"Bricolage Grotesque";font-weight:700;font-size:22px;color:#fff;margin-bottom:4px}
+  .strip .v{font-size:14px;color:#9AA1AC}
 
-  .steps{margin-top:46px;border-top:1px solid var(--line)}
-  .step{display:grid;grid-template-columns:60px 1fr 1.15fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline}
-  .step .num{font-family:"JetBrains Mono";font-size:13px;font-weight:700;color:var(--wine)}
-  .step h3{font-size:21px}
-  .step p{font-size:15.5px;color:var(--slate)}
+  .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .problem{border-top:2px solid var(--ink);padding-top:20px}
+  .problem h3{font-size:20px;margin-bottom:8px}
+  .problem p{color:var(--slate);font-size:15.5px}
 
-  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:2px;background:var(--line-ink);border:1px solid var(--line-ink);border-radius:var(--r);overflow:hidden;margin-top:44px}
-  .colgrp{background:var(--ink);padding:22px}
-  .colgrp h3{font-size:15px;margin-bottom:13px;display:flex;align-items:center;gap:9px}
-  .colgrp h3::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--found-bright);flex-shrink:0}
-  .colgrp ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
-  .colgrp li{font-family:"JetBrains Mono";font-size:11.5px;color:#B6BBC2;background:var(--ink-2);border:1px solid var(--line-ink);padding:4px 9px;border-radius:6px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .split .lead{font-size:20px;color:var(--slate);margin:14px 0}
+  .split ul{list-style:none;margin-top:18px}
+  .split li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;font-size:15.5px}
+  .split li::before{content:"->";color:var(--wine);font-family:"JetBrains Mono";font-weight:500}
+  .ba{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .ba .row{padding:20px 22px;border-bottom:1px solid var(--line)}
+  .ba .row:last-child{border-bottom:none}
+  .ba .tag{font-family:"JetBrains Mono";font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
+  .ba .before{color:var(--slate);font-size:15px}
+  .ba .after{background:var(--paper-2)}
+  .ba .after .tag{color:var(--wine)}
+  .ba .after .txt{font-family:"JetBrains Mono";font-size:14px;color:var(--ink)}
 
-  .cockpit{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;margin-top:42px}
-  .cockpit-bar{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid var(--line);background:var(--paper-2);font-size:13px;color:var(--slate);flex-wrap:wrap}
-  .cockpit-bar b{font-family:"Syne";font-weight:700;color:var(--ink);font-size:14.5px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line-dark);border-radius:16px;overflow:hidden}
+  .step{padding:30px 26px;border-right:1px solid var(--line-dark)}
+  .step:last-child{border-right:none}
+  .step .num{font-family:"JetBrains Mono";font-size:13px;color:var(--green-bright);margin-bottom:20px}
+  .step h3{font-size:19px;margin-bottom:10px;color:#fff}
+  .step p{font-size:14.5px;color:#A6ACB6}
+
+  /* ---- le CRM : carte + fiches ---- */
+  .cockpit{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 26px 60px -34px rgba(22,26,35,.35)}
+  .cockpit-bar{display:flex;align-items:center;gap:14px;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--paper-2);flex-wrap:wrap}
+  .cockpit-bar b{font-family:"Bricolage Grotesque";font-weight:700;font-size:15.5px}
+  .cockpit-bar .maj{font-family:"JetBrains Mono";font-size:11.5px;color:var(--slate)}
   .kpis{display:flex;gap:8px;margin-left:auto;flex-wrap:wrap}
-  .kpi{font-family:"JetBrains Mono";font-size:11.5px;background:var(--white);border:1px solid var(--line);padding:4px 10px;border-radius:99px}
-  .kpi b{color:var(--wine);font-family:"JetBrains Mono";font-size:11.5px}
-  .tblwrap{overflow-x:auto}
-  .tbl{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
-  .tbl th{font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-2);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);font-weight:500;white-space:nowrap}
-  .tbl td{padding:13px 16px;border-bottom:1px solid var(--line)}
-  .tbl tr:last-child td{border-bottom:none}
-  .tbl .co{font-weight:500}
-  .tbl .mono{font-size:12.5px;color:var(--slate)}
-  .tbl tr.fresh{background:rgba(41,121,94,.06)}
-  .new-tag{font-family:"JetBrains Mono";font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--found);border:1px solid rgba(41,121,94,.35);padding:2px 6px;border-radius:5px;margin-left:8px;white-space:nowrap}
-  .st{font-size:12.5px;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
-  .st::before{content:"";width:6px;height:6px;border-radius:50%;flex-shrink:0}
-  .st.rdv::before{background:var(--found)}
-  .st.rel::before{background:#C8963E}
-  .st.tel::before{background:var(--slate-2)}
-  .st.new::before{background:var(--empty)}
-  .feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:14px;margin-top:26px}
-  .feat div{font-size:14.5px;color:var(--slate);padding-left:20px;position:relative}
-  .feat div::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:2px;background:var(--found)}
+  .kpi{font-family:"JetBrains Mono";font-size:11.5px;background:#fff;border:1px solid var(--line);padding:4px 11px;border-radius:99px;color:var(--slate)}
+  .kpi b{color:var(--wine);font-family:"JetBrains Mono";font-weight:500}
+  .crm-grid{display:grid;grid-template-columns:1.08fr .92fr;min-height:440px}
+  #map{min-height:440px;background:var(--paper-2)}
+  .fiches{border-left:1px solid var(--line);max-height:440px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:12px;background:var(--paper)}
+  .fiche{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:transform .16s ease,box-shadow .2s ease,border-color .2s ease}
+  .fiche:hover{transform:translateY(-2px);box-shadow:0 14px 30px -20px rgba(22,26,35,.4);border-color:#CFCBBE}
+  .fiche .top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .fiche .name{font-family:"Bricolage Grotesque";font-weight:700;font-size:15px}
+  .fiche .city{font-size:12.5px;color:var(--slate);margin-top:1px}
+  .fiche .new{font-family:"JetBrains Mono";font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--green);border:1px solid rgba(41,121,94,.35);padding:2px 6px;border-radius:5px;margin-left:8px;vertical-align:2px}
+  .fiche .contact{margin-top:10px;display:flex;flex-direction:column;gap:5px;font-family:"JetBrains Mono";font-size:12px}
+  .fiche .contact a{display:flex;align-items:center;gap:8px;color:var(--ink)}
+  .fiche .contact a:hover{color:var(--wine)}
+  .fiche .contact .ic{width:15px;height:15px;flex-shrink:0;color:var(--slate)}
+  .fiche .contact .mail{color:var(--green);word-break:break-all}
+  .fiche .foot{display:flex;align-items:center;gap:8px;margin-top:11px;padding-top:10px;border-top:1px dashed var(--line);font-size:11.5px;color:var(--slate)}
+  .fiche .st{display:inline-flex;align-items:center;gap:6px}
+  .fiche .st::before{content:"";width:6px;height:6px;border-radius:50%;background:#C8C3B6}
+  .fiche .st.rdv::before{background:var(--green-bright)}
+  .fiche .st.rel::before{background:#CE9B45}
+  .fiche .tierl{font-family:"JetBrains Mono";font-size:10px;padding:2px 7px;border-radius:5px;margin-left:auto}
+  .fiche .tierl.a{background:var(--wine);color:#fff}
+  .fiche .tierl.b{background:rgba(131,40,58,.1);color:var(--wine);border:1px solid rgba(131,40,58,.3)}
+  .fiche .tierl.c{background:var(--paper-2);color:var(--slate);border:1px solid var(--line)}
+  .crm-note{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:22px;font-size:14.5px;color:var(--slate)}
+  .crm-note span{display:flex;align-items:center;gap:9px}
+  .crm-note span::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--green-bright);flex-shrink:0}
+  .leaflet-container{font-family:"Inter",sans-serif}
+  .pd-pop .leaflet-popup-content-wrapper{border-radius:10px;box-shadow:0 12px 30px -14px rgba(22,26,35,.5)}
+  .pd-pop .leaflet-popup-content{margin:12px 14px;font-size:12.5px;line-height:1.5}
+  .pd-pop b{font-family:"Bricolage Grotesque";font-size:13.5px}
+  .pd-pop .m{font-family:"JetBrains Mono";font-size:11.5px;display:block;margin-top:3px}
+  .pd-pop .m.g{color:var(--green)}
 
-  .comp{width:100%;border-collapse:collapse;margin-top:40px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-  .comp th{font-family:"Syne";font-weight:700;font-size:15px;text-align:left;padding:16px;border-bottom:1px solid var(--line);background:var(--paper-2)}
-  .comp th.us{color:var(--wine)}
-  .comp td{padding:15px 16px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--slate);vertical-align:top}
-  .comp td:first-child{font-weight:500;color:var(--ink);width:26%}
-  .comp tr:last-child td{border-bottom:none}
-  .comp td.us{color:var(--ink)}
-  .fair{margin-top:22px;padding:20px 22px;border-left:3px solid var(--wine);background:var(--wine-tint);border-radius:0 var(--r) var(--r) 0;font-size:15px;color:var(--ink)}
+  /* fiches de donnees (formes) */
+  .forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .18s ease,box-shadow .2s ease}
+  .form-card:hover{transform:translateY(-3px);box-shadow:0 20px 40px -26px rgba(22,26,35,.4)}
+  .form-card .vis{height:78px;background:var(--paper-2);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:16px;overflow:hidden;padding:0 12px}
+  .form-card .vis .num{font-family:"Bricolage Grotesque";font-weight:800;font-size:24px;color:var(--ink)}
+  .form-card .vis .num small{color:var(--wine);font-size:13px;font-weight:700;margin-left:5px}
+  .form-card .vis .rowline{display:flex;flex-direction:column;gap:6px;width:100%}
+  .form-card .vis .rl{display:flex;justify-content:space-between;font-family:"JetBrains Mono";font-size:9.5px;color:var(--slate);border-bottom:1px solid var(--line);padding-bottom:4px}
+  .form-card .vis .badge{font-family:"JetBrains Mono";font-size:11px;font-weight:500;padding:5px 9px;border-radius:7px;background:#fff;border:1px solid var(--line);color:var(--slate)}
+  .form-card .vis .badge.g{background:var(--green);color:#fff;border-color:var(--green)}
+  .form-card .vis .badge.w{background:var(--wine);color:#fff;border-color:var(--wine)}
+  .form-card h3{font-size:16px;margin-bottom:6px}
+  .form-card p{font-size:13.5px;color:var(--slate)}
 
-  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
-  .plan{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column}
-  .plan.hi{border:2px solid var(--wine);position:relative;box-shadow:0 24px 50px -30px rgba(131,40,58,.45)}
-  .plan .flag{position:absolute;top:-12px;left:26px;background:var(--wine);color:#fff;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:6px}
-  .plan h3{font-size:20px}
-  .plan .who{font-size:13.5px;color:var(--slate-2);margin-top:6px;min-height:40px}
-  .plan .price{font-family:"Syne";font-weight:800;font-size:36px;letter-spacing:-0.035em;margin:14px 0 4px;line-height:1}
-  .plan .price small{font-family:"Inter";font-size:14px;font-weight:400;color:var(--slate);letter-spacing:0}
-  .plan .once{font-family:"JetBrains Mono";font-size:11.5px;color:var(--found);letter-spacing:.05em;text-transform:uppercase}
-  .plan ul{list-style:none;margin:22px 0 26px;display:flex;flex-direction:column;gap:11px}
-  .plan li{font-size:14.5px;color:var(--slate);padding-left:22px;position:relative;line-height:1.5}
-  .plan li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:2px;background:var(--found)}
-  .plan li b{color:var(--ink);font-weight:500}
-  .plan .btn{width:100%;justify-content:center;margin-top:auto}
-  .marche{margin-top:42px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px}
-  .marche-t{font-family:"JetBrains Mono";font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--slate-2);margin-bottom:20px}
-  .marche-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:22px}
-  .marche-g div{border-top:2px solid var(--wine);padding-top:12px}
-  .marche-g b{font-family:"Syne";font-weight:800;font-size:23px;letter-spacing:-0.03em;display:block;line-height:1.1}
-  .marche-g span{font-size:13.5px;color:var(--slate);display:block;margin-top:7px;line-height:1.45}
-  .marche-n{font-size:12.5px;color:var(--slate-2);margin-top:20px;font-style:normal}
-  .plan-note{margin-top:26px;font-size:14.5px;color:var(--slate);text-align:center;max-width:74ch;margin-left:auto;margin-right:auto}
-  .plan-note b{color:var(--ink);font-weight:500}
+  /* prix */
+  .formulas{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;margin-top:10px}
+  .formula{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
+  .formula.featured{border:1.5px solid var(--wine);box-shadow:0 26px 54px -30px rgba(131,40,58,.5)}
+  .formula .reco{position:absolute;top:-12px;left:26px;background:var(--wine);color:#fff;font-family:"JetBrains Mono";font-size:11px;font-weight:600;letter-spacing:.05em;padding:5px 12px;border-radius:100px}
+  .formula h3{font-family:"Bricolage Grotesque";font-weight:800;font-size:21px;margin:0 0 4px}
+  .formula .sub{color:var(--slate);font-size:14px;margin:0 0 12px}
+  .formula .price{font-family:"Bricolage Grotesque";font-weight:800;font-size:38px;letter-spacing:-0.02em;line-height:1}
+  .formula .price small{font-family:"Inter";font-size:14px;font-weight:400;color:var(--slate)}
+  .formula .once{font-family:"JetBrains Mono";font-size:11.5px;color:var(--green);letter-spacing:.05em;text-transform:uppercase;margin:6px 0 18px}
+  .formula ul{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:11px}
+  .formula li{display:flex;gap:10px;font-size:14.5px;color:var(--ink);line-height:1.4}
+  .formula li::before{content:"\2713";color:var(--green);font-weight:800;flex:0 0 auto}
+  .formula .cost{margin-top:auto;border-top:1px solid var(--line);padding-top:16px;font-size:13.5px;color:var(--slate)}
+  .formula .cost b{color:var(--ink)}
+  .formulas-note{text-align:center;color:var(--slate);font-size:14px;margin-top:22px}
 
-  .src{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
-  .src span{font-family:"JetBrains Mono";font-size:12px;background:var(--ink-2);border:1px solid var(--line-ink);color:#B6BBC2;padding:7px 13px;border-radius:8px}
-  .rgpd{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:16px;margin-top:34px}
-  .rgpd div{font-size:14.5px;color:#A9AEB5;border-top:1px solid var(--line-ink);padding-top:14px}
-  .rgpd b{color:#fff;font-weight:500;display:block;margin-bottom:5px;font-size:15px}
+  .cmp{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .cmp th,.cmp td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
+  .cmp thead th{background:var(--ink);color:#fff;font-family:"Bricolage Grotesque";font-weight:600;font-size:14.5px}
+  .cmp thead th.hi{background:var(--wine)}
+  .cmp td:first-child{font-weight:600;color:var(--ink)}
+  .cmp .col-hi{background:rgba(131,40,58,.05);font-weight:500}
+  .cmp tr:last-child td{border-bottom:none}
+  .cmp .yes{color:var(--green);font-weight:600}
+  .cmp .no{color:#B04A3F}
 
-  .faq{margin-top:42px;border-top:1px solid var(--line)}
-  details{border-bottom:1px solid var(--line)}
-  summary{cursor:pointer;padding:20px 40px 20px 0;font-family:"Syne";font-weight:700;font-size:17.5px;letter-spacing:-0.015em;position:relative;list-style:none}
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";position:absolute;right:6px;top:17px;font-family:"JetBrains Mono";font-size:22px;color:var(--wine);font-weight:400}
-  details[open] summary::after{content:"-"}
-  details p{padding:0 40px 22px 0;font-size:15.5px;color:var(--slate);max-width:78ch}
+  .sec-list{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:10px}
+  .sec-list .it{display:flex;gap:14px;padding:20px;background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:12px}
+  .sec-list .it .g{color:var(--green-bright);font-size:20px;flex-shrink:0;line-height:1.4}
+  .sec-list .it h3{font-size:16.5px;color:#fff;margin-bottom:4px}
+  .sec-list .it p{font-size:14px;color:#A6ACB6}
 
-  .final{text-align:center;padding-top:94px;padding-bottom:94px}
-  .final h2{font-size:clamp(29px,4.5vw,48px);max-width:26ch;margin-left:auto;margin-right:auto}
-  .final .lede{margin-left:auto;margin-right:auto;text-align:center}
-  .final .eyebrow{justify-content:center}
-  .final .cta-row{justify-content:center}
-  .final .mail{margin-top:24px;font-family:"JetBrains Mono";font-size:13.5px;color:#A9AEB5}
-  .final .mail a{color:var(--found-bright);border-bottom:1px solid rgba(55,155,121,.4)}
+  .fit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .fit .f{padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+  .fit .f h3{font-size:17px;margin-bottom:6px}
+  .fit .f p{font-size:14.5px;color:var(--slate)}
 
-  footer{background:var(--ink);color:#7B828C;padding-top:34px;padding-bottom:34px;border-top:1px solid var(--line-ink);font-size:13.5px}
-  .foot{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between}
-  .foot a{border-bottom:1px solid transparent}
-  .foot a:hover{color:#E8E9E6;border-bottom-color:var(--line-ink)}
-  .foot-legal{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
-  .foot-links{display:flex;gap:20px;flex-wrap:wrap}
-  .foot-mark{height:26px;width:auto;display:block;flex-shrink:0}
-  .siren{font-family:"JetBrains Mono";font-size:12.5px;color:#A9AEB5}
-  .siren:hover{color:var(--found-bright)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:22px 0;font-family:"Bricolage Grotesque";font-weight:600;font-size:19px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .faq-q .pm{flex-shrink:0;width:22px;height:22px;position:relative;transition:transform .25s ease}
+  .faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;background:var(--wine);border-radius:2px}
+  .faq-q .pm::before{top:10px;left:0;width:22px;height:2px}
+  .faq-q .pm::after{top:0;left:10px;width:2px;height:22px;transition:opacity .25s ease}
+  .faq-item.open .pm::after{opacity:0}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .faq-a p{padding:0 0 22px;color:var(--slate);font-size:16px;max-width:680px}
 
-  .reveal{opacity:0;transform:translateY(16px)}
-  .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
+  .final{text-align:center;max-width:660px;margin:0 auto}
+  .final h2{font-size:clamp(32px,5vw,52px);color:#fff}
+  .final p{color:#A6ACB6;font-size:19px;margin:18px 0 34px}
+  .mail{font-family:"JetBrains Mono";font-size:15px;color:var(--green-bright);margin-top:22px;display:inline-block;word-break:break-all}
 
-  @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;gap:40px}
-    .stats{grid-template-columns:repeat(2,1fr)}
-    .plans{grid-template-columns:1fr}
-    .step{grid-template-columns:38px 1fr;gap:16px}
-    .step p{grid-column:2}
+  footer{background:var(--ink);color:#8A93A0;padding:52px 0 40px;border-top:1px solid var(--line-dark);font-size:14px}
+  .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;padding-bottom:30px;border-bottom:1px solid var(--line-dark)}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+  .foot-links a:hover{color:#fff}
+  .foot-brand{color:#fff;font-family:"Bricolage Grotesque";font-weight:800;font-size:18px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+  .foot-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;padding-top:22px;line-height:1.6}
+  .foot-bot .legal{max-width:560px}
+  .foot-bot a{color:inherit;text-decoration:underline}
+
+  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .crm-grid{grid-template-columns:1fr}
+    #map{min-height:320px}
+    .fiches{border-left:none;border-top:1px solid var(--line);max-height:360px}
+  }
+  @media(max-width:860px){
     .nav-links{display:none}
-    .band{padding-top:64px;padding-bottom:64px}
-    .comp td:first-child{width:34%}
-    .plan .who{min-height:0}
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .strip .wrap{grid-template-columns:1fr 1fr}
+    .strip .cell:nth-child(2){border-right:none}
+    .cols3,.steps,.sec-list,.fit,.split{grid-template-columns:1fr}
+    .step{border-right:none;border-bottom:1px solid var(--line-dark)}
+    .step:last-child{border-bottom:none}
+    .hero{padding:52px 0 40px}
+    section{padding:58px 0}
+    .cmp{font-size:13.5px;display:block;overflow-x:auto}
   }
-  @media (max-width:560px){
-    .stats{grid-template-columns:1fr}
-    .machine{padding:16px}
-    .mrow{grid-template-columns:1fr 92px 44px;gap:8px;font-size:12.5px}
-    .final{padding-top:70px;padding-bottom:70px}
-  }
-  @media (prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important}
-    .reveal,.ape,.mrow{opacity:1;transform:none}
-    .caret{display:none}
+  @media(prefers-reduced-motion:reduce){
+    .cursor{animation:none}
   }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Aller au contenu</a>
+<a class="skip" href="#top">Aller au contenu</a>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#" aria-label="ProspectData, accueil"><img src="data:image/png;base64,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" alt="ProspectData" /></a>
+    <a class="brand" href="#top" aria-label="ProspectData, accueil"><img class="brand-mark" src="assets/logo.png" alt="ProspectData" /></a>
     <nav class="nav-links">
-      <a href="#methode">Méthode</a>
-      <a href="#vivant">Mise à jour</a>
+      <a href="#comment">Comment ça marche</a>
       <a href="#crm">Le CRM</a>
       <a href="#prix">Prix</a>
-      <a href="#faq">Questions</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="nav-cta" href="#contact">Connaître ma cible</a>
+    <a class="nav-cta" href="mailto:romtaug+prospectdata@gmail.com?subject=Comptage%20de%20ma%20cible&body=Le%20m%C3%A9tier%20que%20je%20veux%20d%C3%A9marcher%20%3A%0AMa%20zone%20g%C3%A9ographique%20%3A%0ALa%20taille%20d%27entreprise%20vis%C3%A9e%20%3A">Comptage gratuit</a>
   </div>
 </header>
 
-<main id="main">
+<main id="top">
 
-<section class="wrap hero">
-  <div class="hero-grid">
-    <div>
-      <p class="eyebrow">CRM de prospection sur mesure - TPE et PME</p>
-      <h1>Décrivez votre cible.<br /><em>Recevez un CRM vivant.</em></h1>
-      <p class="lede">Vous me dites qui vous voulez démarcher, avec vos mots. Je traduis ça en codes d'activité officiels, je construis votre CRM déjà rempli de toutes les entreprises concernées en France, contacts retrouvés. Ensuite il s'enrichit et se met à jour tout seul, chaque mois, sans que personne y touche.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">Combien d'entreprises dans ma cible ?</a>
-        <a class="btn btn-ghost" href="#methode">Voir comment ça marche</a>
-      </div>
-      <div class="chips">
-        <span>Un seul paiement, aucun abonnement</span>
-        <span>Aucune limite de volume</span>
-        <span>Sources publiques officielles</span>
-        <span>Comptage gratuit avant commande</span>
-      </div>
-    </div>
-
-    <div class="machine" id="machine">
-      <div class="m-head"><span>De vos mots à votre CRM</span><b id="m-state">en cours</b></div>
-
-      <div class="m-step">
-        <div class="m-lab">1. ce que vous me dites</div>
-        <div class="m-say"><span id="m-say"></span><span class="caret" aria-hidden="true"></span></div>
-      </div>
-
-      <div class="m-step">
-        <div class="m-lab">2. ce que j'en fais, les codes APE</div>
-        <div class="m-ape" id="m-ape">
-          <span class="ape">45.20A</span>
-          <span class="ape">45.20B</span>
-          <span class="ape">45.11Z</span>
-          <span class="ape">45.32Z</span>
-          <span class="ape">effectif 10 à 19</span>
-          <span class="ape">12 départements</span>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">CRM de prospection sur mesure</div>
+        <h1>Décrivez<br/>votre cible.<br/><em>Recevez un CRM vivant.</em></h1>
+        <p class="sub">Vous dites qui vous voulez démarcher, avec vos mots. ProspectData traduit en codes APE, remplit votre CRM de toutes les entreprises concernées, téléphones et emails compris, puis le met à jour tout seul chaque mois.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:romtaug+prospectdata@gmail.com?subject=Comptage%20de%20ma%20cible&body=Le%20m%C3%A9tier%20que%20je%20veux%20d%C3%A9marcher%20%3A%0AMa%20zone%20g%C3%A9ographique%20%3A%0ALa%20taille%20d%27entreprise%20vis%C3%A9e%20%3A">Compter ma cible gratuitement</a>
+          <a class="btn btn-ghost" href="#crm">Voir le CRM</a>
+        </div>
+        <div class="chips">
+          <span>Paiement unique, zéro abonnement</span>
+          <span>Aucune limite de volume</span>
+          <span>Emails et téléphones vérifiés</span>
         </div>
       </div>
-
-      <div class="m-step">
-        <div class="m-lab">3. votre cible réelle</div>
-        <div class="m-count"><span id="m-count">0</span> entreprises<small id="m-sub">comptage en cours</small></div>
+      <div class="demo" aria-hidden="true">
+        <div class="demo-label"><b>&#9679;</b> Vous décrivez votre cible</div>
+        <div class="askbox"><span class="q" id="typed"></span><span class="cursor"></span></div>
+        <div class="demo-step">Traduction en codes APE</div>
+        <div class="apes" id="apes"></div>
+        <div class="demo-step">Votre cible réelle</div>
+        <div class="count"><span id="count">0</span> entreprises<small id="countSub">&nbsp;</small></div>
+        <div class="demo-step">Votre CRM, rempli</div>
+        <div class="rows" id="rows"></div>
       </div>
+    </div>
+  </section>
 
-      <div class="m-step" style="margin-bottom:0">
-        <div class="m-lab">4. votre CRM, rempli</div>
-        <div class="m-rows">
-          <div class="mrow" data-n="Garage Bertholon" data-t="04 77 33 12 88" data-x="a"><span class="c1"></span><span class="c2"></span><span class="c3"></span></div>
-          <div class="mrow" data-n="Auto Service Vaise" data-t="04 78 64 20 41" data-x="a"><span class="c1"></span><span class="c2"></span><span class="c3"></span></div>
-          <div class="mrow" data-n="Carrosserie Meyzieu" data-t="04 72 45 90 13" data-x="b"><span class="c1"></span><span class="c2"></span><span class="c3"></span></div>
-          <div class="mrow" data-n="SARL Pneus Vienne" data-t="04 74 85 31 66" data-x="b"><span class="c1"></span><span class="c2"></span><span class="c3"></span></div>
+  <!-- TRUST STRIP -->
+  <div class="strip">
+    <div class="wrap">
+      <div class="cell"><div class="k">0 code</div><div class="v">à connaître, vos mots suffisent</div></div>
+      <div class="cell"><div class="k">40+ infos</div><div class="v">par entreprise, email compris</div></div>
+      <div class="cell"><div class="k">1 ×/mois</div><div class="v">mise à jour automatique, à vie</div></div>
+      <div class="cell"><div class="k">0 €</div><div class="v">d'abonnement, paiement unique</div></div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="sec-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Le constat</div>
+        <h2>Un fichier de prospection meurt en trois mois.</h2>
+      </div>
+      <div class="cols3">
+        <div class="problem"><h3>Il est figé le jour de l'achat</h3><p>Des entreprises se créent dans votre cible, d'autres ferment. Votre fichier, lui, ne bouge plus. Un an après, une ligne sur cinq est fausse.</p></div>
+        <div class="problem"><h3>Il n'a pas les contacts</h3><p>Les bases publiques donnent l'identité de toutes les entreprises de France, jamais le téléphone ni l'email. C'est exactement ce trou que ProspectData comble.</p></div>
+        <div class="problem"><h3>Le suivi vit dans un Excel</h3><p>Deux commerciaux appellent le même prospect la même semaine, les relances passent à la trappe, et le fichier finit oublié dans un dossier.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section>
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <div class="eyebrow">La solution</div>
+          <h2 style="font-size:clamp(28px,4vw,42px)">Vos mots suffisent.</h2>
+          <p class="lead">Le bon ciblage se joue dans la nomenclature officielle des activités, les codes APE. Ce travail de traduction, ProspectData le fait pour vous, le fait valider, puis construit le CRM.</p>
+          <ul>
+            <li>Vous décrivez le métier visé en une phrase, sans aucun code</li>
+            <li>Les codes retenus vous sont soumis avant toute construction</li>
+            <li>Le volume exact est compté et annoncé gratuitement, avant de payer</li>
+          </ul>
+        </div>
+        <div class="ba">
+          <div class="row before"><div class="tag">Avant</div><div>Deviner les bons codes NAF, exporter des listes, chercher chaque téléphone à la main, croiser dans Excel, recommencer chaque trimestre.</div></div>
+          <div class="row after"><div class="tag">Avec ProspectData</div><div class="txt">« Les garages de moins de 20 salariés en Auvergne-Rhône-Alpes »</div></div>
         </div>
       </div>
-
-      <div class="m-foot"><span id="m-foot">contacts en cours de recherche</span><span class="pill">se met à jour tout seul</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="wrap" style="padding-bottom:12px">
-  <div class="stats reveal">
-    <div class="stat"><div class="n">732</div><div class="l">codes APE couverts, tous secteurs</div></div>
-    <div class="stat"><div class="n">40+</div><div class="l">informations par entreprise</div></div>
-    <div class="stat"><div class="n">0 €</div><div class="l">d'abonnement, un paiement unique</div></div>
-    <div class="stat"><div class="n">1 fois/mois</div><div class="l">mise à jour automatique, à vie</div></div>
-  </div>
-</section>
-
-<section class="band wrap" id="probleme">
-  <p class="eyebrow reveal">Le constat</p>
-  <h2 class="big reveal">Un fichier de prospection meurt en trois mois.</h2>
-  <p class="lede reveal">Peu importe où vous l'avez acheté. C'est toujours la même fin.</p>
-  <div class="cards">
-    <div class="card reveal">
-      <div class="neg">Problème 1</div>
-      <h3>Il est figé le jour de l'achat</h3>
-      <p>Chaque mois, des entreprises se créent dans votre cible et d'autres ferment. Votre fichier, lui, ne bouge plus. Au bout d'un an, une ligne sur cinq est fausse et les meilleures opportunités n'y sont même pas.</p>
-    </div>
-    <div class="card reveal">
-      <div class="neg">Problème 2</div>
-      <h3>Il n'a pas les contacts</h3>
-      <p>Les bases publiques donnent l'identité de toutes les entreprises de France, gratuitement. Mais jamais le téléphone ni l'email. C'est précisément ce trou que je comble, entreprise par entreprise.</p>
-    </div>
-    <div class="card reveal">
-      <div class="neg">Problème 3</div>
-      <h3>Personne ne sait où en est le suivi</h3>
-      <p>Deux commerciaux appellent le même garage la même semaine. Les relances passent à la trappe. Le fichier finit dans un dossier que plus personne n'ouvre.</p>
-    </div>
-  </div>
-</section>
-
-<section class="band band-alt" id="methode">
-  <div class="wrap">
-    <p class="eyebrow reveal">La méthode</p>
-    <h2 class="big reveal">Vous parlez normalement. Je m'occupe du reste.</h2>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="num">01</div>
-        <h3>Vous décrivez votre cible avec vos mots</h3>
-        <p>« Les garages de moins de 20 salariés en Auvergne-Rhône-Alpes. » « Les boulangeries de Gironde. » « Les bureaux d'études thermiques en France. » Vous n'avez aucun code à connaître, aucun formulaire technique à remplir. Une phrase suffit.</p>
+  <!-- HOW IT WORKS -->
+  <section class="sec-dark" id="comment">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Comment ça marche</div>
+        <h2 style="color:#fff">Quatre étapes, et il tourne tout seul.</h2>
+        <p>De votre phrase jusqu'au CRM qui s'entretient sans vous.</p>
       </div>
-      <div class="step reveal">
-        <div class="num">02</div>
-        <h3>Je traduis en codes d'activité officiels</h3>
-        <p>C'est mon travail, pas le vôtre. Chaque métier correspond à un ou plusieurs codes APE dans la nomenclature de l'INSEE, et tout le ciblage se joue là. Je vous les soumets avant de lancer quoi que ce soit, pour être sûr qu'on parle bien de la même chose.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">03</div>
-        <h3>Je construis le CRM et je le remplis</h3>
-        <p>Toutes les entreprises françaises portant ces codes entrent dans votre CRM. Pour chacune, je retrouve le téléphone, l'email vérifié, le site, le dirigeant, la taille, les finances. Puis un score de priorité, pour savoir qui appeler lundi matin.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">04</div>
-        <h3>Vous prospectez, il se met à jour seul</h3>
-        <p>Votre équipe travaille la liste : statuts, relances, notes, attribution. En arrière-plan, chaque mois, le CRM va rechercher ce qui a changé et se complète tout seul. Vous n'avez plus rien à me redemander.</p>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>Vous décrivez votre cible</h3><p>Un métier, une zone, une taille. « Les boulangeries de Gironde » suffit, aucun formulaire technique.</p></div>
+        <div class="step"><div class="num">02</div><h3>Traduction en codes APE</h3><p>Chaque métier correspond à des codes officiels de l'INSEE. Ils vous sont soumis pour validation avant de lancer quoi que ce soit.</p></div>
+        <div class="step"><div class="num">03</div><h3>Votre CRM arrive rempli</h3><p>Toutes les entreprises concernées, avec téléphone, email vérifié, dirigeant, finances et un score de priorité.</p></div>
+        <div class="step"><div class="num">04</div><h3>Il se met à jour seul</h3><p>Chaque mois : nouvelles entreprises ajoutées, contacts complétés, sociétés fermées écartées. Vos notes ne sont jamais écrasées.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="band band-ink" id="vivant">
-  <div class="wrap">
-    <p class="eyebrow reveal">Ce qui change tout</p>
-    <h2 class="big reveal">C'est le seul CRM qui se remplit sans vous.</h2>
-    <p class="lede reveal">Un CRM classique arrive vide : c'est à vous de le nourrir, et c'est exactement pour ça qu'il finit abandonné. Le vôtre arrive plein, et il continue de se remplir tout seul. Vos statuts, vos notes et votre historique ne sont jamais écrasés, seules les informations nouvelles s'ajoutent.</p>
-    <div class="cards">
-      <div class="card reveal"><h3>Les entreprises qui viennent de naître</h3><p>Toute société qui se crée avec un de vos codes APE entre automatiquement dans votre CRM. Un prospect neuf est un prospect que vos concurrents n'ont pas encore appelé. C'est votre meilleur créneau, et il arrive tout seul.</p></div>
-      <div class="card reveal"><h3>Les contacts qui manquaient encore</h3><p>Une entreprise sans email au premier passage peut publier un site trois mois plus tard. Le système repasse dessus et complète la fiche. Votre base ne fait que s'améliorer avec le temps au lieu de se dégrader.</p></div>
-      <div class="card reveal"><h3>Les sociétés qu'il faut écarter</h3><p>Liquidation judiciaire, radiation, procédure collective : elles sont signalées et sorties de la liste avant que votre commercial y perde un appel, un déplacement ou un devis.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="band wrap" id="crm">
-  <p class="eyebrow reveal">Votre CRM</p>
-  <h2 class="big reveal">Un seul écran, une seule mission : dérouler la liste.</h2>
-  <p class="lede reveal">Il ne gère pas vos devis, ni vos factures, ni vos campagnes marketing. C'est volontaire : c'est ce qui transforme un CRM en usine à gaz que plus personne n'ouvre. Le vôtre sert à une chose, faire avancer des prospects qualifiés sans que personne se marche dessus.</p>
-
-  <div class="cockpit reveal">
-    <div class="cockpit-bar">
-      <b>Garages - Auvergne-Rhône-Alpes</b>
-      <span class="mono" style="font-size:11.5px">mise à jour du 1er août</span>
-      <div class="kpis">
-        <span class="kpi">à contacter <b>318</b></span>
-        <span class="kpi">contactés <b>94</b></span>
-        <span class="kpi">RDV <b>17</b></span>
-        <span class="kpi">signés <b>4</b></span>
+  <!-- LE CRM : CARTE + FICHES -->
+  <section id="crm">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Votre CRM, en vrai</div>
+        <h2>La carte de vos prospects, leurs emails, leurs téléphones.</h2>
+        <p>Voici à quoi ressemble un CRM livré, ici sur la cible « garages en Auvergne-Rhône-Alpes ». Chaque point de la carte est un prospect, chaque fiche a son email et son téléphone, prêts à cliquer.</p>
+      </div>
+      <div class="cockpit reveal">
+        <div class="cockpit-bar">
+          <b>Garages - Auvergne-Rhône-Alpes</b>
+          <span class="maj">mise à jour du 1er août</span>
+          <div class="kpis">
+            <span class="kpi">à contacter <b>318</b></span>
+            <span class="kpi">contactés <b>94</b></span>
+            <span class="kpi">RDV <b>17</b></span>
+            <span class="kpi">signés <b>4</b></span>
+          </div>
+        </div>
+        <div class="crm-grid">
+          <div id="map" aria-label="Carte des prospects de la démonstration"></div>
+          <div class="fiches" id="fiches"></div>
+        </div>
+      </div>
+      <div class="crm-note">
+        <span>Email et téléphone cliquables sur chaque fiche</span>
+        <span>Attribution par commercial, statuts et relances</span>
+        <span>Les nouveaux prospects du mois signalés</span>
+        <span>Export Excel à tout moment</span>
       </div>
     </div>
-    <div class="tblwrap">
-      <table class="tbl">
-        <thead><tr><th>Entreprise</th><th>Priorité</th><th>Téléphone</th><th>Assigné</th><th>Statut</th><th>Relance</th></tr></thead>
+  </section>
+
+  <!-- DANS CHAQUE FICHE -->
+  <section class="sec-alt" id="fiche">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Dans chaque fiche</div>
+        <h2>Plus de quarante informations par entreprise.</h2>
+        <p>De quoi qualifier, prioriser et personnaliser votre approche avant même de décrocher le téléphone.</p>
+      </div>
+      <div class="forms">
+        <div class="form-card">
+          <div class="vis"><div class="rowline"><span class="rl"><span>téléphone</span><span>04 78 64 20 41</span></span><span class="rl"><span>email</span><span style="color:var(--green)">contact@...</span></span><span class="rl" style="border:none"><span>site</span><span>vérifié &#10003;</span></span></div></div>
+          <h3>Le contact direct</h3>
+          <p>Téléphone, email de l'entreprise avec domaine vérifié, site web et page LinkedIn. Aucune adresse devinée.</p>
+        </div>
+        <div class="form-card">
+          <div class="vis"><div class="rowline"><span class="rl"><span>dirigeante</span><span>C. Dubois</span></span><span class="rl"><span>effectif</span><span>10 à 19</span></span><span class="rl" style="border:none"><span>CA</span><span>1,4 M€</span></span></div></div>
+          <h3>Le décideur et la taille</h3>
+          <p>Dirigeant principal et sa fonction, effectif, chiffre d'affaires et résultat quand les comptes sont déposés.</p>
+        </div>
+        <div class="form-card">
+          <div class="vis"><span class="num">87<small>/ 100</small></span><span class="badge w">tier A</span></div>
+          <h3>La priorité d'appel</h3>
+          <p>Un score sur 100 et un tier A, B ou C, avec les raisons du score. Vous savez qui appeler lundi matin.</p>
+        </div>
+        <div class="form-card">
+          <div class="vis"><span class="badge g">RGE</span><span class="badge">Qualiopi</span><span class="badge">BODACC</span></div>
+          <h3>Les signaux qui comptent</h3>
+          <p>Labels, ancienneté, annonces légales, procédures collectives : les sociétés à écarter sortent de la liste toutes seules.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISE A JOUR -->
+  <section id="vivant">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Sans rien demander</div>
+        <h2>Le seul CRM qui se remplit sans vous.</h2>
+        <p>Un CRM classique arrive vide, et c'est pour ça qu'il finit abandonné. Le vôtre arrive plein et continue de se remplir, chaque mois, tout seul.</p>
+      </div>
+      <div class="forms">
+        <div class="form-card">
+          <div class="vis"><span class="badge g">+ 12 ce mois</span></div>
+          <h3>Les entreprises qui naissent</h3>
+          <p>Toute société créée dans vos codes APE entre automatiquement. Un prospect neuf, c'est un prospect que vos concurrents n'ont pas encore appelé.</p>
+        </div>
+        <div class="form-card">
+          <div class="vis"><div class="rowline"><span class="rl"><span>email</span><span style="color:#B7B2A4">manquant</span></span><span class="rl" style="border:none"><span>email</span><span style="color:var(--green)">contact@... &#10003;</span></span></div></div>
+          <h3>Les contacts complétés</h3>
+          <p>Une entreprise sans email au premier passage peut publier un site trois mois plus tard. Le système repasse et complète la fiche.</p>
+        </div>
+        <div class="form-card">
+          <div class="vis"><span class="badge">radiée</span><span class="badge">liquidation</span></div>
+          <h3>Les sociétés écartées</h3>
+          <p>Liquidation, radiation, procédure collective : signalées et sorties avant que votre commercial y perde un appel. Vos statuts et notes, eux, ne bougent jamais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIX -->
+  <section class="sec-alt" id="prix">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Les prix</div>
+        <h2>Trois formules, aucune limite de volume.</h2>
+        <p>Que votre cible fasse 300 entreprises ou 40 000, le prix ne change pas. Et le comptage est gratuit avant toute commande.</p>
+      </div>
+      <div class="formulas">
+        <div class="formula">
+          <h3>Une cible</h3>
+          <p class="sub">Un dirigeant ou un commercial, un métier à démarcher.</p>
+          <div class="price">490 <small>€</small></div>
+          <div class="once">paiement unique</div>
+          <ul>
+            <li>1 cible, autant de codes APE que nécessaire</li>
+            <li>Volume illimité d'entreprises</li>
+            <li>CRM en ligne déployé et déjà rempli</li>
+            <li>Emails et téléphones vérifiés</li>
+            <li>Mise à jour automatique mensuelle</li>
+            <li>2 utilisateurs</li>
+          </ul>
+          <div class="cost">Corrections garanties <b>60 jours</b>, en direct.</div>
+        </div>
+        <div class="formula featured">
+          <div class="reco">Le plus demandé</div>
+          <h3>Équipe</h3>
+          <p class="sub">Plusieurs commerciaux, ou plusieurs marchés à couvrir.</p>
+          <div class="price">990 <small>€</small></div>
+          <div class="once">paiement unique</div>
+          <ul>
+            <li>Cibles illimitées, autant de métiers que voulu</li>
+            <li>Tout ce que contient Une cible</li>
+            <li>Utilisateurs illimités, attribution par commercial</li>
+            <li>Carte des prospects et tableau de bord dirigeant</li>
+            <li>Vos clients actuels exclus automatiquement</li>
+            <li>Prise en main d'une heure incluse</li>
+          </ul>
+          <div class="cost">Corrections garanties <b>60 jours</b>, en direct.</div>
+        </div>
+        <div class="formula">
+          <h3>Sur mesure</h3>
+          <p class="sub">Un métier avec ses propres critères de qualification.</p>
+          <div class="price">dès 2 400 <small>€</small></div>
+          <div class="once">paiement unique</div>
+          <ul>
+            <li>Tout ce que contient Équipe</li>
+            <li>Colonnes et scoring propres à votre métier</li>
+            <li>Sources sectorielles supplémentaires</li>
+            <li>Connexion à vos outils existants</li>
+            <li>Formation de votre équipe commerciale</li>
+          </ul>
+          <div class="cost">Corrections garanties <b>60 jours</b>, en direct.</div>
+        </div>
+      </div>
+      <p class="formulas-note">Aucun abonnement : la mise à jour mensuelle est automatisée, elle est donc incluse à vie. Passé les 60 jours, les évolutions se font au forfait dès 90 €, toujours chiffré et validé avant de commencer.</p>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Comparatif</div>
+        <h2>Trois façons d'obtenir vos prospects.</h2>
+      </div>
+      <table class="cmp">
+        <thead>
+          <tr><th>&nbsp;</th><th>Plateforme par abonnement</th><th>Fichier acheté</th><th class="hi">ProspectData</th></tr>
+        </thead>
         <tbody>
-          <tr class="fresh"><td class="co">Garage du Vieux Pont<span class="new-tag">nouveau</span></td><td><span class="tier a">A</span></td><td class="mono">04 74 22 08 51</td><td>-</td><td><span class="st new">à contacter</span></td><td class="mono">-</td></tr>
-          <tr><td class="co">Garage Bertholon</td><td><span class="tier a">A</span></td><td class="mono">04 77 33 12 88</td><td>Sofiene</td><td><span class="st rdv">RDV le 12</span></td><td class="mono">-</td></tr>
-          <tr><td class="co">Auto Service Vaise</td><td><span class="tier a">A</span></td><td class="mono">04 78 64 20 41</td><td>Sofiene</td><td><span class="st rel">à relancer</span></td><td class="mono">08/09</td></tr>
-          <tr><td class="co">Carrosserie Meyzieu</td><td><span class="tier b">B</span></td><td class="mono">04 72 45 90 13</td><td>Romain</td><td><span class="st tel">contacté</span></td><td class="mono">15/09</td></tr>
-          <tr><td class="co">SARL Pneus Vienne</td><td><span class="tier b">B</span></td><td class="mono">04 74 85 31 66</td><td>-</td><td><span class="st new">à contacter</span></td><td class="mono">-</td></tr>
+          <tr><td>Coût</td><td>1 200 à 2 800 € par an, sans fin</td><td>0,10 à 1 € par contact, figé</td><td class="col-hi">Un paiement unique, dès 490 €</td></tr>
+          <tr><td>Ciblage</td><td>À construire seul dans leur interface</td><td>Des critères imposés</td><td class="col-hi">Traduit avec vous, validé avant</td></tr>
+          <tr><td>Volume</td><td>Crédits mensuels limités</td><td>Facturé à la ligne</td><td class="col-hi"><span class="yes">Illimité</span></td></tr>
+          <tr><td>Mise à jour</td><td>Tant que vous payez</td><td class="no">Jamais</td><td class="col-hi"><span class="yes">Mensuelle, incluse à vie</span></td></tr>
+          <tr><td>Outil de suivi</td><td>Parfois, en option payante</td><td class="no">Aucun</td><td class="col-hi">CRM avec carte, statuts, relances</td></tr>
+          <tr><td>Si vous arrêtez</td><td class="no">Vous perdez tout</td><td>Un fichier mort</td><td class="col-hi"><span class="yes">Le CRM et la base restent à vous</span></td></tr>
         </tbody>
       </table>
     </div>
-  </div>
+  </section>
 
-  <div class="feat">
-    <div>Chaque prospect a un statut, daté</div>
-    <div>Attribution par commercial, fini les doublons d'appels</div>
-    <div>Relances programmées et visibles de tous</div>
-    <div>Notes libres sur chaque prospect</div>
-    <div>Les nouvelles entreprises signalées d'un coup d'oeil</div>
-    <div>Tableau de bord pour le dirigeant</div>
-    <div>Vos clients actuels exclus dès le départ</div>
-    <div>Export Excel à tout moment</div>
-  </div>
-</section>
-
-<section class="band band-ink" id="fiche">
-  <div class="wrap">
-    <p class="eyebrow reveal">Dans chaque ligne</p>
-    <h2 class="big reveal">Plus de quarante informations par entreprise.</h2>
-    <p class="lede reveal">Pas un nom et une ville. De quoi qualifier, prioriser et personnaliser votre approche avant même de décrocher le téléphone.</p>
-    <div class="cols reveal">
-      <div class="colgrp"><h3>Identité</h3><ul><li>raison sociale</li><li>SIREN</li><li>SIRET</li><li>forme juridique</li><li>date de création</li><li>ancienneté</li><li>code APE</li><li>activité en clair</li></ul></div>
-      <div class="colgrp"><h3>Taille</h3><ul><li>tranche d'effectif</li><li>catégorie</li><li>établissements ouverts</li><li>multi-sites</li></ul></div>
-      <div class="colgrp"><h3>Finances</h3><ul><li>chiffre d'affaires</li><li>CA année précédente</li><li>résultat net</li><li>exercice concerné</li></ul></div>
-      <div class="colgrp"><h3>Décideurs</h3><ul><li>dirigeant principal</li><li>sa fonction</li><li>jusqu'à 4 autres</li></ul></div>
-      <div class="colgrp"><h3>Contact</h3><ul><li>téléphone</li><li>email</li><li>domaine vérifié</li><li>site web</li><li>page LinkedIn</li><li>origine de l'email</li></ul></div>
-      <div class="colgrp"><h3>Adresse</h3><ul><li>adresse complète</li><li>code postal</li><li>commune</li><li>département</li><li>coordonnées GPS</li></ul></div>
-      <div class="colgrp"><h3>Signaux</h3><ul><li>labels RGE, Qualiopi</li><li>convention collective</li><li>TVA intracommunautaire</li><li>annonces légales</li></ul></div>
-      <div class="colgrp"><h3>Priorité</h3><ul><li>score sur 100</li><li>tier A, B ou C</li><li>raisons du score</li><li>sociétés à écarter</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<section class="band wrap" id="modele">
-  <p class="eyebrow reveal">Le modèle</p>
-  <h2 class="big reveal">Vous payez une fois. Pas tous les mois, à vie.</h2>
-  <table class="comp reveal">
-    <thead><tr><th></th><th>Les plateformes du marché</th><th class="us">ProspectData</th></tr></thead>
-    <tbody>
-      <tr><td>Coût</td><td>100 à 230 € par mois, sans fin, soit 1 200 à 2 800 € par an</td><td class="us">490 € une seule fois</td></tr>
-      <tr><td>Ciblage</td><td>à vous de deviner les bons codes dans leur interface</td><td class="us">je le traduis et je vous le fais valider</td></tr>
-      <tr><td>Volume</td><td>crédits mensuels, puis il faut payer plus</td><td class="us">aucune limite de lignes</td></tr>
-      <tr><td>Mise à jour</td><td>incluse tant que vous payez</td><td class="us">incluse, sans rien payer ensuite</td></tr>
-      <tr><td>Colonnes</td><td>celles de l'outil, pas les vôtres</td><td class="us">adaptées à votre métier</td></tr>
-      <tr><td>Si vous arrêtez</td><td>vous perdez l'accès et les données</td><td class="us">le CRM et la base restent à vous</td></tr>
-      <tr><td>En cas de souci</td><td>support mutualisé, ticket numéroté</td><td class="us">moi, en direct, garanti 60 jours</td></tr>
-    </tbody>
-  </table>
-  <div class="fair reveal"><b>Pour être honnête :</b> ces plateformes font mieux que moi sur trois points. Les séquences d'emails automatisées, les contacts nominatifs issus de LinkedIn, et les très gros volumes à l'international. Si c'est exactement ce qu'il vous faut, prenez-les, vous serez mieux servi. Mon terrain c'est la cible française précise, livrée complète et vivante, sans abonnement.</div>
-</section>
-
-<section class="band band-alt" id="prix">
-  <div class="wrap">
-    <p class="eyebrow reveal">Les prix</p>
-    <h2 class="big reveal">Trois formules, aucune limite de volume.</h2>
-    <p class="lede reveal">Que votre cible fasse 300 entreprises ou 40 000, le prix ne change pas. Je compte le volume exact et je vous l'annonce gratuitement avant toute commande. Aucun engagement, aucune reconduction tacite, aucun préavis de résiliation.</p>
-    <div class="plans">
-
-      <div class="plan reveal">
-        <h3>Une cible</h3>
-        <p class="who">Pour un dirigeant ou un commercial qui démarche un seul métier.</p>
-        <div class="price">490 <small>€</small></div>
-        <div class="once">paiement unique</div>
-        <ul>
-          <li><b>1 cible</b>, avec autant de codes APE qu'elle nécessite</li>
-          <li><b>Volume illimité</b> d'entreprises</li>
-          <li>CRM en ligne déployé et déjà rempli</li>
-          <li>Les 40+ informations par entreprise</li>
-          <li>Score de priorité et tiers A, B, C</li>
-          <li>Mise à jour automatique mensuelle</li>
-          <li>2 utilisateurs</li>
-          <li>Corrections garanties 60 jours</li>
-        </ul>
-        <a class="btn btn-ghost" href="#contact">Demander le comptage</a>
+  <!-- CONFORMITE -->
+  <section class="sec-dark" id="sources">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Sources et conformité</div>
+        <h2 style="color:#fff">Des données publiques, utilisées dans les règles.</h2>
+        <p>Tout part de bases officielles ouvertes sous licence Etalab : SIRENE, INPI, BODACC, nomenclature APE de l'INSEE. Rien n'est acheté à un revendeur, rien n'est aspiré d'un réseau social.</p>
       </div>
-
-      <div class="plan hi reveal">
-        <span class="flag">le plus demandé</span>
-        <h3>Équipe</h3>
-        <p class="who">Pour une entreprise avec plusieurs commerciaux ou plusieurs marchés.</p>
-        <div class="price">990 <small>€</small></div>
-        <div class="once">paiement unique</div>
-        <ul>
-          <li><b>Cibles illimitées</b>, autant de métiers que vous voulez</li>
-          <li><b>Volume illimité</b> d'entreprises</li>
-          <li>Tout ce que contient la formule Une cible</li>
-          <li><b>Utilisateurs illimités</b> et attribution par commercial</li>
-          <li>Vos clients actuels exclus automatiquement</li>
-          <li>Tableau de bord dirigeant</li>
-          <li>Prise en main d'une heure incluse</li>
-          <li>Corrections garanties 60 jours</li>
-        </ul>
-        <a class="btn btn-primary" href="#contact">Démarrer</a>
+      <div class="sec-list">
+        <div class="it"><span class="g">&#8226;</span><div><h3>Uniquement du B2B</h3><p>Des contacts professionnels d'entreprises, sur la base de l'intérêt légitime.</p></div></div>
+        <div class="it"><span class="g">&#8226;</span><div><h3>Aucune adresse devinée</h3><p>Des emails de contact publiés par l'entreprise elle-même, domaine vérifié. Jamais de prenom.nom fabriqué qui rebondit et fait blacklister.</p></div></div>
+        <div class="it"><span class="g">&#8226;</span><div><h3>Chaque ligne est tracée</h3><p>L'origine de chaque information est indiquée, vous pouvez la justifier.</p></div></div>
+        <div class="it"><span class="g">&#8226;</span><div><h3>Opt-out respecté</h3><p>Une liste de suppression est intégrée et appliquée à chaque mise à jour.</p></div></div>
       </div>
+    </div>
+  </section>
 
-      <div class="plan reveal">
-        <h3>Sur mesure</h3>
-        <p class="who">Pour un métier qui a ses propres critères de qualification.</p>
-        <div class="price">dès 2 400 <small>€</small></div>
-        <div class="once">paiement unique</div>
-        <ul>
-          <li>Tout ce que contient la formule Équipe</li>
-          <li>Colonnes propres à votre métier</li>
-          <li>Score de priorité conçu avec vous</li>
-          <li>Sources sectorielles supplémentaires</li>
-          <li>Connexion à vos outils existants</li>
-          <li>Formation de votre équipe commerciale</li>
-          <li>Corrections garanties 60 jours</li>
-        </ul>
-        <a class="btn btn-ghost" href="#contact">En parler</a>
+  <!-- POUR QUI -->
+  <section class="sec-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Pour qui</div>
+        <h2>Pensé pour les TPE et PME qui prospectent.</h2>
       </div>
-
-    </div>
-
-    <div class="marche reveal">
-      <p class="marche-t">Ce que coûte la même chose ailleurs, tarifs publics 2026</p>
-      <div class="marche-g">
-        <div><b>1 200 à 2 800 €</b><span>par an, une plateforme de prospection française, à payer tant que vous l'utilisez</span></div>
-        <div><b>800 à 5 000 €</b><span>par an chez les acteurs sur devis, avec engagement annuel et résiliation par recommandé</span></div>
-        <div><b>0,10 à 1 €</b><span>par contact pour un fichier figé, plus 50 à 300 € de frais fixes</span></div>
-        <div><b>dès 15 000 €</b><span>pour un CRM sur mesure en agence, budget minimal annoncé pour une TPE</span></div>
+      <div class="fit">
+        <div class="f"><h3>Vous prospectez sur Excel</h3><p>Ou pas du tout, faute de liste fiable. Le CRM arrive plein, il n'y a plus qu'à appeler.</p></div>
+        <div class="f"><h3>Vous refusez un abonnement de plus</h3><p>Vous payez une fois, l'outil et la base restent à vous, même si on ne se reparle jamais.</p></div>
+        <div class="f"><h3>Vous voulez du local et du précis</h3><p>Une cible française fine, par métier et par zone, pas un annuaire mondial généraliste.</p></div>
       </div>
-      <p class="marche-n">Sources : tarifs publics des éditeurs et baromètres du marché français, relevés en 2026. À vérifier avant de vous décider, ces tarifs bougent.</p>
     </div>
-    <p class="plan-note reveal">Passé les 60 jours de garantie, les corrections et les évolutions se font <b>au forfait, à partir de 90 €</b>, toujours chiffré et validé par vous avant que je commence. Aucune facture ne tombe sans votre accord.</p>
-  </div>
-</section>
+  </section>
 
-<section class="band band-ink" id="sources">
-  <div class="wrap">
-    <p class="eyebrow reveal">Sources et conformité</p>
-    <h2 class="big reveal">Des données publiques, utilisées dans les règles.</h2>
-    <p class="lede reveal">Tout part de bases officielles ouvertes, sous licence Etalab. Rien n'est acheté à un revendeur, rien n'est aspiré d'un réseau social.</p>
-    <div class="src reveal">
-      <span>SIRENE / Annuaire des Entreprises</span>
-      <span>INPI, comptes déposés</span>
-      <span>BODACC, annonces légales</span>
-      <span>Nomenclature APE de l'INSEE</span>
-      <span>ADEME, entreprises RGE</span>
-      <span>FINESS, secteur santé</span>
-      <span>Base Adresse Nationale</span>
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Questions fréquentes</div>
+        <h2>Ce que l'on nous demande le plus.</h2>
+      </div>
+      <div style="max-width:820px">
+        <div class="faq-item"><button class="faq-q">Je ne connais pas mes codes APE, c'est un problème ?<span class="pm"></span></button><div class="faq-a"><p>Non, et c'est le cas de presque tous les clients. Vous décrivez le métier visé avec vos mots, la traduction dans la nomenclature officielle est faite pour vous, et les codes retenus vous sont soumis avant de lancer la construction.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Comment un CRM peut-il se mettre à jour tout seul ?<span class="pm"></span></button><div class="faq-a"><p>Le lien avec les sources publiques reste actif. Chaque mois, le système recherche les entreprises qui portent vos codes APE, repère les nouvelles, complète les contacts manquants et signale celles qui ont fermé. Tout est automatisé, c'est pour ça que ce n'est pas facturé.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Mes statuts et mes notes sont-ils écrasés à la mise à jour ?<span class="pm"></span></button><div class="faq-a"><p>Jamais. La fusion se fait par identifiant d'entreprise : votre suivi commercial est conservé intégralement, seules les informations manquantes sont complétées et les nouvelles entreprises ajoutées.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Les emails et téléphones fonctionnent-ils vraiment ?<span class="pm"></span></button><div class="faq-a"><p>Le domaine de chaque adresse est vérifié techniquement avant livraison. Ce sont des adresses de contact publiées par l'entreprise elle-même, du type contact@ ou accueil@. Aucune adresse nominative n'est fabriquée en devinant un prénom et un nom : ce sont celles qui rebondissent et font blacklister votre domaine d'envoi.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Combien d'entreprises vais-je obtenir ?<span class="pm"></span></button><div class="faq-a"><p>Cela dépend de votre cible. Le comptage est gratuit et sans engagement : décrivez-la, le volume exact vous est annoncé avant toute commande, avec le détail par département. Si c'est trop peu pour justifier la dépense, on vous le dit franchement.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Y a-t-il une limite au nombre de lignes ?<span class="pm"></span></button><div class="faq-a"><p>Non. Que votre cible fasse 300 entreprises ou 40 000, le prix est le même. C'est la différence principale avec les plateformes qui vendent des crédits mensuels.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Combien de temps avant de recevoir mon CRM ?<span class="pm"></span></button><div class="faq-a"><p>Environ dix jours ouvrés après validation des codes APE. Sur une cible très large, l'accès est ouvert plus tôt sur une première tranche exploitable, pour que vos commerciaux commencent sans attendre.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Puis-je garder mon CRM actuel ?<span class="pm"></span></button><div class="faq-a"><p>Oui. Si vous avez déjà un outil qui vous convient, la base peut être livrée au format qu'il attend, et rafraîchie de la même manière. Cela relève de la formule Sur mesure quand la connexion doit être automatique.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Est-ce légal ?<span class="pm"></span></button><div class="faq-a"><p>Oui. Ciblage strictement B2B sur la base de l'intérêt légitime, à partir de sources publiques sous licence Etalab. L'origine de chaque information est tracée et une liste de suppression est respectée à chaque mise à jour.</p></div></div>
+      </div>
     </div>
-    <div class="rgpd">
-      <div><b>Uniquement du B2B</b>Des contacts professionnels d'entreprises, sur la base de l'intérêt légitime.</div>
-      <div><b>Aucune adresse nominative devinée</b>Des emails de contact d'entreprise, jamais de prenom.nom fabriqué.</div>
-      <div><b>Chaque ligne est tracée</b>L'origine de chaque information est indiquée, vous pouvez la justifier.</div>
-      <div><b>Opt-out respecté</b>Une liste de suppression est intégrée et appliquée à chaque mise à jour.</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="band wrap" id="faq">
-  <p class="eyebrow reveal">Questions fréquentes</p>
-  <h2 class="big reveal">Ce qu'on me demande le plus souvent.</h2>
-  <div class="faq">
-    <details><summary>Je ne connais pas mes codes APE, c'est un problème ?</summary><p>Non, et c'est le cas de presque tous mes clients. Vous me décrivez le métier que vous visez avec vos mots, je fais la traduction dans la nomenclature officielle, et je vous soumets les codes retenus avant de lancer la construction. Vous validez, ou vous me dites que ce n'est pas tout à fait ça et on ajuste.</p></details>
-    <details><summary>Comment un CRM peut-il se mettre à jour tout seul ?</summary><p>Parce que le lien avec les sources publiques reste actif. Chaque mois, le système va rechercher les entreprises qui portent vos codes APE, repère celles qui sont nouvelles, complète les contacts qui manquaient et signale celles qui ont fermé. Tout est automatisé : ça ne me demande aucun travail, c'est pour ça que ce n'est pas facturé.</p></details>
-    <details><summary>Mes statuts et mes notes sont-ils écrasés à chaque mise à jour ?</summary><p>Jamais. La fusion se fait par identifiant d'entreprise : votre suivi commercial est conservé intégralement, seules les informations manquantes sont complétées et les nouvelles entreprises ajoutées.</p></details>
-    <details><summary>Combien d'entreprises vais-je obtenir ?</summary><p>Cela dépend entièrement de votre cible. Le comptage est gratuit et sans engagement : décrivez-moi votre cible, je vous annonce le volume exact avant que vous commandiez. Si le résultat est trop faible pour justifier la dépense, je vous le dirai franchement.</p></details>
-    <details><summary>Y a-t-il une limite au nombre de lignes ?</summary><p>Non. Que votre cible fasse 300 entreprises ou 40 000, le prix est le même. C'est la différence principale avec les plateformes qui fonctionnent par crédits mensuels.</p></details>
-    <details><summary>Combien de temps avant de recevoir mon CRM ?</summary><p>Comptez dix jours ouvrés à partir de la validation des codes APE. Si la cible est très large, je vous ouvre l'accès sur une première tranche exploitable plus tôt, pour que vos commerciaux commencent sans attendre.</p></details>
-    <details><summary>Les emails et téléphones fonctionnent-ils vraiment ?</summary><p>Le domaine de chaque adresse est vérifié techniquement avant livraison. Il s'agit d'adresses de contact d'entreprise du type contact@ ou accueil@, celles que l'entreprise publie elle-même. Je ne fabrique jamais d'adresse nominative en devinant un prénom et un nom : ce sont celles qui rebondissent et qui font blacklister votre domaine d'envoi.</p></details>
-    <details><summary>Que se passe-t-il après les 60 jours de garantie ?</summary><p>Pendant 60 jours, toute correction est prise en charge sans supplément. Ensuite, corrections et évolutions se font au forfait à partir de 90 €, systématiquement chiffré et validé par vous avant que je commence. Vous ne recevez jamais de facture surprise.</p></details>
-    <details><summary>Puis-je garder mon CRM actuel ?</summary><p>Oui. Si vous avez déjà un outil qui vous convient, la base peut être livrée au format qu'il attend, et rafraîchie de la même manière. Cela relève de la formule Sur mesure quand la connexion doit être automatique.</p></details>
-    <details><summary>Est-ce légal ?</summary><p>Oui. Ciblage strictement B2B, sur la base de l'intérêt légitime, à partir de sources publiques sous licence Etalab. L'origine de chaque information est tracée, ce qui vous permet de la justifier, et une liste de suppression est intégrée puis respectée à chaque mise à jour.</p></details>
-    <details><summary>Travaillez-vous partout en France ?</summary><p>Oui, les sources sont nationales. Je suis basé à Lyon, ce qui facilite les rendez-vous en Auvergne-Rhône-Alpes, mais tout se fait très bien à distance.</p></details>
-  </div>
-</section>
-
-<section class="band-ink" id="contact">
-  <div class="wrap final">
-    <p class="eyebrow reveal">Gratuit et sans engagement</p>
-    <h2 class="reveal">Décrivez votre cible. Je vous dis combien elle pèse.</h2>
-    <p class="lede reveal">Une phrase suffit : le métier que vous visez, la zone, la taille d'entreprise. Je traduis en codes APE et je vous annonce le nombre exact d'entreprises concernées, avec le détail par département. Gratuitement, sans que vous ayez rien à signer.</p>
-    <div class="cta-row reveal">
-      <a class="btn btn-primary" href="mailto:romtaug+prospectdata@gmail.com?subject=Comptage%20de%20ma%20cible&amp;body=Le%20m%C3%A9tier%20que%20je%20veux%20d%C3%A9marcher%20%3A%0AMa%20zone%20g%C3%A9ographique%20%3A%0ALa%20taille%20d%27entreprise%20vis%C3%A9e%20%3A%0A%0AMerci%20%21">Demander le comptage gratuit</a>
-      <a class="btn btn-ghost" href="#prix">Revoir les prix</a>
+  <!-- FINAL CTA -->
+  <section class="sec-dark" id="contact">
+    <div class="wrap final">
+      <h2>Combien pèse votre cible ?</h2>
+      <p>Décrivez-la en une phrase : le métier, la zone, la taille. Vous recevez le nombre exact d'entreprises concernées, gratuitement et sans engagement.</p>
+      <a class="btn btn-primary" href="mailto:romtaug+prospectdata@gmail.com?subject=Comptage%20de%20ma%20cible&body=Le%20m%C3%A9tier%20que%20je%20veux%20d%C3%A9marcher%20%3A%0AMa%20zone%20g%C3%A9ographique%20%3A%0ALa%20taille%20d%27entreprise%20vis%C3%A9e%20%3A">Demander le comptage gratuit</a>
+      <br/>
+      <a class="mail" href="mailto:romtaug+prospectdata@gmail.com">romtaug+prospectdata@gmail.com</a>
     </div>
-    <p class="mail reveal">ou directement <a href="mailto:romtaug+prospectdata@gmail.com">romtaug+prospectdata@gmail.com</a> - réponse sous 24 h, aucun rendez-vous obligatoire</p>
-  </div>
-</section>
+  </section>
 
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <div class="foot-legal">
-      <img class="foot-mark" src="data:image/png;base64,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" alt="" />
-      <span>ProspectData - Lyon</span>
-      <a class="siren" href="https://annuaire-entreprises.data.gouv.fr/entreprise/882813660" target="_blank" rel="noopener">SIREN 882 813 660</a>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand"><img src="assets/logo-mark.png" alt="" style="height:26px;width:auto" />ProspectData</div>
+        <div style="max-width:300px">Votre CRM de prospection, rempli et mis à jour tout seul. Pour les TPE et PME françaises.</div>
+      </div>
+      <nav class="foot-links">
+        <a href="#comment">Comment ça marche</a>
+        <a href="#crm">Le CRM</a>
+        <a href="#prix">Prix</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:romtaug+prospectdata@gmail.com">Contact</a>
+      </nav>
     </div>
-    <div class="foot-links">
-      <a href="#prix">Prix</a>
-      <a href="#sources">Sources</a>
-      <a href="#faq">Questions</a>
-      <a href="mailto:romtaug+prospectdata@gmail.com">Contact</a>
+    <div class="foot-bot">
+      <div class="legal">Service édité en entreprise individuelle. SIREN <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/882813660" target="_blank" rel="noopener">882 813 660</a>. Contact : romtaug+prospectdata@gmail.com</div>
+      <div>&copy; 2026 ProspectData</div>
     </div>
   </div>
 </footer>
 
 <script>
+/* ---- hero : de vos mots au CRM, scenarios en boucle ---- */
 (function(){
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var phrase = 'les garages de moins de 20 salariés en Auvergne-Rhône-Alpes';
-  var TARGET = 4312;
-  var sayEl = document.getElementById('m-say');
-  var apes = Array.prototype.slice.call(document.querySelectorAll('#m-ape .ape'));
-  var countEl = document.getElementById('m-count');
-  var subEl = document.getElementById('m-sub');
-  var rows = Array.prototype.slice.call(document.querySelectorAll('.m-rows .mrow'));
-  var footEl = document.getElementById('m-foot');
-  var stateEl = document.getElementById('m-state');
-  var SUB = 'dont 1 108 en tier A, à appeler en premier';
+  var scenarios = [
+    { q:"les garages de moins de 20 salariés en Auvergne-Rhône-Alpes",
+      apes:["45.20A","45.20B","45.11Z","45.32Z","effectif 10 à 19","12 départements"],
+      n:4312, sub:"dont 1 108 en tier A, à appeler en premier",
+      rows:[
+        ["Garage Bertholon","04 77 33 12 88","contact@garage-bertholon.fr","a"],
+        ["Auto Service Vaise","04 78 64 20 41","accueil@autoservice-vaise.fr","a"],
+        ["Carrosserie Meyzieu","04 72 45 90 13","contact@carrosserie-meyzieu.fr","b"]
+      ]},
+    { q:"les boulangeries de Gironde",
+      apes:["10.71C","10.71B","dép. 33"],
+      n:894, sub:"dont 236 en tier A, à appeler en premier",
+      rows:[
+        ["Boulangerie Lartigue","05 56 44 07 31","contact@boulangerie-lartigue.fr","a"],
+        ["Fournil des Chartrons","05 56 81 25 60","fournilchartrons@orange.fr","b"],
+        ["Maison Peyrole","05 57 22 14 08","contact@maisonpeyrole.fr","b"]
+      ]},
+    { q:"les bureaux d'études thermiques en France",
+      apes:["71.12B","74.90B","France entière"],
+      n:6240, sub:"dont 1 730 en tier A, à appeler en premier",
+      rows:[
+        ["BET Thermica","01 48 22 65 90","contact@thermica.fr","a"],
+        ["Enerconseil Ouest","02 40 71 33 25","etudes@enerconseil-ouest.fr","a"],
+        ["Fluditherm","04 91 55 08 47","contact@fluditherm.fr","b"]
+      ]}
+  ];
+  var typed=document.getElementById('typed'), apesBox=document.getElementById('apes'),
+      countEl=document.getElementById('count'), subEl=document.getElementById('countSub'),
+      rowsBox=document.getElementById('rows'), si=0, timers=[];
 
+  function later(fn,ms){ timers.push(setTimeout(fn,ms)); }
+  function clearTimers(){ timers.forEach(clearTimeout); timers=[]; }
   function nb(n){ return n.toLocaleString('fr-FR'); }
 
-  function paintRow(row){
-    row.querySelector('.c1').textContent = row.getAttribute('data-n');
-    row.querySelector('.c2').textContent = row.getAttribute('data-t');
-    var x = row.getAttribute('data-x');
-    var t = document.createElement('span');
-    t.className = 'tier ' + x;
-    t.textContent = x.toUpperCase();
-    var c3 = row.querySelector('.c3');
-    c3.textContent = '';
-    c3.appendChild(t);
-    row.classList.add('on');
+  function buildRows(s){
+    rowsBox.innerHTML='';
+    s.rows.forEach(function(r){
+      var d=document.createElement('div'); d.className='drow';
+      var l1=document.createElement('div'); l1.className='l1';
+      var nm=document.createElement('span'); nm.textContent=r[0];
+      var t=document.createElement('span'); t.className='tier '+r[3]; t.textContent=r[3].toUpperCase();
+      l1.appendChild(nm); l1.appendChild(t);
+      var l2=document.createElement('div'); l2.className='l2';
+      var tel=document.createElement('span'); tel.textContent=r[1];
+      var em=document.createElement('span'); em.className='mail'; em.textContent=r[2];
+      l2.appendChild(tel); l2.appendChild(em);
+      d.appendChild(l1); d.appendChild(l2); rowsBox.appendChild(d);
+    });
   }
 
-  function done(){
-    countEl.textContent = nb(TARGET);
-    subEl.textContent = SUB;
-    footEl.textContent = nb(TARGET) + ' lignes, contacts retrouvés';
-    stateEl.textContent = 'prêt';
-  }
-
-  if (reduce) {
-    sayEl.textContent = phrase;
-    apes.forEach(function(a){ a.classList.add('on'); });
-    rows.forEach(paintRow);
-    done();
-  } else {
-    var i = 0;
+  function run(){
+    clearTimers();
+    var s=scenarios[si];
+    typed.textContent=''; subEl.innerHTML='&nbsp;'; countEl.textContent='0';
+    apesBox.innerHTML=''; buildRows(s);
+    s.apes.forEach(function(a){
+      var sp=document.createElement('span'); sp.className='ape'; sp.textContent=a; apesBox.appendChild(sp);
+    });
+    var i=0;
     (function type(){
-      if (i <= phrase.length) {
-        sayEl.textContent = phrase.slice(0, i);
-        i++;
-        setTimeout(type, 34);
-      } else {
-        apes.forEach(function(a, n){
-          setTimeout(function(){ a.classList.add('on'); }, 180 + n * 150);
-        });
-        setTimeout(count, 180 + apes.length * 150 + 220);
+      if(i<=s.q.length){ typed.textContent=s.q.slice(0,i); i++; later(type,32); }
+      else{
+        var chips=apesBox.querySelectorAll('.ape');
+        chips.forEach(function(c,k){ later(function(){ c.classList.add('on'); },140+k*130); });
+        later(function(){ count(s); },140+chips.length*130+180);
       }
     })();
   }
 
-  function count(){
-    var start = null, dur = 900;
+  function count(s){
+    var start=null,dur=850;
     function frame(ts){
-      if (start === null) start = ts;
-      var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      countEl.textContent = nb(Math.round(TARGET * eased));
-      if (p < 1) {
-        requestAnimationFrame(frame);
-      } else {
-        subEl.textContent = SUB;
-        rows.forEach(function(row, n){
-          setTimeout(function(){
-            paintRow(row);
-            if (n === rows.length - 1) done();
-          }, 140 + n * 190);
-        });
+      if(start===null)start=ts;
+      var p=Math.min((ts-start)/dur,1), e=1-Math.pow(1-p,3);
+      countEl.textContent=nb(Math.round(s.n*e));
+      if(p<1){ requestAnimationFrame(frame); }
+      else{
+        subEl.textContent=s.sub;
+        var rs=rowsBox.querySelectorAll('.drow');
+        rs.forEach(function(r,k){ later(function(){ r.classList.add('on'); },120+k*180); });
+        later(function(){ si=(si+1)%scenarios.length; run(); },120+rs.length*180+4200);
       }
     }
     requestAnimationFrame(frame);
   }
+  run();
+})();
 
-  var items = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window)) {
-    Array.prototype.forEach.call(items, function(el){ el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+/* ---- FAQ accordeon ---- */
+(function(){
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item=btn.parentElement, ans=btn.nextElementSibling, open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight=null; });
+      if(!open){ item.classList.add('open'); ans.style.maxHeight=ans.scrollHeight+'px'; }
+    });
+  });
+})();
+
+/* ---- apparition au defilement ---- */
+(function(){
+  document.documentElement.classList.add('js');
+  var sel='.sec-head, .cols3, .steps, .forms, .formulas, .cmp, .sec-list, .fit, .ba, .split > div, .cockpit, .crm-note, .strip .wrap';
+  document.querySelectorAll(sel).forEach(function(e){ e.classList.add('reveal'); });
+  var all=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ all.forEach(function(e){ e.classList.add('in'); }); return; }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  all.forEach(function(e){ io.observe(e); });
+})();
+
+/* ---- CRM : fiches + carte Leaflet (initialisee a l'approche) ---- */
+(function(){
+  var PROSPECTS=[
+    {n:"Garage Bertholon",v:"Saint-Étienne",t:"04 77 33 12 88",e:"contact@garage-bertholon.fr",x:"a",lat:45.4397,lng:4.3872,st:"rdv",sl:"RDV le 12",as:"Sofiene"},
+    {n:"Garage du Vieux Pont",v:"Villefranche-sur-Saône",t:"04 74 22 08 51",e:"garageduvieuxpont@orange.fr",x:"a",lat:45.9862,lng:4.7196,st:"new",sl:"à contacter",as:"-",neuf:true},
+    {n:"Auto Service Vaise",v:"Lyon 9e",t:"04 78 64 20 41",e:"accueil@autoservice-vaise.fr",x:"a",lat:45.7719,lng:4.8042,st:"rel",sl:"à relancer le 08/09",as:"Sofiene"},
+    {n:"Garage des Monts d'Or",v:"Limonest",t:"04 78 35 47 12",e:"contact@garagemontsdor.fr",x:"a",lat:45.8369,lng:4.7724,st:"new",sl:"à contacter",as:"-"},
+    {n:"Carrosserie Meyzieu",v:"Meyzieu",t:"04 72 45 90 13",e:"contact@carrosserie-meyzieu.fr",x:"b",lat:45.7669,lng:5.0036,st:"tel",sl:"contacté",as:"Romain"},
+    {n:"SARL Pneus Vienne",v:"Vienne",t:"04 74 85 31 66",e:"contact@pneus-vienne.fr",x:"b",lat:45.5253,lng:4.8744,st:"new",sl:"à contacter",as:"-"},
+    {n:"Méca Plus Bourgoin",v:"Bourgoin-Jallieu",t:"04 74 93 55 20",e:"contact@mecaplus38.fr",x:"b",lat:45.5861,lng:5.2736,st:"new",sl:"à contacter",as:"-"},
+    {n:"Atelier Roanne Auto",v:"Roanne",t:"04 77 71 04 22",e:"atelier-roanne@gmail.com",x:"c",lat:46.0367,lng:4.0689,st:"new",sl:"à contacter",as:"-"}
+  ];
+  var COLORS={a:"#83283A",b:"#B96A7B",c:"#8A93A0"};
+  var box=document.getElementById('fiches');
+
+  var ICO_TEL='<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+  var ICO_MAIL='<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>';
+
+  PROSPECTS.forEach(function(p){
+    var f=document.createElement('div'); f.className='fiche'; f.id='f-'+p.n.replace(/\W+/g,'');
+    f.innerHTML=
+      '<div class="top"><div><span class="name">'+p.n+'</span>'+(p.neuf?'<span class="new">nouveau</span>':'')+'<div class="city">'+p.v+'</div></div></div>'+
+      '<div class="contact">'+
+        '<a href="tel:'+p.t.replace(/\s/g,'')+'">'+ICO_TEL+'<span>'+p.t+'</span></a>'+
+        '<a href="mailto:'+p.e+'">'+ICO_MAIL+'<span class="mail">'+p.e+'</span></a>'+
+      '</div>'+
+      '<div class="foot"><span class="st '+p.st+'">'+p.sl+'</span><span>'+(p.as!=='-'?p.as:'non assigné')+'</span><span class="tierl '+p.x+'">'+p.x.toUpperCase()+'</span></div>';
+    box.appendChild(f);
+  });
+
+  var mapEl=document.getElementById('map'), built=false;
+  function buildMap(){
+    if(built || typeof L==='undefined') return; built=true;
+    var map=L.map(mapEl,{scrollWheelZoom:false});
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+      maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    var group=[];
+    PROSPECTS.forEach(function(p){
+      var m=L.circleMarker([p.lat,p.lng],{radius:9,color:'#fff',weight:2,fillColor:COLORS[p.x],fillOpacity:.95}).addTo(map);
+      m.bindPopup('<b>'+p.n+'</b><span class="m">'+p.t+'</span><span class="m g">'+p.e+'</span>',{className:'pd-pop'});
+      m.on('click',function(){
+        var f=document.getElementById('f-'+p.n.replace(/\W+/g,''));
+        if(f){ f.scrollIntoView({behavior:'smooth',block:'nearest'}); f.style.borderColor='#83283A'; setTimeout(function(){ f.style.borderColor=''; },1400); }
       });
-    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
-    Array.prototype.forEach.call(items, function(el){ io.observe(el); });
+      group.push(m);
+    });
+    map.fitBounds(L.featureGroup(group).getBounds().pad(0.18));
   }
+  if(!('IntersectionObserver' in window)){ window.addEventListener('load',buildMap); return; }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ buildMap(); io.disconnect(); } });
+  },{rootMargin:'300px 0px'});
+  io.observe(mapEl);
 })();
 </script>
 
-<script>window.PD_FAQ = [{"theme": "ape", "question": "Je ne connais pas mes codes APE, c'est un probleme ?", "answer": "Non, et c'est le cas de presque tous les clients. Vous decrivez le metier que vous visez avec vos mots, par exemple les garages de moins de 20 salaries en Auvergne-Rhone-Alpes. La traduction dans la nomenclature officielle de l'INSEE est faite pour vous, et les codes retenus vous sont soumis avant la construction du CRM. Vous validez, ou vous corrigez."}, {"theme": "produit", "question": "Qu'est-ce que je recois exactement ?", "answer": "Un CRM en ligne deja rempli de toutes les entreprises francaises qui portent vos codes APE, avec pour chacune plus de quarante informations : telephone, email verifie, site, dirigeant, taille, finances, adresse, labels, et un score de priorite. Vos commerciaux y travaillent directement : statuts, relances, notes, attribution."}, {"theme": "maj", "question": "Comment le CRM se met-il a jour tout seul ?", "answer": "Le lien avec les sources publiques reste actif. Chaque mois le systeme recherche les entreprises qui portent vos codes APE, repere les nouvelles, complete les contacts qui manquaient et signale celles qui ont ferme. Tout est automatise, cela ne demande aucun travail manuel, c'est pour cette raison que ce n'est pas facture."}, {"theme": "maj", "question": "Mes statuts et mes notes sont-ils ecrases a chaque mise a jour ?", "answer": "Jamais. La fusion se fait par identifiant d'entreprise. Votre suivi commercial est conserve integralement, seules les informations manquantes sont completees et les nouvelles entreprises ajoutees."}, {"theme": "prix", "question": "Combien ca coute ?", "answer": "Trois formules en paiement unique, sans abonnement et sans limite de volume. Une cible a 490 euros avec 2 utilisateurs. Equipe a 990 euros avec cibles et utilisateurs illimites, c'est la formule la plus demandee. Sur mesure des 2 400 euros avec colonnes et scoring propres a votre metier. A titre de comparaison, une annee d'abonnement a une plateforme de prospection francaise coute entre 1 200 et 2 800 euros, chaque annee."}, {"theme": "prix", "question": "Y a-t-il un abonnement ?", "answer": "Non, aucun. Vous payez une seule fois, a partir de 490 euros. La mise a jour mensuelle est automatisee et incluse, sans rien payer ensuite. Aucun engagement, aucune reconduction tacite, aucun preavis de resiliation. Si vous arretez, le CRM et la base restent a vous."}, {"theme": "volume", "question": "Y a-t-il une limite au nombre de lignes ?", "answer": "Non. Que la cible fasse 300 entreprises ou 40 000, le prix est le meme. C'est la difference principale avec les plateformes qui fonctionnent par credits mensuels."}, {"theme": "volume", "question": "Combien d'entreprises vais-je obtenir ?", "answer": "Cela depend de la cible. Le comptage est gratuit et sans engagement : decrivez votre cible et le volume exact vous est annonce avant toute commande, avec le detail par departement. Si le resultat est trop faible pour justifier la depense, cela vous sera dit franchement."}, {"theme": "delais", "question": "Combien de temps avant de recevoir mon CRM ?", "answer": "Environ dix jours ouvres a partir de la validation des codes APE. Sur une cible tres large, l'acces est ouvert sur une premiere tranche exploitable plus tot pour que les commerciaux commencent sans attendre."}, {"theme": "qualite", "question": "Les emails et telephones fonctionnent-ils vraiment ?", "answer": "Le domaine de chaque adresse est verifie techniquement avant livraison. Ce sont des adresses de contact d'entreprise du type contact@ ou accueil@, publiees par l'entreprise elle-meme. Aucune adresse nominative n'est fabriquee en devinant un prenom et un nom : ce sont celles qui rebondissent et qui font blacklister un domaine d'envoi."}, {"theme": "sav", "question": "Que se passe-t-il si quelque chose ne marche pas ?", "answer": "Toute correction est prise en charge sans supplement pendant 60 jours. Ensuite, corrections et evolutions se font au forfait a partir de 90 euros, systematiquement chiffre et valide par vous avant de commencer. Aucune facture ne tombe sans votre accord."}, {"theme": "crm", "question": "C'est un CRM complet comme HubSpot ?", "answer": "Non, et c'est volontaire. Il ne gere ni devis, ni factures, ni campagnes marketing. Il sert a une seule chose : derouler une liste de prospects qualifies sans doublons d'appels, avec statuts, relances, attribution et notes. C'est ce qui fait qu'il reste utilise."}, {"theme": "outils", "question": "Puis-je garder mon CRM actuel ?", "answer": "Oui. Si vous avez deja un outil qui vous convient, la base peut etre livree au format qu'il attend et rafraichie de la meme maniere. Cela releve de la formule Sur mesure quand la connexion doit etre automatique."}, {"theme": "sources", "question": "D'ou viennent les donnees ?", "answer": "De bases publiques officielles sous licence Etalab : annuaire des entreprises SIRENE, INPI pour les comptes deposes, BODACC pour les annonces legales, nomenclature APE de l'INSEE, plus des sources sectorielles comme l'ADEME ou FINESS. Les contacts ne figurent dans aucune base publique : ils sont reconstitues depuis le site officiel de chaque entreprise, puis verifies."}, {"theme": "rgpd", "question": "Est-ce legal ?", "answer": "Oui. Ciblage strictement B2B sur la base de l'interet legitime, a partir de sources publiques sous licence Etalab. L'origine de chaque information est tracee, ce qui permet de la justifier, et une liste de suppression est integree puis respectee a chaque mise a jour."}, {"theme": "zone", "question": "Travaillez-vous partout en France ?", "answer": "Oui, les sources sont nationales. Base a Lyon, ce qui facilite les rendez-vous en Auvergne-Rhone-Alpes, mais tout se fait tres bien a distance."}, {"theme": "prix", "question": "Pourquoi est-ce moins cher qu'une plateforme de prospection ?", "answer": "Parce que le modele est different. Une plateforme vous loue un acces et doit facturer chaque mois pour vivre. Ici le travail est fait une fois, la mise a jour est entierement automatisee et ne coute presque rien a faire tourner. Il n'y a donc aucune raison de facturer un abonnement. En echange, vous n'avez pas les fonctions annexes d'une grosse plateforme, comme les sequences d'emails ou les contacts nominatifs LinkedIn."}];</script>
-<script>
-/* =============================================================================
-   Assistant ProspectData - chatbot autonome, sans serveur et sans cle API
-   -----------------------------------------------------------------------------
-   Il repond en cherchant la meilleure entree de data/faq-prospectdata.json.
-   Aucun appel reseau, aucune cle a proteger : il fonctionne sur GitHub Pages,
-   sur Netlify, sur Streamlit, et meme en ouvrant le fichier en local.
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" crossorigin="" defer></script>
 
-   Amelioration optionnelle : si tu deploies un jour un vrai backend IA, pose
-   window.PD_CHAT_API = "/api/chat" AVANT ce script. Le bot appellera l'API en
-   priorite et retombera automatiquement sur la FAQ locale en cas d'echec.
-   ========================================================================== */
-(function () {
-  "use strict";
-
-  var CFG = {
-    faqUrl: "data/faq-prospectdata.json",
-    email: "romtaug+prospectdata@gmail.com",
-    title: "Assistant ProspectData",
-    welcome:
-      "Bonjour. Posez votre question sur les CRM de prospection, je reponds a partir de la documentation du site.",
-    suggestions: [
-      "Je ne connais pas mes codes APE",
-      "Comment il se met a jour tout seul ?",
-      "Combien ca coute ?",
-      "Y a-t-il une limite de volume ?"
-    ],
-    minScore: 1.6
-  };
-
-  var FAQ = [];
-  var history = [];
-  var open = false;
-  var loaded = false;
-
-  /* ---------- recherche locale ------------------------------------------- */
-
-  var STOP = {};
-  ("le la les un une des du de d a au aux et ou est sont ce cet cette ça ca " +
-   "je tu il elle on nous vous ils que qui quoi quel quelle mon ma mes votre " +
-   "vos pour par sur avec sans dans en y a-t-il il-y-a plus moins tres bien " +
-   "comment combien pourquoi quand est-ce que qu ne pas si mais donc alors " +
-   "the of to and").split(" ").forEach(function (w) { STOP[w] = 1; });
-
-  function norm(s) {
-    return String(s || "")
-      .toLowerCase()
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9\s]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function tokens(s) {
-    return norm(s).split(" ").filter(function (w) {
-      return w.length > 2 && !STOP[w];
-    });
-  }
-
-  function score(queryTokens, entry) {
-    var q = norm(entry.question), a = norm(entry.answer), t = norm(entry.theme);
-    var s = 0;
-    for (var i = 0; i < queryTokens.length; i++) {
-      var w = queryTokens[i];
-      if (t.indexOf(w) !== -1) s += 1.2;
-      if (q.indexOf(w) !== -1) s += 2.2;
-      else if (a.indexOf(w) !== -1) s += 0.9;
-    }
-    return queryTokens.length ? s / Math.sqrt(queryTokens.length) : 0;
-  }
-
-  function answerLocally(question) {
-    var qt = tokens(question);
-    if (!qt.length || !FAQ.length) return null;
-    var best = null, bestScore = 0;
-    for (var i = 0; i < FAQ.length; i++) {
-      var sc = score(qt, FAQ[i]);
-      if (sc > bestScore) { bestScore = sc; best = FAQ[i]; }
-    }
-    return bestScore >= CFG.minScore ? best.answer : null;
-  }
-
-  var FALLBACK =
-    "Je n'ai pas la reponse dans ma documentation. Ecrivez directement a " +
-    CFG.email + ", la reponse arrive sous 24 h.";
-
-  /* ---------- interface --------------------------------------------------- */
-
-  var css = [
-    "#pdc-btn{position:fixed;right:20px;bottom:20px;z-index:9998;width:58px;height:58px;border-radius:50%;",
-    "border:none;cursor:pointer;background:var(--wine);box-shadow:0 10px 26px -8px rgba(22,26,35,.5);",
-    "display:flex;align-items:center;justify-content:center;transition:transform .18s ease,background .2s ease}",
-    "#pdc-btn:hover{transform:translateY(-2px) scale(1.04);background:var(--wine-dark)}",
-    "#pdc-btn svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}",
-    "#pdc-panel{position:fixed;right:20px;bottom:88px;z-index:9999;width:376px;max-width:calc(100vw - 32px);",
-    "height:520px;max-height:calc(100vh - 130px);background:var(--white);border:1px solid var(--line);",
-    "border-radius:16px;box-shadow:0 26px 60px -22px rgba(22,26,35,.45);display:none;flex-direction:column;overflow:hidden}",
-    "#pdc-panel.on{display:flex}",
-    "#pdc-head{background:var(--ink);color:#fff;padding:15px 17px;display:flex;align-items:center;gap:11px;flex-shrink:0}",
-    "#pdc-head img{height:22px;width:auto;display:block}",
-    "#pdc-head b{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;letter-spacing:-.02em}",
-    "#pdc-head span{font-size:11.5px;color:#9AA1AA;display:block;margin-top:1px}",
-    "#pdc-x{margin-left:auto;background:none;border:none;color:#9AA1AA;font-size:24px;line-height:1;cursor:pointer;padding:0 2px}",
-    "#pdc-x:hover{color:#fff}",
-    "#pdc-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:11px;background:var(--paper)}",
-    ".pdc-m{max-width:88%;padding:11px 14px;border-radius:13px;font-size:14.5px;line-height:1.55;white-space:pre-wrap}",
-    ".pdc-bot{background:var(--white);border:1px solid var(--line);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}",
-    ".pdc-me{background:var(--wine);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}",
-    "#pdc-sug{display:flex;flex-wrap:wrap;gap:7px;padding:0 16px 12px;background:var(--paper)}",
-    "#pdc-sug button{font-family:inherit;font-size:12.5px;background:var(--white);border:1px solid var(--line);",
-    "color:var(--slate);padding:7px 11px;border-radius:99px;cursor:pointer;transition:border-color .15s,color .15s}",
-    "#pdc-sug button:hover{border-color:var(--wine);color:var(--wine)}",
-    "#pdc-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:var(--white);flex-shrink:0}",
-    "#pdc-in{flex:1;font-family:inherit;font-size:14.5px;padding:11px 13px;border:1px solid var(--line);",
-    "border-radius:10px;outline:none;color:var(--ink);background:var(--white);min-width:0}",
-    "#pdc-in:focus{border-color:var(--wine)}",
-    "#pdc-send{background:var(--ink);color:#fff;border:none;border-radius:10px;padding:0 15px;cursor:pointer;",
-    "font-family:'Syne',sans-serif;font-weight:700;font-size:14px}",
-    "#pdc-send:hover{background:var(--wine)}",
-    "#pdc-foot{font-size:11px;color:var(--slate-2);text-align:center;padding:0 12px 10px;background:var(--white)}",
-    "#pdc-foot a{color:var(--wine)}",
-    "@media (max-width:520px){#pdc-panel{right:12px;left:12px;width:auto;bottom:82px;height:calc(100vh - 120px)}",
-    "#pdc-btn{right:14px;bottom:14px}}",
-    "@media (prefers-reduced-motion:reduce){#pdc-btn{transition:none}#pdc-btn:hover{transform:none}}"
-  ].join("");
-
-  function el(tag, attrs, text) {
-    var e = document.createElement(tag);
-    if (attrs) for (var k in attrs) e.setAttribute(k, attrs[k]);
-    if (text != null) e.textContent = text;
-    return e;
-  }
-
-  var panel, log, input, sugBox;
-
-  function build() {
-    var style = el("style"); style.textContent = css;
-    document.head.appendChild(style);
-
-    var btn = el("button", { id: "pdc-btn", "aria-label": "Ouvrir l'assistant ProspectData" });
-    btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>';
-    btn.addEventListener("click", toggle);
-    document.body.appendChild(btn);
-
-    panel = el("div", { id: "pdc-panel", role: "dialog", "aria-label": CFG.title, "aria-modal": "false" });
-
-    var head = el("div", { id: "pdc-head" });
-    var mark = el("img", { src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAALbUlEQVR42u1afYxdVbX//dbe96PTmek3U8UWXiotVqBgqZhauS3PBPM0Eqy3kQdiTXzwgiJoRKtEz4wG8oCA70GfiR9UkFiVK2rUmADRAE/ED/C1EYfS9/pCK6EttNPpdJiPe87eyz/OuXfO3Ll3eqfzUehjJ7/cc8/eZ529115rr99e+wBvlDfK/+tixqsMgkAAmL179wqA1x0KhYJs3rwZjz/+uE65ck6ViWaD+wLA33HHHWfc98D2d+3Zs5vGZOO2biLvck3cR/NtmhEBAMbAubKuWLHCX3XFpj/cdNNNeytjakYBAsCvWfOujx3u6797YGCw3XkHglAAUFafiu8poAAUIOPL45bUW5l6QEFUJaQuR7fQVNsagalnFAprLFpm5freeuYZn3v00V99W1XHKEHSf4rFogHgP3DZxn/c/0rPfUeP9rU75yNCHMCIYERqRGhEIIIiojICkCBuAyD5rQCjQGUV1XpqRPpYfvKOes9rAkBHwOTdOvJOQpyLfNR7tL/9+T3/963LL79iAwCfjLGhBVgS0fKzz32op+/Vy+NOINNwJpV1xagqSE7ARXW0KVRvS912qiNt4/ewWj1mSESo8Hbxovk/fXbnnzeqqk2UOdYCgKKqAgf2H8hLPAAZ35R1BOnbHKuQdKdPuHAcBaJ+X6AqRoT7XtiXj/tQ1IYuAJQAAK3tbVabdOeRmfExoGP7lSiksRIYz7ZKbFXKkdlnLFvhoepTMgioSdqxQV/iKqfez50/18b9KKGhAgqFWNLSJac/aqDivY8AOpKegCfgwWagHlRPSUD1JD1JD9RvC6oH4FUr0MooGoA1vymZgGcs23nvogwpb3nLkkdUFYVCgeMZFQFQVc3551/485d7et8XuljznKz5Vv25gb8nbcb690j79OwTKd+njgkZqnF11losPm3hwz/6wQOXLV++PByxy8Zexfhdmlm7tnBdX3//5TZjF0RRRGLyemjWo8Z7U90IWbPoZDJWQ6dH5s2d+5MnHnt0K8mo3qM83justbDWjPY9AENDQ/Jaonr5fN6nQgFIwkUOYRQ1rbc6SijYOpHgNTXw4/SNKBTsePbECQYhFRJXXnXV8hf3v7x6cUdH++BQmaYeyay9l+6ab0KNvjm157NZfaWn59jS0xc/vW3bvbu91wnNNpsffEDVTll38Ya79r340rVh6LImcQ2mxGjFBMfQ1VpKW68LHLUMVFdlMnHBSlytkDCCBCLvkbUmfPNpi77x1FNPfC6JNtqMEppUQNEAJbd6zbpbXzpw4IvD5WEVEV8d7ShR2oR1NjINHdOtKqlSQOEbtaH3KtlcjmcsXXzbH558Yovqhw1QchP1mQY5gZK7/fbbFx86fOiG4XLZWWtVRIwYsTGMFalALIUpiCWNJRnXkaPrmYYkiNuKmOp/ChP5NoFYCqzEcow1Vsvlsjuw/+CntmzZsigZPCetgO7ubgLAM8/sfDuAFok5cuPnyIb7gAnRYaYYXT2Ky8Q6qgaiQpDO+Zbnn3/+nGRzd9zx2Wb7M3du67Hx9anjOlplndBm1iYmLWtJETW1AdM6CouvrLVHJ729GNOdZ5/NvPVDm3b09g28zYqUlbAkxskA1HQ0vbNLzaZ61mFANTOuCopUZanWMiUqgMg5zS6c2/bcrud2rkqID463EDYT07VYLArPOad83qrzPjWndVbZq2a9egmjiFHkGiBKkPx34QiqdRGdH0HkXXLt6NwIIu9rZHlGlTrn6L0X9cjOaZs9fPaKs64jGSbmP1VRYCSyb968ec0zO/5y08Dg4OpZ+ZY27106MTDljLg2qNeETxURDAwN9rfk88+8c/X5t23btu3pIAikq6vLTyUPGKUExtu2LIA8Dh+OaxYAL7xwTOTYsWndL/i2Nj2zrW1kcAsWAMCwkMNan4JNbamkyl+Lmd+kb1OTY2kqUKmis7OTXV1d3lqLj1x99TkuDJcOvzoMVWU1xkQTiDdR/fhEUnO5HPLevvC9H97f7ZxHEATS2dmpSdg9oZSTnYyLkhQA/ou33NLxq9LPvv3Yr5/4J4oYHdHQCeha686TIs4zeufdynNX/+IjxSv/9eabbzw4WZOfrL+K6tNm5duveezQkSNrnaqf7Io4HqGubHStEVkwr+233X/570tIusko4IS3tpUU+oYNX/hgX3/fWoWWRUArNEbEGNKIiBERY5JfESZAChwFJqjXxgiNNaB6Vz52rH/d+vXvvbReqntGFFAqlQgAQ+VwQ+ScF6FIlZsSoCSJK46ksCpJz9rUejoRqjI2Z6MEIRU2SQoldN7bbO7SdF9mVAHVNSuK+keH5zocPsnQssLfqwOVUVQ3rq9cM3WfNQ4bp5qdi3qTdC5OhgsoAJyxZMnPc7ksnfcKwmk6cxvnseOcNrSKOEscIyHDo+qB+BmC8fPVe+oBOO+BfMZydnvLz+LQvP7kLYIi9OdesObfX3m554Zy5GCMaXaLNLFEZ9LGRw6ZTAaLF82/bceOP27x3p/UKEAANMb4iy5ad/3hI0c+cejQ4fbYtknPZgOC1ln/WRsIlRC/cP6C3oWL5n3nqSf/a+tkBz8VChg1gZlMBmEYZlNyCYAdgKAjuXOweaEHgZqjJmgmkxkOw3D6Ke+JUNGxuZHJ67eBjCmj4tOxcWElG1MqlZyq8rufufmC/sNH5keI4L0bfTgppsbWKQYG+fnzDl3z9Vt2knTFYtGUSiU/wWXlpCkAle3of2y+fm30P/u2Dg8cuwDeo5oXIsYctFQ/rkgulESmdfZOLHnTJz+//ZtPTmSLe1IVkHRUt37iupW9T3f/3gyWW8vqPVXHXetJjnJoBZCDlahtVn/7hWdfdMM373kuCAJOtRKm/pSn6zEBob279n4pOxS1lomySIXIikCaA41IKL6cGxxqHdj1ty+B0O6u7imfMDuVwuLPhB6P1Gv2tvd8cN2wi1SssT69KyQhTWwSk5SgHY5CzUXuYvWaJVlWKNnwePkkK2CULpxGcZzScR1Pj8MMks+i3FQvftPiAgQ0KBQsybCc4yNZm6GqhsmnXVW4FNL8VxNUxu2pYYvN0GXsb0iGDxaLZipnf3rWgPXrvQKcv/q8fxtuyR1oUZOj8zQgJYFtBI1hlKTzbFGbG5o966V5K877mgL868qVU24FU57biz9LDeQLT32t98ObNv4yGnRnekVH2Xt1RrwTcY50TqqIUtfOGYm8SJif3TqQ7Vj065Z3vu2fP7n1lj14vYTBWi4AIbbf9a2O3//ykRzyQOQdrRiNvGMmk+EQgJzz8cCGAOQBa0TfvfH9wxs3f+xleMV0cYBpL0EQSDAJNwsAOZFM72uuqCoDQAJAKukrVc3c+dD3Vt310APv0PiMAYVCwVbaqSpxqpXKbP7L1ls/evGtn/7rhcE1fk3ntfqeW6/v/vjdwVXpNjNVZkzLxQeLprSp5K6+u/OKXb0Ht/cM9QPOx4cL1rB91mysbOu48oEbu7Ynmx93KimAALDvd7/Lb3rk/l2HygNLMh7p75CjSGDeNGvO/tI1X17R0dHxKlQBUqe7YzNibpWT2nv3PLsqJJbCeQWQ8dXDdVrjif6hgTdv2XbPMgAadHbOyOTMjL8ViwCAMp2RmOdTE77PaipY6AgMhuEpuQYQAHY8/HDLtb/98f/2REOnWaVHcnpISBRRpSPfevi+Kz971rJly/qST+5PDRcAoMUHi3L+pZe+etbC07/a3tYmIb31qqoKjaB2Xtsc+Yc5i4Jly5YdLQQFMxODnxYq3Kh0l7o1CAL5zy1f/dMll72/L1R/Loj2rM1yTm72i2fNnt/5/Ru77vlKEMj9Xfc7nLIliK2uZ8+eOdfee+eqj99756rdu3e3z7BFntxS7zBzMgecr196HAQSBMGpSXvfKG+U10f5Ozbp6FCO6WM7AAAAAElFTkSuQmCC", alt: "" });
-    var txt = el("div");
-    txt.appendChild(el("b", null, CFG.title));
-    txt.appendChild(el("span", null, "Reponses issues du site, pas d'attente"));
-    var x = el("button", { id: "pdc-x", "aria-label": "Fermer l'assistant" }, "\u00d7");
-    x.addEventListener("click", toggle);
-    head.appendChild(mark); head.appendChild(txt); head.appendChild(x);
-
-    log = el("div", { id: "pdc-log", role: "log", "aria-live": "polite" });
-    sugBox = el("div", { id: "pdc-sug" });
-
-    var form = el("form", { id: "pdc-form" });
-    input = el("input", {
-      id: "pdc-in", type: "text", autocomplete: "off",
-      placeholder: "Votre question", "aria-label": "Votre question"
-    });
-    var send = el("button", { id: "pdc-send", type: "submit" }, "Envoyer");
-    form.appendChild(input); form.appendChild(send);
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var v = input.value.trim();
-      if (v) { input.value = ""; ask(v); }
-    });
-
-    var foot = el("div", { id: "pdc-foot" });
-    foot.innerHTML = 'Une question hors documentation ? <a href="mailto:' + CFG.email + '">Ecrivez-moi</a>';
-
-    panel.appendChild(head); panel.appendChild(log);
-    panel.appendChild(sugBox); panel.appendChild(form); panel.appendChild(foot);
-    document.body.appendChild(panel);
-
-    say(CFG.welcome);
-    renderSuggestions();
-
-    document.addEventListener("keydown", function (ev) {
-      if (ev.key === "Escape" && open) toggle();
-    });
-  }
-
-  function renderSuggestions() {
-    sugBox.textContent = "";
-    CFG.suggestions.forEach(function (q) {
-      var b = el("button", { type: "button" }, q);
-      b.addEventListener("click", function () { ask(q); });
-      sugBox.appendChild(b);
-    });
-  }
-
-  function say(text, mine) {
-    var m = el("div", { class: "pdc-m " + (mine ? "pdc-me" : "pdc-bot") }, text);
-    log.appendChild(m);
-    log.scrollTop = log.scrollHeight;
-    return m;
-  }
-
-  function toggle() {
-    open = !open;
-    panel.classList.toggle("on", open);
-    if (open) {
-      loadFaq();
-      setTimeout(function () { input.focus(); }, 60);
-    }
-  }
-
-  function loadFaq() {
-    if (loaded) return;
-    loaded = true;
-    // Build Streamlit : la FAQ est deja injectee, aucun fetch relatif ne
-    // fonctionnerait depuis l'iframe.
-    if (Array.isArray(window.PD_FAQ) && window.PD_FAQ.length) {
-      FAQ = window.PD_FAQ;
-      return;
-    }
-    if (!window.fetch) return;
-    fetch(CFG.faqUrl)
-      .then(function (r) { return r.ok ? r.json() : []; })
-      .then(function (d) { if (Array.isArray(d)) FAQ = d; })
-      .catch(function () { /* la FAQ reste vide, le bot renvoie vers l'email */ });
-  }
-
-  function ask(question) {
-    say(question, true);
-    history.push({ role: "user", content: question });
-    sugBox.style.display = "none";
-
-    var pending = say("...");
-
-    function finish(text) {
-      pending.textContent = text;
-      history.push({ role: "assistant", content: text });
-      log.scrollTop = log.scrollHeight;
-    }
-
-    var local = answerLocally(question);
-
-    if (window.PD_CHAT_API && window.fetch) {
-      fetch(window.PD_CHAT_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: history.slice(-10), faqUrl: CFG.faqUrl })
-      })
-        .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (d) {
-          finish((d && d.reply) ? d.reply : (local || FALLBACK));
-        })
-        .catch(function () { finish(local || FALLBACK); });
-      return;
-    }
-
-    setTimeout(function () { finish(local || FALLBACK); }, 260);
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", build);
-  } else {
-    build();
-  }
-})();
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"ProfessionalService","@id":"https://prospectdata.netlify.app/#org","name":"ProspectData","description":"Création de CRM de prospection sur mesure pour TPE et PME. Le client décrit sa cible, ProspectData la traduit en codes APE, remplit le CRM des entreprises concernées avec téléphones et emails vérifiés, et le met à jour automatiquement chaque mois. Paiement unique, sans abonnement.","url":"https://prospectdata.netlify.app/","email":"romtaug+prospectdata@gmail.com","image":"https://prospectdata.netlify.app/og-image.png","identifier":"882813660","priceRange":"490-2400 EUR","address":{"@type":"PostalAddress","addressLocality":"Lyon","addressRegion":"Auvergne-Rhône-Alpes","addressCountry":"FR"},"areaServed":[{"@type":"Country","name":"France"},{"@type":"City","name":"Lyon"},{"@type":"AdministrativeArea","name":"Auvergne-Rhône-Alpes"}],"knowsAbout":["Prospection B2B","Codes APE","SIRENE","Enrichissement de données","CRM sur mesure","Fichier de prospection"],"serviceType":"CRM de prospection sur mesure","slogan":"Décrivez votre cible, recevez un CRM vivant"},
+    {"@type":"WebSite","@id":"https://prospectdata.netlify.app/#website","url":"https://prospectdata.netlify.app/","name":"ProspectData","inLanguage":"fr-FR","publisher":{"@id":"https://prospectdata.netlify.app/#org"}},
+    {"@type":"Service","name":"CRM de prospection rempli et mis à jour automatiquement","provider":{"@id":"https://prospectdata.netlify.app/#org"},"areaServed":{"@type":"Country","name":"France"},"description":"Traduction de la cible en codes APE, construction d'un CRM rempli de toutes les entreprises concernées avec contacts vérifiés, mise à jour mensuelle automatique. Paiement unique dès 490 euros."},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Je ne connais pas mes codes APE, c'est un problème ?","acceptedAnswer":{"@type":"Answer","text":"Non. Vous décrivez le métier visé avec vos mots, la traduction dans la nomenclature officielle est faite pour vous, et les codes retenus vous sont soumis avant la construction du CRM."}},
+      {"@type":"Question","name":"Comment un CRM peut-il se mettre à jour tout seul ?","acceptedAnswer":{"@type":"Answer","text":"Le lien avec les sources publiques reste actif. Chaque mois, le système recherche les entreprises des codes APE ciblés, ajoute les nouvelles, complète les contacts manquants et signale les sociétés fermées. Tout est automatisé et inclus."}},
+      {"@type":"Question","name":"Les emails et téléphones fonctionnent-ils vraiment ?","acceptedAnswer":{"@type":"Answer","text":"Le domaine de chaque adresse est vérifié techniquement avant livraison. Ce sont des adresses publiées par l'entreprise elle-même, jamais des adresses nominatives devinées."}},
+      {"@type":"Question","name":"Combien ça coûte ?","acceptedAnswer":{"@type":"Answer","text":"Trois formules en paiement unique, sans abonnement et sans limite de volume : Une cible à 490 euros, Équipe à 990 euros, Sur mesure dès 2 400 euros. Le comptage de la cible est gratuit avant toute commande."}},
+      {"@type":"Question","name":"Y a-t-il une limite au nombre de lignes ?","acceptedAnswer":{"@type":"Answer","text":"Non. Que la cible fasse 300 entreprises ou 40 000, le prix est le même."}},
+      {"@type":"Question","name":"Mes statuts et notes sont-ils écrasés à la mise à jour ?","acceptedAnswer":{"@type":"Answer","text":"Jamais. La fusion se fait par identifiant d'entreprise : le suivi commercial est conservé intégralement."}},
+      {"@type":"Question","name":"Est-ce légal ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Ciblage strictement B2B sur la base de l'intérêt légitime, à partir de sources publiques sous licence Etalab, avec traçabilité de chaque information et liste de suppression respectée."}}
+    ]}
+  ]
+}
 </script>
+<!-- Chatbot ProspectData (fonction serveur sur le meme site) -->
+<script
+  src="/widget.js"
+  data-title="Assistant ProspectData"
+  data-color="#83283A"
+  data-header-start="#161A23"
+  data-header-end="#83283A"
+  data-welcome="Bonjour 👋 Une question sur les CRM de prospection ? Je m'appuie sur notre documentation pour vous répondre."
+  data-questions="Je ne connais pas mes codes APE, c'est grave ?|Comment il se met à jour tout seul ?|Combien ça coûte ?|Y a-t-il une limite de volume ?"
+  data-faq-url="/data/faq-prospectdata.json"
+  data-contact-email="romtaug+prospectdata@gmail.com"
+  data-tone="pro"
+  defer></script>
 </body>
 </html>
