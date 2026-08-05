@@ -201,6 +201,24 @@
   .form-card h3{font-size:16px;margin-bottom:6px}
   .form-card p{font-size:13.5px;color:var(--slate)}
 
+  /* onglets secteur */
+  .sector-tabs{display:flex;gap:8px;margin-bottom:14px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .stab{font-family:"Bricolage Grotesque";font-weight:600;font-size:14px;padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--slate);cursor:pointer;white-space:nowrap;transition:background .18s ease,color .18s ease,border-color .18s ease}
+  .stab:hover{border-color:var(--ink);color:var(--ink)}
+  .stab.on{background:var(--wine);border-color:var(--wine);color:#fff}
+  .sector-hint{font-size:13.5px;color:var(--slate);margin:14px 0 0}
+  .sector-hint a{color:var(--wine);text-decoration:underline}
+
+  /* grille exhaustive des colonnes livrees */
+  .allfields{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px;margin-top:38px}
+  .fgroup{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  .fgroup h3{font-size:14.5px;margin-bottom:11px;display:flex;align-items:center;gap:8px}
+  .fgroup h3::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--green-bright);flex-shrink:0}
+  .fgroup.suivi h3::before{background:var(--wine)}
+  .fgroup ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+  .fgroup li{font-family:"JetBrains Mono";font-size:10.5px;color:var(--slate);background:var(--paper);border:1px solid var(--line);padding:4px 8px;border-radius:6px}
+  .allfields-note{margin-top:18px;font-size:13.5px;color:var(--slate);font-family:"JetBrains Mono";font-size:12px}
+
   /* prix */
   .formulas{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;margin-top:10px}
   .formula{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
@@ -340,7 +358,7 @@
   <div class="strip">
     <div class="wrap">
       <div class="cell"><div class="k">0 code</div><div class="v">à connaître, vos mots suffisent</div></div>
-      <div class="cell"><div class="k">40+ infos</div><div class="v">par entreprise, email compris</div></div>
+      <div class="cell"><div class="k">48 infos</div><div class="v">par entreprise, email compris</div></div>
       <div class="cell"><div class="k">1 ×/mois</div><div class="v">mise à jour automatique, à vie</div></div>
       <div class="cell"><div class="k">0 €</div><div class="v">d'abonnement, paiement unique</div></div>
     </div>
@@ -406,24 +424,21 @@
       <div class="sec-head">
         <div class="eyebrow">Votre CRM, en vrai</div>
         <h2>La carte de vos prospects, leurs emails, leurs téléphones.</h2>
-        <p>Voici à quoi ressemble un CRM livré, ici sur la cible « garages en Auvergne-Rhône-Alpes ». Chaque point de la carte est un prospect, chaque fiche a son email et son téléphone, prêts à cliquer.</p>
+        <p>Le même CRM, quel que soit votre métier. Choisissez un secteur : la carte, les fiches et les compteurs s'adaptent instantanément. Chaque fiche a son email et son téléphone, prêts à cliquer. Entreprises fictives, format réel.</p>
       </div>
+      <nav class="sector-tabs reveal" id="sectorTabs" aria-label="Choisir un secteur de démonstration"></nav>
       <div class="cockpit reveal">
         <div class="cockpit-bar">
-          <b>Garages - Auvergne-Rhône-Alpes</b>
-          <span class="maj">mise à jour du 1er août</span>
-          <div class="kpis">
-            <span class="kpi">à contacter <b>318</b></span>
-            <span class="kpi">contactés <b>94</b></span>
-            <span class="kpi">RDV <b>17</b></span>
-            <span class="kpi">signés <b>4</b></span>
-          </div>
+          <b id="crmTitle"></b>
+          <span class="maj" id="crmMaj"></span>
+          <div class="kpis" id="crmKpis"></div>
         </div>
         <div class="crm-grid">
           <div id="map" aria-label="Carte des prospects de la démonstration"></div>
           <div class="fiches" id="fiches"></div>
         </div>
       </div>
+      <p class="sector-hint reveal">Votre secteur n'est pas dans la liste ? Les 732 codes APE fonctionnent pareil : <a href="#contact">décrivez votre cible, le comptage est gratuit</a>.</p>
       <div class="crm-note">
         <span>Email et téléphone cliquables sur chaque fiche</span>
         <span>Attribution par commercial, statuts et relances</span>
@@ -438,8 +453,8 @@
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">Dans chaque fiche</div>
-        <h2>Plus de quarante informations par entreprise.</h2>
-        <p>De quoi qualifier, prioriser et personnaliser votre approche avant même de décrocher le téléphone.</p>
+        <h2>48 informations par entreprise, plus votre suivi.</h2>
+        <p>Le détail complet est affiché ci-dessous, colonne par colonne : c'est exactement ce qui arrive dans votre CRM. De quoi qualifier, prioriser et personnaliser chaque approche avant de décrocher le téléphone.</p>
       </div>
       <div class="forms">
         <div class="form-card">
@@ -462,7 +477,24 @@
           <h3>Les signaux qui comptent</h3>
           <p>Labels, ancienneté, annonces légales, procédures collectives : les sociétés à écarter sortent de la liste toutes seules.</p>
         </div>
+        <div class="form-card">
+          <div class="vis"><span class="badge w">Pappers</span><span class="badge">Maps</span><span class="badge">LinkedIn</span></div>
+          <h3>8 liens prêts à cliquer</h3>
+          <p>Pour chaque entreprise : Pappers, Annuaire officiel, Google Maps, LinkedIn, Pages Jaunes, Trustpilot, site officiel, recherche Google. La recherche est déjà faite.</p>
+        </div>
       </div>
+      <div class="allfields reveal">
+        <div class="fgroup"><h3>Identité, 12 colonnes</h3><ul><li>raison sociale</li><li>SIREN</li><li>SIRET</li><li>code APE</li><li>activité en clair</li><li>forme juridique</li><li>date de création</li><li>ancienneté</li><li>état actif ou radié</li><li>TVA intracommunautaire</li><li>convention collective</li><li>labels RGE, Qualiopi</li></ul></div>
+        <div class="fgroup"><h3>Contact, 9 colonnes</h3><ul><li>téléphone</li><li>email</li><li>email vérifié</li><li>origine de l'email</li><li>autres emails</li><li>domaine</li><li>site web</li><li>présence d'un site</li><li>LinkedIn</li></ul></div>
+        <div class="fgroup"><h3>Décideurs, 2 colonnes</h3><ul><li>dirigeant principal</li><li>autres dirigeants</li></ul></div>
+        <div class="fgroup"><h3>Taille, 4 colonnes</h3><ul><li>tranche d'effectif</li><li>catégorie</li><li>établissements ouverts</li><li>total établissements</li></ul></div>
+        <div class="fgroup"><h3>Finances, 3 colonnes</h3><ul><li>chiffre d'affaires</li><li>résultat net</li><li>exercice concerné</li></ul></div>
+        <div class="fgroup"><h3>Localisation, 6 colonnes</h3><ul><li>adresse</li><li>code postal</li><li>commune</li><li>département</li><li>latitude</li><li>longitude</li></ul></div>
+        <div class="fgroup"><h3>Liens en un clic, 8 colonnes</h3><ul><li>Pappers</li><li>Annuaire des Entreprises</li><li>Google Maps</li><li>recherche Google</li><li>recherche LinkedIn</li><li>Pages Jaunes</li><li>site officiel</li><li>Trustpilot</li></ul></div>
+        <div class="fgroup"><h3>Priorité, 4 colonnes</h3><ul><li>score sur 100</li><li>tier A, B ou C</li><li>qualité du contact</li><li>raisons du score</li></ul></div>
+        <div class="fgroup suivi"><h3>Votre suivi, 11 colonnes</h3><ul><li>statut</li><li>date de contact</li><li>canal</li><li>date de relance</li><li>notes</li><li>produit proposé</li><li>montant vendu</li><li>date de vente</li><li>payé</li><li>montant encaissé</li><li>statut de livraison</li></ul></div>
+      </div>
+      <p class="allfields-note reveal">48 colonnes de données + 11 colonnes de suivi = 59 colonnes dans votre CRM, dès le premier jour.</p>
     </div>
   </section>
 
@@ -665,37 +697,123 @@
 </footer>
 
 <script>
-/* ---- hero : de vos mots au CRM, scenarios en boucle ---- */
+/* =============================================================================
+   CONFIGURATION DES SECTEURS - LA SEULE ZONE A EDITER
+   -----------------------------------------------------------------------------
+   Chaque secteur alimente a la fois : l'animation du hero, l'onglet, le titre
+   du CRM, les compteurs, la carte et les fiches. Pour ajouter un secteur,
+   copiez un bloc et changez les valeurs. Rien d'autre a toucher.
+
+   Lien direct vers un secteur (pour une campagne ciblee) :
+   https://prospectdata.netlify.app/?secteur=restaurants
+
+   Champs d'un prospect : n nom, v ville, t telephone, e email, x tier (a/b/c),
+   lat/lng coordonnees, st statut (new/tel/rel/rdv), sl libelle du statut,
+   as assigne, neuf: true pour le badge "nouveau".
+============================================================================= */
+var PD_SECTORS = [
+  { id:"garages", tab:"Garages",
+    phrase:"les garages de moins de 20 salariés en Auvergne-Rhône-Alpes",
+    apes:["45.20A","45.20B","45.11Z","45.32Z","effectif 10 à 19","12 départements"],
+    n:4312, nA:1108,
+    titre:"Garages - Auvergne-Rhône-Alpes", maj:"mise à jour du 1er août",
+    kpis:[["à contacter",318],["contactés",94],["RDV",17],["signés",4]],
+    prospects:[
+      {n:"Garage Bertholon",v:"Saint-Étienne",t:"04 77 33 12 88",e:"contact@garage-bertholon.fr",x:"a",lat:45.4397,lng:4.3872,st:"rdv",sl:"RDV le 12",as:"Sofiene"},
+      {n:"Garage du Vieux Pont",v:"Villefranche-sur-Saône",t:"04 74 22 08 51",e:"garageduvieuxpont@orange.fr",x:"a",lat:45.9862,lng:4.7196,st:"new",sl:"à contacter",as:"-",neuf:true},
+      {n:"Auto Service Vaise",v:"Lyon 9e",t:"04 78 64 20 41",e:"accueil@autoservice-vaise.fr",x:"a",lat:45.7719,lng:4.8042,st:"rel",sl:"à relancer le 08/09",as:"Sofiene"},
+      {n:"Garage des Monts d'Or",v:"Limonest",t:"04 78 35 47 12",e:"contact@garagemontsdor.fr",x:"a",lat:45.8369,lng:4.7724,st:"new",sl:"à contacter",as:"-"},
+      {n:"Carrosserie Meyzieu",v:"Meyzieu",t:"04 72 45 90 13",e:"contact@carrosserie-meyzieu.fr",x:"b",lat:45.7669,lng:5.0036,st:"tel",sl:"contacté",as:"Romain"},
+      {n:"SARL Pneus Vienne",v:"Vienne",t:"04 74 85 31 66",e:"contact@pneus-vienne.fr",x:"b",lat:45.5253,lng:4.8744,st:"new",sl:"à contacter",as:"-"},
+      {n:"Méca Plus Bourgoin",v:"Bourgoin-Jallieu",t:"04 74 93 55 20",e:"contact@mecaplus38.fr",x:"b",lat:45.5861,lng:5.2736,st:"new",sl:"à contacter",as:"-"},
+      {n:"Atelier Roanne Auto",v:"Roanne",t:"04 77 71 04 22",e:"atelier-roanne@gmail.com",x:"c",lat:46.0367,lng:4.0689,st:"new",sl:"à contacter",as:"-"}
+    ]},
+  { id:"boulangeries", tab:"Boulangeries",
+    phrase:"les boulangeries artisanales de Gironde",
+    apes:["10.71C","10.71B","dép. 33"],
+    n:894, nA:236,
+    titre:"Boulangeries - Gironde", maj:"mise à jour du 1er août",
+    kpis:[["à contacter",214],["contactés",61],["RDV",9],["signés",2]],
+    prospects:[
+      {n:"Boulangerie Lartigue",v:"Bordeaux",t:"05 56 44 07 31",e:"contact@boulangerie-lartigue.fr",x:"a",lat:44.8378,lng:-0.5792,st:"rdv",sl:"RDV le 09",as:"Sofiene"},
+      {n:"Aux Blés de Libourne",v:"Libourne",t:"05 57 51 28 44",e:"contact@blesdelibourne.fr",x:"a",lat:44.9133,lng:-0.2442,st:"new",sl:"à contacter",as:"-",neuf:true},
+      {n:"Fournil des Chartrons",v:"Bordeaux",t:"05 56 81 25 60",e:"fournilchartrons@orange.fr",x:"b",lat:44.8532,lng:-0.5706,st:"rel",sl:"à relancer le 11/09",as:"Sofiene"},
+      {n:"L'Épi d'Arcachon",v:"Arcachon",t:"05 56 83 09 57",e:"contact@epidarcachon.fr",x:"a",lat:44.6586,lng:-1.1689,st:"new",sl:"à contacter",as:"-"},
+      {n:"Maison Peyrole",v:"Mérignac",t:"05 56 97 14 08",e:"contact@maisonpeyrole.fr",x:"b",lat:44.8438,lng:-0.6561,st:"tel",sl:"contacté",as:"Romain"},
+      {n:"Le Pétrin de Pessac",v:"Pessac",t:"05 56 45 62 30",e:"lepetrindepessac@gmail.com",x:"c",lat:44.8067,lng:-0.6311,st:"new",sl:"à contacter",as:"-"}
+    ]},
+  { id:"bet", tab:"Bureaux d'études",
+    phrase:"les bureaux d'études thermiques en France",
+    apes:["71.12B","74.90B","France entière"],
+    n:6240, nA:1730,
+    titre:"Bureaux d'études thermiques - France", maj:"mise à jour du 1er août",
+    kpis:[["à contacter",402],["contactés",118],["RDV",21],["signés",6]],
+    prospects:[
+      {n:"BET Thermica",v:"Paris 11e",t:"01 48 22 65 90",e:"contact@thermica.fr",x:"a",lat:48.8632,lng:2.3708,st:"rdv",sl:"RDV le 14",as:"Sofiene"},
+      {n:"Enerconseil Ouest",v:"Nantes",t:"02 40 71 33 25",e:"etudes@enerconseil-ouest.fr",x:"a",lat:47.2184,lng:-1.5536,st:"rel",sl:"à relancer le 10/09",as:"Sofiene"},
+      {n:"Calorix Études",v:"Lyon 3e",t:"04 78 29 51 66",e:"contact@calorix-etudes.fr",x:"a",lat:45.7601,lng:4.8591,st:"new",sl:"à contacter",as:"-",neuf:true},
+      {n:"Fluditherm",v:"Marseille",t:"04 91 55 08 47",e:"contact@fluditherm.fr",x:"b",lat:43.2965,lng:5.3698,st:"tel",sl:"contacté",as:"Romain"},
+      {n:"BET Nordtherm",v:"Lille",t:"03 20 45 76 12",e:"contact@nordtherm.fr",x:"b",lat:50.6292,lng:3.0573,st:"new",sl:"à contacter",as:"-"},
+      {n:"Thermiflux Ingénierie",v:"Toulouse",t:"05 61 42 88 03",e:"contact@thermiflux.fr",x:"b",lat:43.6047,lng:1.4442,st:"new",sl:"à contacter",as:"-"}
+    ]},
+  { id:"restaurants", tab:"Restaurants",
+    phrase:"les restaurants de la métropole nantaise",
+    apes:["56.10A","56.10C","métropole de Nantes"],
+    n:1876, nA:402,
+    titre:"Restaurants - Métropole de Nantes", maj:"mise à jour du 1er août",
+    kpis:[["à contacter",287],["contactés",73],["RDV",12],["signés",3]],
+    prospects:[
+      {n:"La Table d'Erdre",v:"Nantes",t:"02 40 48 12 76",e:"contact@latabledererdre.fr",x:"a",lat:47.2213,lng:-1.5534,st:"rdv",sl:"RDV le 15",as:"Sofiene"},
+      {n:"Le Comptoir de Rezé",v:"Rezé",t:"02 40 75 84 10",e:"contact@comptoir-reze.fr",x:"a",lat:47.1833,lng:-1.5500,st:"new",sl:"à contacter",as:"-",neuf:true},
+      {n:"Brasserie Atlantique",v:"Saint-Herblain",t:"02 28 07 44 15",e:"contact@brasserie-atlantique.fr",x:"a",lat:47.2122,lng:-1.6486,st:"rel",sl:"à relancer le 12/09",as:"Sofiene"},
+      {n:"Auberge du Vignoble",v:"Vertou",t:"02 40 34 57 92",e:"contact@aubergeduvignoble.fr",x:"b",lat:47.1689,lng:-1.4697,st:"tel",sl:"contacté",as:"Romain"},
+      {n:"Bistrot des Machines",v:"Nantes",t:"02 40 69 33 21",e:"bistrotdesmachines@gmail.com",x:"b",lat:47.2061,lng:-1.5646,st:"new",sl:"à contacter",as:"-"},
+      {n:"Chez Marguerite",v:"Orvault",t:"02 51 78 20 63",e:"chezmarguerite44@orange.fr",x:"c",lat:47.2711,lng:-1.6222,st:"new",sl:"à contacter",as:"-"}
+    ]},
+  { id:"immobilier", tab:"Agences immo",
+    phrase:"les agences immobilières d'Île-de-France",
+    apes:["68.31Z","68.32A","région Île-de-France"],
+    n:9350, nA:2140,
+    titre:"Agences immobilières - Île-de-France", maj:"mise à jour du 1er août",
+    kpis:[["à contacter",356],["contactés",89],["RDV",15],["signés",5]],
+    prospects:[
+      {n:"Cergy Immobilier Conseil",v:"Cergy",t:"01 34 43 66 19",e:"contact@cergy-immo.fr",x:"a",lat:49.0364,lng:2.0761,st:"rdv",sl:"RDV le 11",as:"Sofiene"},
+      {n:"Versailles Prestige Immo",v:"Versailles",t:"01 39 50 27 64",e:"contact@versaillesprestige.fr",x:"b",lat:48.8049,lng:2.1204,st:"new",sl:"à contacter",as:"-",neuf:true},
+      {n:"Agence du Parc",v:"Paris 15e",t:"01 45 32 78 90",e:"contact@agenceduparc.fr",x:"a",lat:48.8412,lng:2.3003,st:"rel",sl:"à relancer le 09/09",as:"Sofiene"},
+      {n:"Boulogne Habitat Conseil",v:"Boulogne-Billancourt",t:"01 46 05 88 21",e:"contact@boulognehabitat.fr",x:"a",lat:48.8352,lng:2.2409,st:"new",sl:"à contacter",as:"-"},
+      {n:"Immo Saint-Germain",v:"Saint-Germain-en-Laye",t:"01 34 51 90 08",e:"contact@immo-stgermain.fr",x:"b",lat:48.8989,lng:2.0938,st:"tel",sl:"contacté",as:"Romain"},
+      {n:"Créteil Transactions",v:"Créteil",t:"01 48 98 35 72",e:"creteil.transactions@gmail.com",x:"c",lat:48.7904,lng:2.4556,st:"new",sl:"à contacter",as:"-"}
+    ]},
+  { id:"electriciens", tab:"Électriciens",
+    phrase:"les électriciens de Haute-Garonne et du Tarn",
+    apes:["43.21A","dép. 31, 81, 82"],
+    n:3120, nA:845,
+    titre:"Électriciens - Occitanie", maj:"mise à jour du 1er août",
+    kpis:[["à contacter",268],["contactés",77],["RDV",14],["signés",3]],
+    prospects:[
+      {n:"Élec Garonne",v:"Toulouse",t:"05 61 44 27 83",e:"contact@elecgaronne.fr",x:"a",lat:43.6047,lng:1.4442,st:"rdv",sl:"RDV le 10",as:"Sofiene"},
+      {n:"Électricité 82",v:"Montauban",t:"05 63 20 47 15",e:"contact@elec82.fr",x:"a",lat:44.0221,lng:1.3529,st:"new",sl:"à contacter",as:"-",neuf:true},
+      {n:"ACL Électricité",v:"Colomiers",t:"05 61 30 82 47",e:"contact@acl-elec.fr",x:"a",lat:43.6110,lng:1.3348,st:"rel",sl:"à relancer le 05/09",as:"Sofiene"},
+      {n:"Muret Courant Fort",v:"Muret",t:"05 61 51 09 76",e:"contact@muretcourantfort.fr",x:"b",lat:43.4611,lng:1.3267,st:"tel",sl:"contacté",as:"Romain"},
+      {n:"Blagnac Élec Services",v:"Blagnac",t:"05 61 71 39 04",e:"blagnacelec@orange.fr",x:"b",lat:43.6364,lng:1.3906,st:"new",sl:"à contacter",as:"-"},
+      {n:"Albi Élec 81",v:"Albi",t:"05 63 54 21 88",e:"albielec81@gmail.com",x:"c",lat:43.9298,lng:2.1480,st:"new",sl:"à contacter",as:"-"}
+    ]}
+];
+
+/* secteur demande dans l'URL : ?secteur=restaurants */
+var PD_START = 0;
 (function(){
-  var scenarios = [
-    { q:"les garages de moins de 20 salariés en Auvergne-Rhône-Alpes",
-      apes:["45.20A","45.20B","45.11Z","45.32Z","effectif 10 à 19","12 départements"],
-      n:4312, sub:"dont 1 108 en tier A, à appeler en premier",
-      rows:[
-        ["Garage Bertholon","04 77 33 12 88","contact@garage-bertholon.fr","a"],
-        ["Auto Service Vaise","04 78 64 20 41","accueil@autoservice-vaise.fr","a"],
-        ["Carrosserie Meyzieu","04 72 45 90 13","contact@carrosserie-meyzieu.fr","b"]
-      ]},
-    { q:"les boulangeries de Gironde",
-      apes:["10.71C","10.71B","dép. 33"],
-      n:894, sub:"dont 236 en tier A, à appeler en premier",
-      rows:[
-        ["Boulangerie Lartigue","05 56 44 07 31","contact@boulangerie-lartigue.fr","a"],
-        ["Fournil des Chartrons","05 56 81 25 60","fournilchartrons@orange.fr","b"],
-        ["Maison Peyrole","05 57 22 14 08","contact@maisonpeyrole.fr","b"]
-      ]},
-    { q:"les bureaux d'études thermiques en France",
-      apes:["71.12B","74.90B","France entière"],
-      n:6240, sub:"dont 1 730 en tier A, à appeler en premier",
-      rows:[
-        ["BET Thermica","01 48 22 65 90","contact@thermica.fr","a"],
-        ["Enerconseil Ouest","02 40 71 33 25","etudes@enerconseil-ouest.fr","a"],
-        ["Fluditherm","04 91 55 08 47","contact@fluditherm.fr","b"]
-      ]}
-  ];
+  try{
+    var q=new URLSearchParams(location.search).get('secteur');
+    if(q){ PD_SECTORS.forEach(function(s,i){ if(s.id===q) PD_START=i; }); }
+  }catch(e){}
+})();
+
+/* ---- hero : de vos mots au CRM, tous les secteurs en boucle ---- */
+(function(){
   var typed=document.getElementById('typed'), apesBox=document.getElementById('apes'),
       countEl=document.getElementById('count'), subEl=document.getElementById('countSub'),
-      rowsBox=document.getElementById('rows'), si=0, timers=[];
+      rowsBox=document.getElementById('rows'), si=PD_START, timers=[];
 
   function later(fn,ms){ timers.push(setTimeout(fn,ms)); }
   function clearTimers(){ timers.forEach(clearTimeout); timers=[]; }
@@ -703,15 +821,15 @@
 
   function buildRows(s){
     rowsBox.innerHTML='';
-    s.rows.forEach(function(r){
+    s.prospects.slice(0,3).forEach(function(r){
       var d=document.createElement('div'); d.className='drow';
       var l1=document.createElement('div'); l1.className='l1';
-      var nm=document.createElement('span'); nm.textContent=r[0];
-      var t=document.createElement('span'); t.className='tier '+r[3]; t.textContent=r[3].toUpperCase();
+      var nm=document.createElement('span'); nm.textContent=r.n;
+      var t=document.createElement('span'); t.className='tier '+r.x; t.textContent=r.x.toUpperCase();
       l1.appendChild(nm); l1.appendChild(t);
       var l2=document.createElement('div'); l2.className='l2';
-      var tel=document.createElement('span'); tel.textContent=r[1];
-      var em=document.createElement('span'); em.className='mail'; em.textContent=r[2];
+      var tel=document.createElement('span'); tel.textContent=r.t;
+      var em=document.createElement('span'); em.className='mail'; em.textContent=r.e;
       l2.appendChild(tel); l2.appendChild(em);
       d.appendChild(l1); d.appendChild(l2); rowsBox.appendChild(d);
     });
@@ -719,7 +837,7 @@
 
   function run(){
     clearTimers();
-    var s=scenarios[si];
+    var s=PD_SECTORS[si];
     typed.textContent=''; subEl.innerHTML='&nbsp;'; countEl.textContent='0';
     apesBox.innerHTML=''; buildRows(s);
     s.apes.forEach(function(a){
@@ -727,7 +845,7 @@
     });
     var i=0;
     (function type(){
-      if(i<=s.q.length){ typed.textContent=s.q.slice(0,i); i++; later(type,32); }
+      if(i<=s.phrase.length){ typed.textContent=s.phrase.slice(0,i); i++; later(type,32); }
       else{
         var chips=apesBox.querySelectorAll('.ape');
         chips.forEach(function(c,k){ later(function(){ c.classList.add('on'); },140+k*130); });
@@ -744,10 +862,10 @@
       countEl.textContent=nb(Math.round(s.n*e));
       if(p<1){ requestAnimationFrame(frame); }
       else{
-        subEl.textContent=s.sub;
+        subEl.textContent='dont '+nb(s.nA)+' en tier A, à appeler en premier';
         var rs=rowsBox.querySelectorAll('.drow');
         rs.forEach(function(r,k){ later(function(){ r.classList.add('on'); },120+k*180); });
-        later(function(){ si=(si+1)%scenarios.length; run(); },120+rs.length*180+4200);
+        later(function(){ si=(si+1)%PD_SECTORS.length; run(); },120+rs.length*180+4200);
       }
     }
     requestAnimationFrame(frame);
@@ -769,7 +887,7 @@
 /* ---- apparition au defilement ---- */
 (function(){
   document.documentElement.classList.add('js');
-  var sel='.sec-head, .cols3, .steps, .forms, .formulas, .cmp, .sec-list, .fit, .ba, .split > div, .cockpit, .crm-note, .strip .wrap';
+  var sel='.sec-head, .cols3, .steps, .forms, .formulas, .cmp, .sec-list, .fit, .ba, .split > div, .cockpit, .crm-note, .strip .wrap, .allfields, .allfields-note, .sector-tabs, .sector-hint';
   document.querySelectorAll(sel).forEach(function(e){ e.classList.add('reveal'); });
   var all=document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)){ all.forEach(function(e){ e.classList.add('in'); }); return; }
@@ -779,55 +897,95 @@
   all.forEach(function(e){ io.observe(e); });
 })();
 
-/* ---- CRM : fiches + carte Leaflet (initialisee a l'approche) ---- */
+/* ---- CRM : onglets secteur + carte Leaflet + fiches ---- */
 (function(){
-  var PROSPECTS=[
-    {n:"Garage Bertholon",v:"Saint-Étienne",t:"04 77 33 12 88",e:"contact@garage-bertholon.fr",x:"a",lat:45.4397,lng:4.3872,st:"rdv",sl:"RDV le 12",as:"Sofiene"},
-    {n:"Garage du Vieux Pont",v:"Villefranche-sur-Saône",t:"04 74 22 08 51",e:"garageduvieuxpont@orange.fr",x:"a",lat:45.9862,lng:4.7196,st:"new",sl:"à contacter",as:"-",neuf:true},
-    {n:"Auto Service Vaise",v:"Lyon 9e",t:"04 78 64 20 41",e:"accueil@autoservice-vaise.fr",x:"a",lat:45.7719,lng:4.8042,st:"rel",sl:"à relancer le 08/09",as:"Sofiene"},
-    {n:"Garage des Monts d'Or",v:"Limonest",t:"04 78 35 47 12",e:"contact@garagemontsdor.fr",x:"a",lat:45.8369,lng:4.7724,st:"new",sl:"à contacter",as:"-"},
-    {n:"Carrosserie Meyzieu",v:"Meyzieu",t:"04 72 45 90 13",e:"contact@carrosserie-meyzieu.fr",x:"b",lat:45.7669,lng:5.0036,st:"tel",sl:"contacté",as:"Romain"},
-    {n:"SARL Pneus Vienne",v:"Vienne",t:"04 74 85 31 66",e:"contact@pneus-vienne.fr",x:"b",lat:45.5253,lng:4.8744,st:"new",sl:"à contacter",as:"-"},
-    {n:"Méca Plus Bourgoin",v:"Bourgoin-Jallieu",t:"04 74 93 55 20",e:"contact@mecaplus38.fr",x:"b",lat:45.5861,lng:5.2736,st:"new",sl:"à contacter",as:"-"},
-    {n:"Atelier Roanne Auto",v:"Roanne",t:"04 77 71 04 22",e:"atelier-roanne@gmail.com",x:"c",lat:46.0367,lng:4.0689,st:"new",sl:"à contacter",as:"-"}
-  ];
   var COLORS={a:"#83283A",b:"#B96A7B",c:"#8A93A0"};
-  var box=document.getElementById('fiches');
+  var tabsBox=document.getElementById('sectorTabs'), fichesBox=document.getElementById('fiches'),
+      titleEl=document.getElementById('crmTitle'), majEl=document.getElementById('crmMaj'),
+      kpisBox=document.getElementById('crmKpis'), mapEl=document.getElementById('map');
+  var current=PD_START, map=null, markers=null;
 
   var ICO_TEL='<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
   var ICO_MAIL='<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>';
 
-  PROSPECTS.forEach(function(p){
-    var f=document.createElement('div'); f.className='fiche'; f.id='f-'+p.n.replace(/\W+/g,'');
-    f.innerHTML=
-      '<div class="top"><div><span class="name">'+p.n+'</span>'+(p.neuf?'<span class="new">nouveau</span>':'')+'<div class="city">'+p.v+'</div></div></div>'+
-      '<div class="contact">'+
-        '<a href="tel:'+p.t.replace(/\s/g,'')+'">'+ICO_TEL+'<span>'+p.t+'</span></a>'+
-        '<a href="mailto:'+p.e+'">'+ICO_MAIL+'<span class="mail">'+p.e+'</span></a>'+
-      '</div>'+
-      '<div class="foot"><span class="st '+p.st+'">'+p.sl+'</span><span>'+(p.as!=='-'?p.as:'non assigné')+'</span><span class="tierl '+p.x+'">'+p.x.toUpperCase()+'</span></div>';
-    box.appendChild(f);
-  });
+  function fid(p){ return 'f-'+p.n.replace(/\W+/g,''); }
 
-  var mapEl=document.getElementById('map'), built=false;
-  function buildMap(){
-    if(built || typeof L==='undefined') return; built=true;
-    var map=L.map(mapEl,{scrollWheelZoom:false});
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
-      maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+  function renderTabs(){
+    PD_SECTORS.forEach(function(s,i){
+      var b=document.createElement('button');
+      b.type='button'; b.className='stab'+(i===current?' on':''); b.textContent=s.tab;
+      b.addEventListener('click',function(){ switchTo(i); });
+      tabsBox.appendChild(b);
+    });
+  }
+
+  function renderBar(s){
+    titleEl.textContent=s.titre; majEl.textContent=s.maj;
+    kpisBox.innerHTML='';
+    s.kpis.forEach(function(k){
+      var sp=document.createElement('span'); sp.className='kpi';
+      sp.appendChild(document.createTextNode(k[0]+' '));
+      var b=document.createElement('b'); b.textContent=k[1]; sp.appendChild(b);
+      kpisBox.appendChild(sp);
+    });
+  }
+
+  function renderFiches(s){
+    fichesBox.innerHTML='';
+    s.prospects.forEach(function(p){
+      var f=document.createElement('div'); f.className='fiche'; f.id=fid(p);
+      f.innerHTML=
+        '<div class="top"><div><span class="name">'+p.n+'</span>'+(p.neuf?'<span class="new">nouveau</span>':'')+'<div class="city">'+p.v+'</div></div></div>'+
+        '<div class="contact">'+
+          '<a href="tel:'+p.t.replace(/\s/g,'')+'">'+ICO_TEL+'<span>'+p.t+'</span></a>'+
+          '<a href="mailto:'+p.e+'">'+ICO_MAIL+'<span class="mail">'+p.e+'</span></a>'+
+        '</div>'+
+        '<div class="foot"><span class="st '+p.st+'">'+p.sl+'</span><span>'+(p.as!=='-'?p.as:'non assigné')+'</span><span class="tierl '+p.x+'">'+p.x.toUpperCase()+'</span></div>';
+      fichesBox.appendChild(f);
+    });
+  }
+
+  function renderMap(s){
+    if(!map) return;
+    markers.clearLayers();
     var group=[];
-    PROSPECTS.forEach(function(p){
-      var m=L.circleMarker([p.lat,p.lng],{radius:9,color:'#fff',weight:2,fillColor:COLORS[p.x],fillOpacity:.95}).addTo(map);
+    s.prospects.forEach(function(p){
+      var m=L.circleMarker([p.lat,p.lng],{radius:9,color:'#fff',weight:2,fillColor:COLORS[p.x],fillOpacity:.95});
       m.bindPopup('<b>'+p.n+'</b><span class="m">'+p.t+'</span><span class="m g">'+p.e+'</span>',{className:'pd-pop'});
       m.on('click',function(){
-        var f=document.getElementById('f-'+p.n.replace(/\W+/g,''));
+        var f=document.getElementById(fid(p));
         if(f){ f.scrollIntoView({behavior:'smooth',block:'nearest'}); f.style.borderColor='#83283A'; setTimeout(function(){ f.style.borderColor=''; },1400); }
       });
-      group.push(m);
+      markers.addLayer(m); group.push(m);
     });
     map.fitBounds(L.featureGroup(group).getBounds().pad(0.18));
   }
+
+  function switchTo(i){
+    current=i;
+    tabsBox.querySelectorAll('.stab').forEach(function(b,k){ b.classList.toggle('on',k===i); });
+    var s=PD_SECTORS[i];
+    renderBar(s); renderFiches(s); renderMap(s);
+    try{
+      var u=new URL(location.href); u.searchParams.set('secteur',s.id);
+      history.replaceState(null,'',u.pathname+'?'+u.searchParams.toString()+u.hash);
+    }catch(e){}
+  }
+
+  function buildMap(){
+    if(map || typeof L==='undefined') return;
+    map=L.map(mapEl,{scrollWheelZoom:false});
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+      maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    markers=L.layerGroup().addTo(map);
+    renderMap(PD_SECTORS[current]);
+  }
+
+  renderTabs();
+  renderBar(PD_SECTORS[current]);
+  renderFiches(PD_SECTORS[current]);
+
   if(!('IntersectionObserver' in window)){ window.addEventListener('load',buildMap); return; }
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(en){ if(en.isIntersecting){ buildMap(); io.disconnect(); } });
