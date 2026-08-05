@@ -12,7 +12,7 @@
  {
   "theme": "maj",
   "question": "Comment le CRM se met-il a jour tout seul ?",
-  "answer": "Le lien avec les sources publiques reste actif. Chaque mois le systeme recherche les entreprises qui portent vos codes APE, repere les nouvelles, complete les contacts qui manquaient et signale celles qui ont ferme. Tout est automatise, cela ne demande aucun travail manuel, c'est pour cette raison que ce n'est pas facture."
+  "answer": "Le lien avec les sources publiques reste actif. Chaque jour le systeme recherche les entreprises qui portent vos codes APE, repere les nouvelles, complete les contacts qui manquaient et signale celles qui ont ferme. Tout est automatise, cela ne demande aucun travail manuel, c'est pour cette raison que ce n'est pas facture."
  },
  {
   "theme": "maj",
@@ -27,7 +27,7 @@
  {
   "theme": "prix",
   "question": "Y a-t-il un abonnement ?",
-  "answer": "Non, aucun. Vous payez une seule fois, a partir de 490 euros. La mise a jour mensuelle est automatisee et incluse, sans rien payer ensuite. Aucun engagement, aucune reconduction tacite, aucun preavis de resiliation. Si vous arretez, le CRM et la base restent a vous."
+  "answer": "Non, aucun. Vous payez une seule fois, a partir de 490 euros. La mise a jour quotidienne est automatisee et incluse, sans rien payer ensuite. Aucun engagement, aucune reconduction tacite, aucun preavis de resiliation. Si vous arretez, le CRM et la base restent a vous."
  },
  {
   "theme": "volume",
@@ -82,7 +82,7 @@
  {
   "theme": "prix",
   "question": "Pourquoi est-ce moins cher qu'une plateforme de prospection ?",
-  "answer": "Parce que le modele est different. Une plateforme vous loue un acces et doit facturer chaque mois pour vivre. Ici le travail est fait une fois, la mise a jour est entierement automatisee et ne coute presque rien a faire tourner. Il n'y a donc aucune raison de facturer un abonnement. En echange, vous n'avez pas les fonctions annexes d'une grosse plateforme, comme les sequences d'emails ou les contacts nominatifs LinkedIn."
+  "answer": "Parce que le modele est different. Une plateforme vous loue un acces et doit facturer chaque jour pour vivre. Ici le travail est fait une fois, la mise a jour est entierement automatisee et ne coute presque rien a faire tourner. Il n'y a donc aucune raison de facturer un abonnement. En echange, vous n'avez pas les fonctions annexes d'une grosse plateforme, comme les sequences d'emails ou les contacts nominatifs LinkedIn."
  },
  {
   "theme": "couverture",
@@ -102,12 +102,12 @@
  {
   "theme": "limites",
   "question": "Qu'est-ce que ProspectData ne fait pas ?",
-  "answer": "Pas d'envoi de campagnes ni de sequences email automatisees, pas de contacts nominatifs issus de LinkedIn, pas de donnees hors de France, pas de gestion de devis factures ou stock, pas de mise a jour en temps reel puisqu'elle est mensuelle, et aucune garantie de resultat commercial : la liste est juste et joignable, l'appel reste a passer."
+  "answer": "Pas d'envoi de campagnes ni de sequences email automatisees, pas de contacts nominatifs issus de LinkedIn, pas de donnees hors de France, pas de gestion de devis factures ou stock, pas de mise a jour en temps reel puisqu'elle est quotidienne, et aucune garantie de resultat commercial : la liste est juste et joignable, l'appel reste a passer."
  },
  {
   "theme": "delais",
   "question": "Comment se deroule un projet, jour par jour ?",
-  "answer": "Jour 1, vingt minutes d'echange sur votre cible. Jour 2, vous recevez les codes APE retenus, le volume exact par departement et la couverture attendue, gratuitement. Jour 3, vous validez ou vous corrigez, puis vous commandez. Jours 4 a 8, construction et enrichissement. Jour 9, controle a la main d'un echantillon. Jour 10, livraison du CRM et prise en main d'une heure. Puis chaque 1er du mois, la mise a jour automatique."
+  "answer": "Jour 1, vingt minutes d'echange sur votre cible. Jour 2, vous recevez les codes APE retenus, le volume exact par departement et la couverture attendue, gratuitement. Jour 3, vous validez ou vous corrigez, puis vous commandez. Jours 4 a 8, construction et enrichissement. Jour 9, controle a la main d'un echantillon. Jour 10, livraison du CRM et prise en main d'une heure. Puis chaque nuit, la mise a jour automatique."
  },
  {
   "theme": "atelier",
@@ -128,5 +128,10 @@
   "theme": "atelier",
   "question": "Qu'est-ce que SupportAI ?",
   "answer": "Un chatbot de service client cle en main pour PME. Il repond aux questions des clients 24 heures sur 24 en s'appuyant sur une FAQ que l'entreprise tient dans un simple Google Sheets : une ligne modifiee et il repond autrement dans la minute. Plus d'informations sur supportai.fr."
+ },
+ {
+  "theme": "maj",
+  "question": "La mise a jour est-elle en temps reel ?",
+  "answer": "Elle est quotidienne, ce qui est le maximum possible. Les sources officielles publient une fois par jour : l'INSEE pour les creations et radiations d'entreprises, le BODACC pour les annonces legales. Votre CRM les recupere chaque nuit, donc une nouvelle entreprise apparait au plus tard le lendemain de son immatriculation. Personne ne peut faire mieux que la source, et qui vous promet la minute vous raconte une histoire."
  }
 ]
