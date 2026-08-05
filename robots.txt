@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /netlify/
+
+# Crawlers d'IA : acces autorise, le resume de l'offre est dans llms.txt
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
 
 Sitemap: https://prospectdata.netlify.app/sitemap.xml
