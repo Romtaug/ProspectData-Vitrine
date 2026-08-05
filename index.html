@@ -3,11 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ProspectData - CRM de prospection sur mesure, rempli et mis à jour tout seul | TPE et PME</title>
-<meta name="description" content="Décrivez votre cible avec vos mots. ProspectData la traduit en codes APE, construit votre CRM rempli de toutes les entreprises concernées avec téléphones et emails vérifiés, et le met à jour tout seul chaque mois. Paiement unique." />
-<meta name="keywords" content="CRM prospection sur mesure, fichier prospection B2B, code APE, base entreprises France, email vérifié prospection, CRM sans abonnement, prospection TPE PME, SIRENE, carte prospects" />
+<title>ProspectData - CRM de prospection sur mesure, TPE et PME</title>
+<meta name="description" content="Décrivez votre cible, recevez un CRM rempli des entreprises concernées, téléphones et emails vérifiés, mis à jour chaque nuit. Dès 490 €, sans abonnement." />
+<meta name="keywords" content="CRM prospection sur mesure, fichier prospection B2B, base de donnees entreprises France, code APE prospection, email verifie B2B, CRM sans abonnement, prospection TPE PME, SIRENE, fichier prospection garages, base prospection boulangeries, prospection restaurants, fichier agences immobilieres, prospection electriciens, bureaux d'etudes thermiques, carte des prospects, base entreprises Lyon, prospection Auvergne-Rhone-Alpes" />
 <meta name="author" content="ProspectData" />
-<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow" />
+<meta name="language" content="French" />
+<meta name="geo.region" content="FR-ARA" />
+<meta name="geo.placename" content="Lyon" />
+<meta name="geo.position" content="45.764043;4.835659" />
+<meta name="ICBM" content="45.764043, 4.835659" />
 <link rel="canonical" href="https://prospectdata.netlify.app/" />
 <meta name="theme-color" content="#161A23" />
 
@@ -15,12 +21,16 @@
 <meta property="og:site_name" content="ProspectData" />
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:title" content="ProspectData - Un CRM de prospection qui se remplit tout seul" />
-<meta property="og:description" content="Décrivez votre cible. Recevez un CRM rempli, téléphones et emails compris, qui se met à jour seul chaque mois. Paiement unique." />
+<meta property="og:description" content="Décrivez votre cible. Recevez un CRM rempli, téléphones et emails compris, qui se met à jour seul chaque jour. Paiement unique." />
 <meta property="og:url" content="https://prospectdata.netlify.app/" />
 <meta property="og:image" content="https://prospectdata.netlify.app/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="ProspectData - CRM de prospection sur mesure" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:type" content="image/png" />
+<link rel="alternate" hreflang="fr-FR" href="https://prospectdata.netlify.app/" />
+<link rel="alternate" hreflang="x-default" href="https://prospectdata.netlify.app/" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="ProspectData - Un CRM de prospection qui se remplit tout seul" />
@@ -32,8 +42,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+<link rel="preload" as="image" href="logo-header.png" fetchpriority="high" />
 <style>
   :root{
     --ink:#161A23;--ink-soft:#20242F;--paper:#FAF9F5;--paper-2:#F1EFE7;
@@ -252,6 +263,25 @@
   .wcard h3{font-size:16px;color:#fff;margin-bottom:6px}
   .wcard p{font-size:14px;color:#A6ACB6;line-height:1.55}
 
+  /* secteurs et zones couverts, bloc indexable */
+  /* cibles deja construites : codes APE et volumes, indexables */
+  .built{margin-top:32px;border-top:1px solid var(--line)}
+  .brow{display:grid;grid-template-columns:1fr auto;gap:6px 24px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .brow h3{font-size:15.5px;margin-bottom:3px}
+  .brow p{font-size:13.5px;color:var(--slate);line-height:1.5}
+  .brow p code{font-family:"JetBrains Mono";font-size:12px;color:var(--green)}
+  .brow .vol{font-family:"JetBrains Mono";font-size:14px;color:var(--wine);white-space:nowrap;text-align:right}
+  .brow .vol small{display:block;color:var(--slate);font-size:11.5px;margin-top:2px}
+  @media(max-width:600px){.brow{grid-template-columns:1fr}.brow .vol{text-align:left}}
+
+  .zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:16px;margin-top:34px}
+  .zcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+  .zcard h3{font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .zcard h3::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--wine);flex-shrink:0}
+  .zcard p{font-size:13.5px;color:var(--slate);line-height:1.65}
+  .zones-note{margin-top:22px;font-size:14.5px;color:var(--slate);line-height:1.6}
+  .zones-note a{color:var(--wine);text-decoration:underline}
+
   /* les autres outils de l'atelier */
   .shop{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:36px}
   .scard{background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;transition:border-color .2s ease,transform .18s ease}
@@ -385,7 +415,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="ProspectData, accueil"><img class="brand-mark" src="assets/logo.png" alt="ProspectData" /></a>
+    <a class="brand" href="#top" aria-label="ProspectData, accueil"><img class="brand-mark" src="logo-header.png" alt="ProspectData, CRM de prospection sur mesure" width="240" height="90" fetchpriority="high" /></a>
     <nav class="nav-links">
       <a href="#comment">Comment ça marche</a>
       <a href="#crm">Le CRM</a>
@@ -405,7 +435,7 @@
       <div>
         <div class="eyebrow">CRM de prospection sur mesure</div>
         <h1>Décrivez<br/>votre cible.<br/><em>Recevez un CRM vivant.</em></h1>
-        <p class="sub">Vous dites qui vous voulez démarcher, avec vos mots. ProspectData traduit en codes APE, remplit votre CRM de toutes les entreprises concernées, téléphones et emails compris, puis le met à jour tout seul chaque mois.</p>
+        <p class="sub">Vous dites qui vous voulez démarcher, avec vos mots. ProspectData traduit en codes APE, remplit votre CRM de toutes les entreprises concernées, téléphones et emails compris, puis le met à jour tout seul chaque jour.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="mailto:romtaug+prospectdata@gmail.com?subject=Comptage%20de%20ma%20cible&body=Le%20m%C3%A9tier%20que%20je%20veux%20d%C3%A9marcher%20%3A%0AMa%20zone%20g%C3%A9ographique%20%3A%0ALa%20taille%20d%27entreprise%20vis%C3%A9e%20%3A">Compter ma cible gratuitement</a>
           <a class="btn btn-ghost" href="#crm">Voir le CRM</a>
@@ -434,7 +464,7 @@
     <div class="wrap">
       <div class="cell"><div class="k">0 code</div><div class="v">à connaître, vos mots suffisent</div></div>
       <div class="cell"><div class="k">48 infos</div><div class="v">par entreprise, email compris</div></div>
-      <div class="cell"><div class="k">1 ×/mois</div><div class="v">mise à jour automatique, à vie</div></div>
+      <div class="cell"><div class="k">chaque jour</div><div class="v">mise à jour automatique, à vie</div></div>
       <div class="cell"><div class="k">0 €</div><div class="v">d'abonnement, paiement unique</div></div>
     </div>
   </div>
@@ -470,7 +500,7 @@
         </div>
         <div class="ba">
           <div class="row before"><div class="tag">Avant</div><div>Deviner les bons codes NAF, exporter des listes, chercher chaque téléphone à la main, croiser dans Excel, recommencer chaque trimestre.</div></div>
-          <div class="row after"><div class="tag">Avec ProspectData</div><div class="txt">« Les garages de moins de 20 salariés en Auvergne »</div></div>
+          <div class="row after"><div class="tag">Avec ProspectData</div><div class="txt">« Les garages de moins de 20 salariés en Rhône-Alpes »</div></div>
         </div>
       </div>
     </div>
@@ -488,7 +518,7 @@
         <div class="step"><div class="num">01</div><h3>Vous décrivez votre cible</h3><p>Un métier, une zone, une taille. « Les boulangeries de Gironde » suffit, aucun formulaire technique.</p></div>
         <div class="step"><div class="num">02</div><h3>Traduction en codes APE</h3><p>Chaque métier correspond à des codes officiels de l'INSEE. Ils vous sont soumis pour validation avant de lancer quoi que ce soit.</p></div>
         <div class="step"><div class="num">03</div><h3>Votre CRM arrive rempli</h3><p>Toutes les entreprises concernées, avec téléphone, email vérifié, dirigeant, finances et un score de priorité.</p></div>
-        <div class="step"><div class="num">04</div><h3>Il se met à jour seul</h3><p>Chaque mois : nouvelles entreprises ajoutées, contacts complétés, sociétés fermées écartées. Vos notes ne sont jamais écrasées.</p></div>
+        <div class="step"><div class="num">04</div><h3>Il se met à jour seul</h3><p>Chaque nuit : nouvelles entreprises ajoutées, contacts complétés, sociétés fermées écartées. Vos notes ne sont jamais écrasées.</p></div>
       </div>
     </div>
   </section>
@@ -557,11 +587,19 @@
           <div class="fiches" id="fiches"></div>
         </div>
       </div>
+      <div class="built">
+        <div class="brow"><div><h3>Garages et carrosseries en Auvergne-Rhône-Alpes</h3><p>Codes APE <code>45.20A</code> <code>45.20B</code> <code>45.11Z</code> <code>45.32Z</code>, 10 à 19 salariés, 12 départements.</p></div><div class="vol">4 312<small>dont 1 108 en tier A</small></div></div>
+        <div class="brow"><div><h3>Boulangeries artisanales de Gironde</h3><p>Codes APE <code>10.71C</code> <code>10.71B</code>, département 33, fabrication sur place.</p></div><div class="vol">894<small>dont 236 en tier A</small></div></div>
+        <div class="brow"><div><h3>Bureaux d'études thermiques, France entière</h3><p>Codes APE <code>71.12B</code> <code>74.90B</code>, croisés avec la dénomination et les labels d'études énergétiques.</p></div><div class="vol">6 240<small>dont 1 730 en tier A</small></div></div>
+        <div class="brow"><div><h3>Restaurants de la métropole nantaise</h3><p>Codes APE <code>56.10A</code> <code>56.10C</code>, restauration traditionnelle et rapide.</p></div><div class="vol">1 876<small>dont 402 en tier A</small></div></div>
+        <div class="brow"><div><h3>Agences immobilières d'Île-de-France</h3><p>Codes APE <code>68.31Z</code> <code>68.32A</code>, transaction et administration de biens.</p></div><div class="vol">9 350<small>dont 2 140 en tier A</small></div></div>
+        <div class="brow"><div><h3>Électriciens d'Occitanie</h3><p>Code APE <code>43.21A</code>, départements 31, 81 et 82, travaux d'installation électrique.</p></div><div class="vol">3 120<small>dont 845 en tier A</small></div></div>
+      </div>
       <p class="sector-hint reveal">Votre secteur n'est pas dans la liste ? Les 732 codes APE fonctionnent pareil : <a href="#contact">décrivez votre cible, le comptage est gratuit</a>.</p>
       <div class="crm-note">
         <span>Email et téléphone cliquables sur chaque fiche</span>
         <span>Attribution par commercial, statuts et relances</span>
-        <span>Les nouveaux prospects du mois signalés</span>
+        <span>Les nouveaux prospects du jour signalés</span>
         <span>Export Excel à tout moment</span>
       </div>
     </div>
@@ -628,11 +666,11 @@
       <div class="sec-head">
         <div class="eyebrow">Sans rien demander</div>
         <h2>Le seul CRM qui se remplit sans vous.</h2>
-        <p>Un CRM classique arrive vide, et c'est pour ça qu'il finit abandonné. Le vôtre arrive plein et continue de se remplir, chaque mois, tout seul.</p>
+        <p>Un CRM classique arrive vide, et c'est pour ça qu'il finit abandonné. Le vôtre arrive plein et continue de se remplir, chaque jour, tout seul.</p>
       </div>
       <div class="forms">
         <div class="form-card">
-          <div class="vis"><span class="badge g">+ 12 ce mois</span></div>
+          <div class="vis"><span class="badge g">+ 12 hier</span></div>
           <h3>Les entreprises qui naissent</h3>
           <p>Toute société créée dans vos codes APE entre automatiquement. Un prospect neuf, c'est un prospect que vos concurrents n'ont pas encore appelé.</p>
         </div>
@@ -668,7 +706,7 @@
         <div class="it"><span class="g">&#8226;</span><div><h3>Uniquement du B2B</h3><p>Des coordonnées professionnelles d'entreprises, sur la base de l'intérêt légitime. Jamais de données de particuliers.</p></div></div>
         <div class="it"><span class="g">&#8226;</span><div><h3>Sources publiques sous licence Etalab</h3><p>SIRENE, INPI, BODACC, nomenclature APE de l'INSEE, bases sectorielles. Rien acheté à un revendeur, rien aspiré d'un réseau social.</p></div></div>
         <div class="it"><span class="g">&#8226;</span><div><h3>Chaque ligne est traçable</h3><p>L'origine de chaque information figure dans la fiche. Si un prospect vous demande d'où vient son adresse, vous pouvez répondre.</p></div></div>
-        <div class="it"><span class="g">&#8226;</span><div><h3>Opt-out respecté à chaque mise à jour</h3><p>Toute demande de suppression entre dans une liste qui est appliquée à chaque rafraîchissement mensuel, définitivement.</p></div></div>
+        <div class="it"><span class="g">&#8226;</span><div><h3>Opt-out respecté à chaque mise à jour</h3><p>Toute demande de suppression entre dans une liste qui est appliquée à chaque rafraîchissement quotidien, définitivement.</p></div></div>
       </div>
     </div>
   </section>
@@ -708,7 +746,7 @@
         <div class="tl"><div class="when">Jours 4 à 8</div><div><h3>Construction et enrichissement</h3><p>La base est constituée, les contacts reconstitués et vérifiés, le score de priorité calculé. Si vous avez un fichier de clients actuels, il est intégré comme liste d'exclusion pour qu'aucun commercial ne les appelle comme prospects.</p></div></div>
         <div class="tl"><div class="when">Jour 9</div><div><h3>Contrôle avant livraison</h3><p>Un échantillon est vérifié à la main, numéro par numéro, pour valider que la cible correspond bien à ce qui était annoncé et que les coordonnées répondent.</p></div></div>
         <div class="tl"><div class="when">Jour 10</div><div><h3>Livraison et prise en main</h3><p>Votre CRM est en ligne, rempli, avec vos accès. Une heure suffit pour que votre équipe soit autonome. Les 60 jours de garantie de correction commencent à cette date.</p></div></div>
-        <div class="tl recur"><div class="when">Chaque 1er du mois</div><div><h3>La mise à jour, sans rien demander</h3><p>Nouvelles entreprises ajoutées, contacts manquants complétés, sociétés radiées signalées. Vos statuts, vos notes et votre historique ne sont jamais touchés. Vous n'avez aucune démarche à faire, et rien de plus à payer.</p></div></div>
+        <div class="tl recur"><div class="when">Chaque nuit</div><div><h3>La mise à jour, sans rien demander</h3><p>Nouvelles entreprises ajoutées, contacts manquants complétés, sociétés radiées signalées. Vos statuts, vos notes et votre historique ne sont jamais touchés. Vous n'avez aucune démarche à faire, et rien de plus à payer.</p></div></div>
       </div>
     </div>
   </section>
@@ -732,7 +770,7 @@
             <li>Volume illimité d'entreprises</li>
             <li>CRM en ligne déployé et déjà rempli</li>
             <li>Emails et téléphones vérifiés</li>
-            <li>Mise à jour automatique mensuelle</li>
+            <li>Mise à jour automatique quotidienne</li>
             <li>2 utilisateurs</li>
           </ul>
           <div class="cost">Corrections garanties <b>60 jours</b>, en direct.</div>
@@ -768,7 +806,7 @@
           <div class="cost">Corrections garanties <b>60 jours</b>, en direct.</div>
         </div>
       </div>
-      <p class="formulas-note">Aucun abonnement : la mise à jour mensuelle est automatisée, elle est donc incluse à vie. Passé les 60 jours, les évolutions se font au forfait dès 90 €, toujours chiffré et validé avant de commencer.</p>
+      <p class="formulas-note">Aucun abonnement : la mise à jour quotidienne est automatisée, elle est donc incluse à vie. Passé les 60 jours, les évolutions se font au forfait dès 90 €, toujours chiffré et validé avant de commencer.</p>
     </div>
   </section>
 
@@ -784,7 +822,7 @@
         <div class="wcard"><div class="k">0 €</div><h3>Les données sources sont gratuites</h3><p>SIRENE, INPI, BODACC et la nomenclature APE sont des données publiques sous licence Etalab. Il n'y a aucune licence à répercuter sur vous, contrairement aux revendeurs de fichiers.</p></div>
         <div class="wcard"><div class="k">×1</div><h3>Le travail est le même à toutes les tailles</h3><p>Construire une cible de 400 entreprises ou de 40 000 demande exactement le même temps : celui de définir les codes et de lancer la chaîne. C'est pour ça qu'il n'y a aucune limite de volume et aucune facturation à la ligne.</p></div>
         <div class="wcard"><div class="k">1</div><h3>Une seule personne, aucune structure</h3><p>Pas de commerciaux à commissionner, pas de bureaux, pas de service marketing, pas d'investisseurs à rembourser. Vous ne payez que le travail, pas l'organisation qui l'entoure.</p></div>
-        <div class="wcard"><div class="k">&#8635;</div><h3>Le CRM est déployé, pas développé</h3><p>L'outil existe déjà et a été construit une fois. Chaque client reçoit sa propre instance en quelques heures. Et la mise à jour mensuelle est entièrement automatisée : elle ne coûte rien à faire tourner, donc elle n'est pas facturée.</p></div>
+        <div class="wcard"><div class="k">&#8635;</div><h3>Le CRM est déployé, pas développé</h3><p>L'outil existe déjà et a été construit une fois. Chaque client reçoit sa propre instance en quelques heures. Et la mise à jour quotidienne est entièrement automatisée : elle ne coûte rien à faire tourner, donc elle n'est pas facturée.</p></div>
       </div>
       <div class="honest" style="background:rgba(255,255,255,.04);border-color:var(--line-dark);color:#ECEDEA;margin-top:30px"><b>Ce que ce prix implique, en toute franchise.</b> Un seul interlocuteur, donc pas de support téléphonique permanent : les échanges se font par email, avec une réponse sous 24 heures. Un périmètre volontairement étroit, aussi. ProspectData fait une chose et la fait bien, et refuse tout le reste. C'est exactement ce qui permet de tenir ce tarif.</div>
     </div>
@@ -805,7 +843,7 @@
           <tr><td>Coût</td><td>1 200 à 2 800 € par an, sans fin</td><td>0,10 à 1 € par contact, figé</td><td class="col-hi">Un paiement unique, dès 490 €</td></tr>
           <tr><td>Ciblage</td><td>À construire seul dans leur interface</td><td>Des critères imposés</td><td class="col-hi">Traduit avec vous, validé avant</td></tr>
           <tr><td>Volume</td><td>Crédits mensuels limités</td><td>Facturé à la ligne</td><td class="col-hi"><span class="yes">Illimité</span></td></tr>
-          <tr><td>Mise à jour</td><td>Tant que vous payez</td><td class="no">Jamais</td><td class="col-hi"><span class="yes">Mensuelle, incluse à vie</span></td></tr>
+          <tr><td>Mise à jour</td><td>Tant que vous payez</td><td class="no">Jamais</td><td class="col-hi"><span class="yes">Quotidienne, incluse à vie</span></td></tr>
           <tr><td>Outil de suivi</td><td>Parfois, en option payante</td><td class="no">Aucun</td><td class="col-hi">CRM avec carte, statuts, relances</td></tr>
           <tr><td>Si vous arrêtez</td><td class="no">Vous perdez tout</td><td>Un fichier mort</td><td class="col-hi"><span class="yes">Le CRM et la base restent à vous</span></td></tr>
         </tbody>
@@ -826,7 +864,7 @@
         <div class="notc"><h3>Les contacts nominatifs LinkedIn</h3><p>Pas d'email personnel de directeur commercial extrait d'un réseau social. Vous obtenez le nom du dirigeant et l'adresse de contact de l'entreprise, pas l'adresse privée d'un salarié.</p></div>
         <div class="notc"><h3>L'international</h3><p>Les sources sont françaises, la couverture s'arrête à la France. Pour une cible européenne ou mondiale, il faut une plateforme internationale.</p></div>
         <div class="notc"><h3>Gérer votre entreprise</h3><p>Ni devis, ni factures, ni stock, ni comptabilité, ni campagnes marketing. C'est un outil de prospection, et c'est ce qui fait qu'il reste utilisé au bout de six mois.</p></div>
-        <div class="notc"><h3>Le temps réel</h3><p>La mise à jour est mensuelle, pas instantanée. Pour de la détection d'événement à la journée, ce n'est pas le bon outil.</p></div>
+        <div class="notc"><h3>L'instantané à la minute</h3><p>Les sources officielles publient leurs mises à jour une fois par jour : l'INSEE pour les créations et radiations, le BODACC pour les annonces légales. Votre CRM les récupère chaque nuit, donc au plus tard le lendemain. Personne ne peut faire mieux que la source, et qui vous promet la minute vous raconte une histoire.</p></div>
         <div class="notc"><h3>Garantir vos ventes</h3><p>La liste est juste, qualifiée et joignable. Mais l'appel reste à passer, et l'argumentaire reste le vôtre. Personne ne peut vous promettre un résultat commercial, et méfiez-vous de qui le fait.</p></div>
       </div>
     </div>
@@ -847,7 +885,30 @@
     </div>
   </section>
 
-  <!-- LES AUTRES OUTILS -->
+  <!-- SECTEURS ET ZONES COUVERTS, contenu indexable -->
+  <section class="sec-alt" id="secteurs">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Secteurs et zones</div>
+        <h2>Tous les métiers, toute la France.</h2>
+        <p>La nomenclature officielle compte 732 codes d'activité, et ils fonctionnent tous de la même façon. Voici les familles de métiers les plus souvent demandées, à titre d'exemple : votre secteur ne s'y trouve pas forcément, il est couvert quand même.</p>
+      </div>
+      <div class="zones">
+        <div class="zcard"><h3>Bâtiment et artisanat</h3><p>Électriciens, plombiers chauffagistes, couvreurs, maçons, menuisiers, plaquistes, peintres en bâtiment, carreleurs, serruriers métalliers, entreprises de gros oeuvre, artisans RGE, entreprises d'isolation, installateurs de pompes à chaleur et de panneaux photovoltaïques.</p></div>
+        <div class="zcard"><h3>Automobile et transport</h3><p>Garages et centres d'entretien, carrossiers, concessions, centres de contrôle technique, loueurs de véhicules, auto-écoles, transporteurs routiers, entreprises de messagerie, taxis et VTC, ambulanciers, entreprises de déménagement.</p></div>
+        <div class="zcard"><h3>Commerce et alimentation</h3><p>Boulangeries et pâtisseries, boucheries charcuteries, épiceries et supérettes, primeurs, cavistes, fleuristes, pharmacies, opticiens, magasins de bricolage, animaleries, commerces de détail spécialisés.</p></div>
+        <div class="zcard"><h3>Hôtellerie et restauration</h3><p>Restaurants traditionnels, restauration rapide, brasseries et bars, traiteurs, hôtels, chambres d'hôtes, campings, salles de réception, discothèques, entreprises de restauration collective.</p></div>
+        <div class="zcard"><h3>Services aux entreprises</h3><p>Bureaux d'études techniques et thermiques, cabinets d'expertise comptable, avocats, agences de communication, sociétés informatiques, entreprises de nettoyage, sociétés de sécurité, organismes de formation, cabinets de recrutement, bureaux de contrôle et diagnostiqueurs.</p></div>
+        <div class="zcard"><h3>Immobilier et gestion</h3><p>Agences immobilières, administrateurs de biens, syndics de copropriété, marchands de biens, promoteurs, courtiers en crédit, entreprises de conciergerie, gestionnaires de résidences.</p></div>
+        <div class="zcard"><h3>Santé et social</h3><p>Cabinets médicaux et paramédicaux, kinésithérapeutes, infirmiers libéraux, dentistes, vétérinaires, laboratoires, EHPAD, cliniques, services d'aide à domicile, crèches, centres de soins.</p></div>
+        <div class="zcard"><h3>Industrie et agriculture</h3><p>Ateliers de production, métallurgie et usinage, agroalimentaire, plastiques, imprimeries, exploitations agricoles, coopératives, entreprises de travaux agricoles, pépiniéristes, paysagistes.</p></div>
+        <div class="zcard"><h3>Toutes les régions</h3><p>Auvergne-Rhône-Alpes, Île-de-France, Provence-Alpes-Côte d'Azur, Occitanie, Nouvelle-Aquitaine, Hauts-de-France, Grand Est, Pays de la Loire, Bretagne, Normandie, Centre-Val de Loire, Bourgogne-Franche-Comté, Corse, ainsi que la Guadeloupe, la Martinique, la Guyane, La Réunion et Mayotte.</p></div>
+        <div class="zcard"><h3>Ou une zone précise</h3><p>Un département, une agglomération, un rayon autour de votre siège, une liste de codes postaux, un secteur commercial déjà défini. Les coordonnées géographiques de chaque entreprise étant fournies, tout découpage est possible, même celui que vous avez dessiné à la main.</p></div>
+      </div>
+      <p class="zones-note">Cette liste n'est qu'un échantillon. Si vous ne vous y reconnaissez pas, <a href="#contact">décrivez votre cible en une phrase</a> : le comptage et la couverture attendue vous sont annoncés gratuitement, avant toute commande.</p>
+    </div>
+  </section>
+
   <section class="sec-dark" id="atelier">
     <div class="wrap">
       <div class="sec-head">
@@ -894,7 +955,7 @@
       </div>
       <div style="max-width:820px">
         <div class="faq-item"><button class="faq-q">Je ne connais pas mes codes APE, c'est un problème ?<span class="pm"></span></button><div class="faq-a"><p>Non, et c'est le cas de presque tous les clients. Vous décrivez le métier visé avec vos mots, la traduction dans la nomenclature officielle est faite pour vous, et les codes retenus vous sont soumis avant de lancer la construction.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Comment un CRM peut-il se mettre à jour tout seul ?<span class="pm"></span></button><div class="faq-a"><p>Le lien avec les sources publiques reste actif. Chaque mois, le système recherche les entreprises qui portent vos codes APE, repère les nouvelles, complète les contacts manquants et signale celles qui ont fermé. Tout est automatisé, c'est pour ça que ce n'est pas facturé.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Comment un CRM peut-il se mettre à jour tout seul ?<span class="pm"></span></button><div class="faq-a"><p>Le lien avec les sources publiques reste actif. Chaque nuit, le système recherche les entreprises qui portent vos codes APE, repère les nouvelles, complète les contacts manquants et signale celles qui ont fermé. Tout est automatisé, c'est pour ça que ce n'est pas facturé.</p></div></div>
         <div class="faq-item"><button class="faq-q">Mes statuts et mes notes sont-ils écrasés à la mise à jour ?<span class="pm"></span></button><div class="faq-a"><p>Jamais. La fusion se fait par identifiant d'entreprise : votre suivi commercial est conservé intégralement, seules les informations manquantes sont complétées et les nouvelles entreprises ajoutées.</p></div></div>
         <div class="faq-item"><button class="faq-q">Les emails et téléphones fonctionnent-ils vraiment ?<span class="pm"></span></button><div class="faq-a"><p>Le domaine de chaque adresse est vérifié techniquement avant livraison. Ce sont des adresses de contact publiées par l'entreprise elle-même, du type contact@ ou accueil@. Aucune adresse nominative n'est fabriquée en devinant un prénom et un nom : ce sont celles qui rebondissent et font blacklister votre domaine d'envoi.</p></div></div>
         <div class="faq-item"><button class="faq-q">Combien d'entreprises vais-je obtenir ?<span class="pm"></span></button><div class="faq-a"><p>Cela dépend de votre cible. Le comptage est gratuit et sans engagement : décrivez-la, le volume exact vous est annoncé avant toute commande, avec le détail par département. Si c'est trop peu pour justifier la dépense, on vous le dit franchement.</p></div></div>
@@ -926,8 +987,8 @@
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <div class="foot-brand"><img src="assets/logo-mark.png" alt="" style="height:26px;width:auto" />ProspectData</div>
-        <div style="max-width:300px">Votre CRM de prospection, rempli et mis à jour tout seul. Pour les TPE et PME françaises.</div>
+        <div class="foot-brand"><img src="logo-mark-small.png" alt="" width="64" height="64" loading="lazy" style="height:26px;width:auto" />ProspectData</div>
+        <div style="max-width:300px">Votre CRM de prospection, rempli et mis à jour chaque jour. Pour les TPE et PME françaises.</div>
       </div>
       <nav class="foot-links">
         <a href="#comment">Comment ça marche</a>
@@ -939,6 +1000,7 @@
         <a href="#limites">Limites</a>
         <a href="#atelier">Autres outils</a>
         <a href="#faq">FAQ</a>
+        <a href="#secteurs">Secteurs</a>
         <a href="mailto:romtaug+prospectdata@gmail.com">Contact</a>
         <a href="https://thermodata.fr" target="_blank" rel="noopener">ThermoData</a>
         <a href="https://supportai.fr" target="_blank" rel="noopener">SupportAI</a>
@@ -968,10 +1030,10 @@
 ============================================================================= */
 var PD_SECTORS = [
   { id:"garages", tab:"Garages",
-    phrase:"Les garages de moins de 20 salariés en Auvergne",
+    phrase:"les garages de moins de 20 salariés en Rhône-Alpes",
     apes:["45.20A","45.20B","45.11Z","45.32Z","effectif 10 à 19","12 départements"],
     n:4312, nA:1108,
-    titre:"Garages - Auvergne-Rhône-Alpes", maj:"mise à jour du 1er août",
+    titre:"Garages - Rhône-Alpes", maj:"mise à jour de cette nuit",
     kpis:[["à contacter",318],["contactés",94],["RDV",17],["signés",4]],
     prospects:[
       {n:"Garage Bertholon",v:"Saint-Étienne",t:"04 77 33 12 88",e:"contact@garage-bertholon.fr",x:"a",lat:45.4397,lng:4.3872,st:"rdv",sl:"RDV le 12",as:"Romain"},
@@ -987,7 +1049,7 @@ var PD_SECTORS = [
     phrase:"les boulangeries artisanales de Gironde",
     apes:["10.71C","10.71B","dép. 33"],
     n:894, nA:236,
-    titre:"Boulangeries - Gironde", maj:"mise à jour du 1er août",
+    titre:"Boulangeries - Gironde", maj:"mise à jour de cette nuit",
     kpis:[["à contacter",214],["contactés",61],["RDV",9],["signés",2]],
     prospects:[
       {n:"Boulangerie Lartigue",v:"Bordeaux",t:"05 56 44 07 31",e:"contact@boulangerie-lartigue.fr",x:"a",lat:44.8378,lng:-0.5792,st:"rdv",sl:"RDV le 09",as:"Raphaële"},
@@ -1001,7 +1063,7 @@ var PD_SECTORS = [
     phrase:"les bureaux d'études thermiques en France",
     apes:["71.12B","74.90B","France entière"],
     n:6240, nA:1730,
-    titre:"Bureaux d'études thermiques - France", maj:"mise à jour du 1er août",
+    titre:"Bureaux d'études thermiques - France", maj:"mise à jour de cette nuit",
     kpis:[["à contacter",402],["contactés",118],["RDV",21],["signés",6]],
     prospects:[
       {n:"BET Thermica",v:"Paris 11e",t:"01 48 22 65 90",e:"contact@thermica.fr",x:"a",lat:48.8632,lng:2.3708,st:"rdv",sl:"RDV le 14",as:"Sofiene"},
@@ -1015,7 +1077,7 @@ var PD_SECTORS = [
     phrase:"les restaurants de la métropole nantaise",
     apes:["56.10A","56.10C","métropole de Nantes"],
     n:1876, nA:402,
-    titre:"Restaurants - Métropole de Nantes", maj:"mise à jour du 1er août",
+    titre:"Restaurants - Métropole de Nantes", maj:"mise à jour de cette nuit",
     kpis:[["à contacter",287],["contactés",73],["RDV",12],["signés",3]],
     prospects:[
       {n:"La Table d'Erdre",v:"Nantes",t:"02 40 48 12 76",e:"contact@latabledererdre.fr",x:"a",lat:47.2213,lng:-1.5534,st:"rdv",sl:"RDV le 15",as:"Romain"},
@@ -1029,7 +1091,7 @@ var PD_SECTORS = [
     phrase:"les agences immobilières d'Île-de-France",
     apes:["68.31Z","68.32A","région Île-de-France"],
     n:9350, nA:2140,
-    titre:"Agences immobilières - Île-de-France", maj:"mise à jour du 1er août",
+    titre:"Agences immobilières - Île-de-France", maj:"mise à jour de cette nuit",
     kpis:[["à contacter",356],["contactés",89],["RDV",15],["signés",5]],
     prospects:[
       {n:"Cergy Immobilier Conseil",v:"Cergy",t:"01 34 43 66 19",e:"contact@cergy-immo.fr",x:"a",lat:49.0364,lng:2.0761,st:"rdv",sl:"RDV le 11",as:"Raphaële"},
@@ -1043,7 +1105,7 @@ var PD_SECTORS = [
     phrase:"les électriciens de Haute-Garonne et du Tarn",
     apes:["43.21A","dép. 31, 81, 82"],
     n:3120, nA:845,
-    titre:"Électriciens - Occitanie", maj:"mise à jour du 1er août",
+    titre:"Électriciens - Occitanie", maj:"mise à jour de cette nuit",
     kpis:[["à contacter",268],["contactés",77],["RDV",14],["signés",3]],
     prospects:[
       {n:"Élec Garonne",v:"Toulouse",t:"05 61 44 27 83",e:"contact@elecgaronne.fr",x:"a",lat:43.6047,lng:1.4442,st:"rdv",sl:"RDV le 10",as:"Sofiene"},
@@ -1142,7 +1204,7 @@ var PD_START = 0;
 /* ---- apparition au defilement ---- */
 (function(){
   document.documentElement.classList.add('js');
-  var sel='.sec-head, .cols3, .steps, .forms, .formulas, .cmp, .sec-list, .fit, .ba, .split > div, .cockpit, .crm-note, .strip .wrap, .allfields, .allfields-note, .sector-tabs, .sector-hint, .trad, .method, .cov, .honest, .timeline, .why, .nots, .shop, .shop-lead';
+  var sel='.sec-head, .cols3, .steps, .forms, .formulas, .cmp, .sec-list, .fit, .ba, .split > div, .cockpit, .crm-note, .strip .wrap, .allfields, .allfields-note, .sector-tabs, .sector-hint, .trad, .method, .cov, .honest, .timeline, .why, .nots, .shop, .shop-lead, .zones, .zones-note, .built';
   document.querySelectorAll(sel).forEach(function(e){ e.classList.add('reveal'); });
   var all=document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)){ all.forEach(function(e){ e.classList.add('in'); }); return; }
@@ -1227,8 +1289,22 @@ var PD_START = 0;
     }catch(e){}
   }
 
+  var libLoading=false;
+  function loadLeaflet(cb){
+    if(typeof L!=='undefined'){ cb(); return; }
+    if(libLoading){ return; }
+    libLoading=true;
+    var css=document.createElement('link');
+    css.rel='stylesheet'; css.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
+    css.crossOrigin=''; document.head.appendChild(css);
+    var js=document.createElement('script');
+    js.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js';
+    js.crossOrigin=''; js.onload=cb; document.head.appendChild(js);
+  }
+
   function buildMap(){
-    if(map || typeof L==='undefined') return;
+    if(map) return;
+    if(typeof L==='undefined'){ loadLeaflet(buildMap); return; }
     map=L.map(mapEl,{scrollWheelZoom:false});
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
       maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -1249,29 +1325,8 @@ var PD_START = 0;
 })();
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" crossorigin="" defer></script>
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {"@type":"ProfessionalService","@id":"https://prospectdata.netlify.app/#org","name":"ProspectData","description":"Création de CRM de prospection sur mesure pour TPE et PME. Le client décrit sa cible, ProspectData la traduit en codes APE, remplit le CRM des entreprises concernées avec téléphones et emails vérifiés, et le met à jour automatiquement chaque mois. Paiement unique, sans abonnement.","url":"https://prospectdata.netlify.app/","email":"romtaug+prospectdata@gmail.com","image":"https://prospectdata.netlify.app/og-image.png","identifier":"882813660","priceRange":"490-2400 EUR","address":{"@type":"PostalAddress","addressLocality":"Lyon","addressRegion":"Auvergne-Rhône-Alpes","addressCountry":"FR"},"areaServed":[{"@type":"Country","name":"France"},{"@type":"City","name":"Lyon"},{"@type":"AdministrativeArea","name":"Auvergne-Rhône-Alpes"}],"knowsAbout":["Prospection B2B","Codes APE","SIRENE","Enrichissement de données","CRM sur mesure","Fichier de prospection"],"serviceType":"CRM de prospection sur mesure","slogan":"Décrivez votre cible, recevez un CRM vivant"},
-    {"@type":"WebSite","@id":"https://prospectdata.netlify.app/#website","url":"https://prospectdata.netlify.app/","name":"ProspectData","inLanguage":"fr-FR","publisher":{"@id":"https://prospectdata.netlify.app/#org"}},
-    {"@type":"Service","name":"CRM de prospection rempli et mis à jour automatiquement","provider":{"@id":"https://prospectdata.netlify.app/#org"},"areaServed":{"@type":"Country","name":"France"},"description":"Traduction de la cible en codes APE, construction d'un CRM rempli de toutes les entreprises concernées avec contacts vérifiés, mise à jour mensuelle automatique. Paiement unique dès 490 euros.","offers":[{"@type":"Offer","name":"Une cible","price":"490","priceCurrency":"EUR","description":"1 cible, volume illimité, CRM déployé et rempli, mise à jour mensuelle, 2 utilisateurs. Paiement unique."},{"@type":"Offer","name":"Équipe","price":"990","priceCurrency":"EUR","description":"Cibles et utilisateurs illimités, carte des prospects, tableau de bord, exclusion des clients actuels, prise en main incluse. Paiement unique."},{"@type":"Offer","name":"Sur mesure","price":"2400","priceCurrency":"EUR","description":"Colonnes et scoring propres au métier, sources sectorielles, connexion aux outils existants, formation. Paiement unique à partir de 2 400 euros."}]},
-    {"@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"Je ne connais pas mes codes APE, c'est un problème ?","acceptedAnswer":{"@type":"Answer","text":"Non. Vous décrivez le métier visé avec vos mots, la traduction dans la nomenclature officielle est faite pour vous, et les codes retenus vous sont soumis avant la construction du CRM."}},
-      {"@type":"Question","name":"Comment un CRM peut-il se mettre à jour tout seul ?","acceptedAnswer":{"@type":"Answer","text":"Le lien avec les sources publiques reste actif. Chaque mois, le système recherche les entreprises des codes APE ciblés, ajoute les nouvelles, complète les contacts manquants et signale les sociétés fermées. Tout est automatisé et inclus."}},
-      {"@type":"Question","name":"Les emails et téléphones fonctionnent-ils vraiment ?","acceptedAnswer":{"@type":"Answer","text":"Le domaine de chaque adresse est vérifié techniquement avant livraison. Ce sont des adresses publiées par l'entreprise elle-même, jamais des adresses nominatives devinées."}},
-      {"@type":"Question","name":"Combien ça coûte ?","acceptedAnswer":{"@type":"Answer","text":"Trois formules en paiement unique, sans abonnement et sans limite de volume : Une cible à 490 euros, Équipe à 990 euros, Sur mesure dès 2 400 euros. Le comptage de la cible est gratuit avant toute commande."}},
-      {"@type":"Question","name":"Y a-t-il une limite au nombre de lignes ?","acceptedAnswer":{"@type":"Answer","text":"Non. Que la cible fasse 300 entreprises ou 40 000, le prix est le même."}},
-      {"@type":"Question","name":"Mes statuts et notes sont-ils écrasés à la mise à jour ?","acceptedAnswer":{"@type":"Answer","text":"Jamais. La fusion se fait par identifiant d'entreprise : le suivi commercial est conservé intégralement."}},
-      {"@type":"Question","name":"Aurai-je un email sur chaque ligne ?","acceptedAnswer":{"@type":"Answer","text":"Non, et personne ne peut le promettre honnêtement. La couverture va de 95 à 100 pour cent sur les métiers labellisés, de 35 à 55 pour cent sur les commerces avec vitrine, et de 5 à 15 pour cent sur les micro-entreprises sans présence en ligne. Le comptage gratuit annonce la couverture attendue avant toute commande."}},
-      {"@type":"Question","name":"Pourquoi ProspectData est-il si peu cher ?","acceptedAnswer":{"@type":"Answer","text":"Les données sources sont publiques et gratuites, une cible de 400 ou de 40 000 entreprises demande le même temps de travail, il n'y a ni commerciaux ni bureaux ni investisseurs à rémunérer, et le CRM est un outil déjà construit qui est déployé en quelques heures."}},
-      {"@type":"Question","name":"Est-ce légal ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Ciblage strictement B2B sur la base de l'intérêt légitime, à partir de sources publiques sous licence Etalab, avec traçabilité de chaque information et liste de suppression respectée."}}
-    ]}
-  ]
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://prospectdata.netlify.app/#org","name":"ProspectData","description":"Création de CRM de prospection sur mesure pour TPE et PME. Le client décrit sa cible, ProspectData la traduit en codes APE, remplit le CRM des entreprises concernées avec téléphones et emails vérifiés, et le met à jour automatiquement chaque nuit. Paiement unique, sans abonnement.","url":"https://prospectdata.netlify.app/","email":"romtaug+prospectdata@gmail.com","image":"https://prospectdata.netlify.app/og-image.png","identifier":"882813660","priceRange":"490-2400 EUR","address":{"@type":"PostalAddress","addressLocality":"Lyon","addressRegion":"Auvergne-Rhône-Alpes","addressCountry":"FR"},"areaServed":[{"@type":"Country","name":"France"},{"@type":"City","name":"Lyon"},{"@type":"AdministrativeArea","name":"Auvergne-Rhône-Alpes"}],"knowsAbout":["Prospection B2B","Codes APE","SIRENE","Enrichissement de données","CRM sur mesure","Fichier de prospection"],"serviceType":"CRM de prospection sur mesure","slogan":"Décrivez votre cible, recevez un CRM vivant","logo":{"@type":"ImageObject","url":"https://prospectdata.netlify.app/assets/logo.png","caption":"ProspectData"},"founder":{"@type":"Person","name":"Romain Taugourdeau"},"availableLanguage":"fr","currenciesAccepted":"EUR","paymentAccepted":"Virement bancaire","hasOfferCatalog":{"@type":"OfferCatalog","name":"Formules ProspectData","itemListElement":[{"@type":"Offer","name":"Une cible","price":"490","priceCurrency":"EUR"},{"@type":"Offer","name":"Équipe","price":"990","priceCurrency":"EUR"},{"@type":"Offer","name":"Sur mesure","price":"2400","priceCurrency":"EUR"}]}},{"@type":"WebSite","@id":"https://prospectdata.netlify.app/#website","url":"https://prospectdata.netlify.app/","name":"ProspectData","inLanguage":"fr-FR","publisher":{"@id":"https://prospectdata.netlify.app/#org"}},{"@type":"Service","name":"CRM de prospection rempli et mis à jour automatiquement","provider":{"@id":"https://prospectdata.netlify.app/#org"},"areaServed":{"@type":"Country","name":"France"},"description":"Traduction de la cible en codes APE, construction d'un CRM rempli de toutes les entreprises concernées avec contacts vérifiés, mise à jour quotidienne automatique. Paiement unique dès 490 euros.","offers":[{"@type":"Offer","name":"Une cible","price":"490","priceCurrency":"EUR","description":"1 cible, volume illimité, CRM déployé et rempli, mise à jour quotidienne, 2 utilisateurs. Paiement unique."},{"@type":"Offer","name":"Équipe","price":"990","priceCurrency":"EUR","description":"Cibles et utilisateurs illimités, carte des prospects, tableau de bord, exclusion des clients actuels, prise en main incluse. Paiement unique."},{"@type":"Offer","name":"Sur mesure","price":"2400","priceCurrency":"EUR","description":"Colonnes et scoring propres au métier, sources sectorielles, connexion aux outils existants, formation. Paiement unique à partir de 2 400 euros."}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Je ne connais pas mes codes APE, c'est un problème ?","acceptedAnswer":{"@type":"Answer","text":"Non. Vous décrivez le métier visé avec vos mots, la traduction dans la nomenclature officielle est faite pour vous, et les codes retenus vous sont soumis avant la construction du CRM."}},{"@type":"Question","name":"Comment un CRM peut-il se mettre à jour tout seul ?","acceptedAnswer":{"@type":"Answer","text":"Le lien avec les sources publiques reste actif. Chaque nuit, le système recherche les entreprises des codes APE ciblés, ajoute les nouvelles, complète les contacts manquants et signale les sociétés fermées. Tout est automatisé et inclus."}},{"@type":"Question","name":"Les emails et téléphones fonctionnent-ils vraiment ?","acceptedAnswer":{"@type":"Answer","text":"Le domaine de chaque adresse est vérifié techniquement avant livraison. Ce sont des adresses publiées par l'entreprise elle-même, jamais des adresses nominatives devinées."}},{"@type":"Question","name":"Combien ça coûte ?","acceptedAnswer":{"@type":"Answer","text":"Trois formules en paiement unique, sans abonnement et sans limite de volume : Une cible à 490 euros, Équipe à 990 euros, Sur mesure dès 2 400 euros. Le comptage de la cible est gratuit avant toute commande."}},{"@type":"Question","name":"Y a-t-il une limite au nombre de lignes ?","acceptedAnswer":{"@type":"Answer","text":"Non. Que la cible fasse 300 entreprises ou 40 000, le prix est le même."}},{"@type":"Question","name":"Mes statuts et notes sont-ils écrasés à la mise à jour ?","acceptedAnswer":{"@type":"Answer","text":"Jamais. La fusion se fait par identifiant d'entreprise : le suivi commercial est conservé intégralement."}},{"@type":"Question","name":"Aurai-je un email sur chaque ligne ?","acceptedAnswer":{"@type":"Answer","text":"Non, et personne ne peut le promettre honnêtement. La couverture va de 95 à 100 pour cent sur les métiers labellisés, de 35 à 55 pour cent sur les commerces avec vitrine, et de 5 à 15 pour cent sur les micro-entreprises sans présence en ligne. Le comptage gratuit annonce la couverture attendue avant toute commande."}},{"@type":"Question","name":"Pourquoi ProspectData est-il si peu cher ?","acceptedAnswer":{"@type":"Answer","text":"Les données sources sont publiques et gratuites, une cible de 400 ou de 40 000 entreprises demande le même temps de travail, il n'y a ni commerciaux ni bureaux ni investisseurs à rémunérer, et le CRM est un outil déjà construit qui est déployé en quelques heures."}},{"@type":"Question","name":"Est-ce légal ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Ciblage strictement B2B sur la base de l'intérêt légitime, à partir de sources publiques sous licence Etalab, avec traçabilité de chaque information et liste de suppression respectée."}}]},{"@type":"WebPage","@id":"https://prospectdata.netlify.app/#webpage","url":"https://prospectdata.netlify.app/","name":"ProspectData - CRM de prospection sur mesure, rempli et mis à jour","description":"Décrivez votre cible avec vos mots. Elle est traduite en codes APE, votre CRM arrive rempli des entreprises concernées avec téléphones et emails vérifiés.","inLanguage":"fr-FR","isPartOf":{"@id":"https://prospectdata.netlify.app/#website"},"about":{"@id":"https://prospectdata.netlify.app/#org"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://prospectdata.netlify.app/og-image.png"},"breadcrumb":{"@id":"https://prospectdata.netlify.app/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://prospectdata.netlify.app/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://prospectdata.netlify.app/"},{"@type":"ListItem","position":2,"name":"CRM de prospection sur mesure","item":"https://prospectdata.netlify.app/#crm"},{"@type":"ListItem","position":3,"name":"Prix","item":"https://prospectdata.netlify.app/#prix"}]},{"@type":"HowTo","name":"Obtenir un CRM de prospection rempli en dix jours","description":"Le déroulé complet, de la description de la cible jusqu'au CRM livré et mis à jour.","totalTime":"P10D","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"490"},"step":[{"@type":"HowToStep","position":1,"name":"Décrire sa cible","text":"Vingt minutes d'échange sur le métier visé, la zone et la taille d'entreprise. Aucune préparation nécessaire."},{"@type":"HowToStep","position":2,"name":"Recevoir codes, volume et couverture","text":"Les codes APE retenus, le nombre exact d'entreprises par département et la couverture attendue en téléphone et email, gratuitement."},{"@type":"HowToStep","position":3,"name":"Valider ou corriger le ciblage","text":"Le client ajuste les codes selon sa connaissance du métier, puis commande. Sans commande, aucun frais."},{"@type":"HowToStep","position":4,"name":"Construction et enrichissement","text":"La base est constituée, les contacts reconstitués et vérifiés, le score de priorité calculé, les clients actuels exclus."},{"@type":"HowToStep","position":5,"name":"Contrôle avant livraison","text":"Un échantillon est vérifié à la main pour valider la cible et les coordonnées."},{"@type":"HowToStep","position":6,"name":"Livraison et prise en main","text":"Le CRM est en ligne et rempli. Une heure de prise en main suffit. La garantie de correction de 60 jours démarre."}]},{"@type":"ItemList","name":"Secteurs couverts par ProspectData","description":"Familles de métiers les plus demandées. Les 732 codes APE de la nomenclature INSEE sont tous couverts.","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"name":"Bâtiment et artisanat"},{"@type":"ListItem","position":2,"name":"Automobile et transport"},{"@type":"ListItem","position":3,"name":"Commerce et alimentation"},{"@type":"ListItem","position":4,"name":"Hôtellerie et restauration"},{"@type":"ListItem","position":5,"name":"Services aux entreprises"},{"@type":"ListItem","position":6,"name":"Immobilier et gestion"},{"@type":"ListItem","position":7,"name":"Santé et social"},{"@type":"ListItem","position":8,"name":"Industrie et agriculture"}]}]}</script>
 <!-- Chatbot ProspectData (fonction serveur sur le meme site) -->
 <script
   src="/widget.js"
