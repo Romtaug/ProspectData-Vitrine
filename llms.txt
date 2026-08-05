@@ -41,5 +41,21 @@ SIRENE / Annuaire des Entreprises, INPI, BODACC, nomenclature APE INSEE, ADEME,
 FINESS, Base Adresse Nationale. Licence Etalab. B2B uniquement, interet legitime,
 liste de suppression respectee.
 
+## Autres outils du meme atelier
+- ThermoData (thermodata.fr) : prospection pour artisans RGE, geolocalisation des
+  logements mal isoles depuis les diagnostics energetiques publics, plans de
+  porte-a-porte optimises, contacts issus de l'annuaire RGE officiel.
+- SupportAI (supportai.fr) : chatbot de service client cle en main pour PME,
+  alimente par une FAQ tenue dans un Google Sheets, disponible 24h/24.
+- Sites vitrine premium : sites modernes et animes construits a partir des
+  donnees publiques de l'entreprise, mise en ligne immediate, sans maintenance.
+- Optimiseur de tournees : application web pour equipes terrain, import Excel des
+  interventions, calcul des trajets les plus courts sur distances routieres
+  reelles, carte interactive, feuilles de route Google Maps et Waze, export avec
+  cout et CO2 economises, livre en marque blanche.
+
+Tous partagent le meme moteur d'enrichissement que ProspectData, ce qui explique
+le niveau de prix.
+
 ## Contact
 romtaug+prospectdata@gmail.com
