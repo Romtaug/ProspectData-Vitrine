@@ -10,7 +10,7 @@ cette description en codes APE officiels de la nomenclature INSEE, puis construi
 un CRM en ligne deja rempli de toutes les entreprises francaises portant ces
 codes, avec leurs contacts reconstitues et verifies.
 
-Ensuite, le CRM s'enrichit et se met a jour automatiquement chaque mois : les
+Ensuite, le CRM s'enrichit et se met a jour automatiquement chaque jour : les
 entreprises nouvellement creees dans la cible sont ajoutees, les contacts
 manquants sont completes, les societes radiees ou en procedure collective sont
 signalees. Les statuts et notes du client ne sont jamais ecrases.
