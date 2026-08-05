@@ -1,7 +1,10 @@
-# Netlify : la racine du depot est publiee telle quelle.
-# Aucune etape de build, le site est un fichier HTML autonome.
-# Ce fichier est simplement ignore par GitHub Pages et par Streamlit.
+# ProspectData - Netlify publie la racine du depot telle quelle.
+# Les fonctions serveur (chatbot Gemini) vivent dans netlify/functions.
 
 [build]
   publish = "."
   command = ""
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
