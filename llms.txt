@@ -16,7 +16,7 @@ manquants sont completes, les societes radiees ou en procedure collective sont
 signalees. Les statuts et notes du client ne sont jamais ecrases.
 
 ## Ce que contient chaque ligne
-Plus de 40 informations : identite (raison sociale, SIREN, SIRET, forme
+48 colonnes de donnees par entreprise, plus 8 liens de recherche prets (Pappers, Maps, LinkedIn, Pages Jaunes, Trustpilot) et 11 colonnes de suivi commercial. Detail : identite (raison sociale, SIREN, SIRET, forme
 juridique, anciennete, code APE), taille (effectif, categorie, etablissements
 ouverts), finances (CA, CA n-1, resultat net), dirigeants, contact (telephone,
 email verifie, site, LinkedIn), adresse et GPS, labels et signaux legaux,
