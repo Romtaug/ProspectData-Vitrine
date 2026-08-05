@@ -108,5 +108,25 @@
   "theme": "delais",
   "question": "Comment se deroule un projet, jour par jour ?",
   "answer": "Jour 1, vingt minutes d'echange sur votre cible. Jour 2, vous recevez les codes APE retenus, le volume exact par departement et la couverture attendue, gratuitement. Jour 3, vous validez ou vous corrigez, puis vous commandez. Jours 4 a 8, construction et enrichissement. Jour 9, controle a la main d'un echantillon. Jour 10, livraison du CRM et prise en main d'une heure. Puis chaque 1er du mois, la mise a jour automatique."
+ },
+ {
+  "theme": "atelier",
+  "question": "Faites-vous autre chose que des CRM de prospection ?",
+  "answer": "Oui, quatre autres outils tournent chez des clients. ThermoData, prospection pour artisans RGE a partir des diagnostics energetiques publics, sur thermodata.fr. SupportAI, chatbot de service client alimente par une simple FAQ Google Sheets, sur supportai.fr. Des sites vitrine modernes et animes construits depuis les donnees publiques de l'entreprise. Et un optimiseur de tournees pour equipes terrain, avec import Excel, calcul des trajets les plus courts sur distances routieres reelles et feuilles de route vers Google Maps ou Waze, livre en marque blanche."
+ },
+ {
+  "theme": "atelier",
+  "question": "Que fait l'optimiseur de tournees ?",
+  "answer": "Il s'adresse aux equipes terrain : techniciens, inspecteurs, livreurs. Vous importez vos interventions depuis un fichier Excel, l'application calcule les tournees les plus courtes en tenant compte des distances routieres reelles et non de la distance a vol d'oiseau, affiche une carte interactive, et genere les feuilles de route directement ouvrables dans Google Maps ou Waze. L'export chiffre les kilometres, le cout et le CO2 economises. Il est livre en marque blanche aux couleurs du client."
+ },
+ {
+  "theme": "atelier",
+  "question": "Qu'est-ce que ThermoData ?",
+  "answer": "Un outil de prospection destine aux artisans RGE de la renovation energetique. Il geolocalise les logements les plus mal isoles d'un secteur a partir des diagnostics de performance energetique publics, et transforme cette carte en plans de porte-a-porte optimises. Les coordonnees des artisans proviennent de l'annuaire RGE officiel. Plus d'informations sur thermodata.fr."
+ },
+ {
+  "theme": "atelier",
+  "question": "Qu'est-ce que SupportAI ?",
+  "answer": "Un chatbot de service client cle en main pour PME. Il repond aux questions des clients 24 heures sur 24 en s'appuyant sur une FAQ que l'entreprise tient dans un simple Google Sheets : une ligne modifiee et il repond autrement dans la minute. Plus d'informations sur supportai.fr."
  }
 ]
