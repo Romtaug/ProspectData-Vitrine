@@ -83,5 +83,30 @@
   "theme": "prix",
   "question": "Pourquoi est-ce moins cher qu'une plateforme de prospection ?",
   "answer": "Parce que le modele est different. Une plateforme vous loue un acces et doit facturer chaque mois pour vivre. Ici le travail est fait une fois, la mise a jour est entierement automatisee et ne coute presque rien a faire tourner. Il n'y a donc aucune raison de facturer un abonnement. En echange, vous n'avez pas les fonctions annexes d'une grosse plateforme, comme les sequences d'emails ou les contacts nominatifs LinkedIn."
+ },
+ {
+  "theme": "couverture",
+  "question": "Aurai-je un email sur chaque ligne ?",
+  "answer": "Non, et personne ne peut le promettre honnetement. La couverture depend du fait que les entreprises publient leurs coordonnees : 95 a 100 pour cent sur les metiers labellises comme les artisans RGE, 35 a 55 pour cent sur les commerces avec vitrine, 5 a 15 pour cent sur les micro-entreprises sans presence en ligne. Le comptage gratuit annonce la couverture attendue sur votre cible precise avant toute commande, et si elle est trop faible l'achat vous est deconseille."
+ },
+ {
+  "theme": "prix",
+  "question": "Pourquoi est-ce si peu cher ?",
+  "answer": "Quatre raisons structurelles : les donnees sources sont publiques et gratuites sous licence Etalab, une cible de 400 ou de 40 000 entreprises demande le meme temps de travail, il n'y a ni commerciaux ni bureaux ni investisseurs a remunerer, et le CRM est un outil deja construit qui est simplement deploye. En contrepartie le perimetre est volontairement etroit et le support se fait par email sous 24 heures."
+ },
+ {
+  "theme": "methode",
+  "question": "Comment les telephones et emails sont-ils retrouves ?",
+  "answer": "En quatre temps. Le site officiel est identifie a partir de la denomination et de la commune, puis confirme par le SIREN ou l'adresse presente sur la page. Les pages de contact et mentions legales sont lues et les coordonnees extraites. Le domaine de chaque email est verifie techniquement pour ecarter les adresses mortes. Et aucune adresse nominative du type prenom.nom n'est jamais fabriquee : ce sont celles qui rebondissent et font blacklister un domaine d'envoi."
+ },
+ {
+  "theme": "limites",
+  "question": "Qu'est-ce que ProspectData ne fait pas ?",
+  "answer": "Pas d'envoi de campagnes ni de sequences email automatisees, pas de contacts nominatifs issus de LinkedIn, pas de donnees hors de France, pas de gestion de devis factures ou stock, pas de mise a jour en temps reel puisqu'elle est mensuelle, et aucune garantie de resultat commercial : la liste est juste et joignable, l'appel reste a passer."
+ },
+ {
+  "theme": "delais",
+  "question": "Comment se deroule un projet, jour par jour ?",
+  "answer": "Jour 1, vingt minutes d'echange sur votre cible. Jour 2, vous recevez les codes APE retenus, le volume exact par departement et la couverture attendue, gratuitement. Jour 3, vous validez ou vous corrigez, puis vous commandez. Jours 4 a 8, construction et enrichissement. Jour 9, controle a la main d'un echantillon. Jour 10, livraison du CRM et prise en main d'une heure. Puis chaque 1er du mois, la mise a jour automatique."
  }
 ]
