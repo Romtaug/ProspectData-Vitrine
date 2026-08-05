@@ -188,6 +188,7 @@
 
   /* fiches de donnees (formes) */
   .forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  #fiche .forms{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
   .form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .18s ease,box-shadow .2s ease}
   .form-card:hover{transform:translateY(-3px);box-shadow:0 20px 40px -26px rgba(22,26,35,.4)}
   .form-card .vis{height:78px;background:var(--paper-2);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:16px;overflow:hidden;padding:0 12px}
@@ -201,6 +202,64 @@
   .form-card h3{font-size:16px;margin-bottom:6px}
   .form-card p{font-size:13.5px;color:var(--slate)}
 
+  /* traduction APE : ce que vous dites -> les codes -> le piege */
+  .trad{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px;margin-top:38px}
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column}
+  .tcard .said{font-family:"JetBrains Mono";font-size:13.5px;color:var(--ink);background:var(--paper-2);border-radius:9px;padding:11px 13px;line-height:1.45}
+  .tcard .said::before{content:"\201C"}
+  .tcard .said::after{content:"\201D"}
+  .tcard .arrow{font-family:"JetBrains Mono";font-size:13px;color:var(--wine);margin:12px 0 10px}
+  .tcard .codes{display:flex;flex-direction:column;gap:7px}
+  .tcard .code{display:flex;gap:10px;font-size:13.5px;align-items:baseline}
+  .tcard .code b{font-family:"JetBrains Mono";font-size:12.5px;color:var(--green);flex-shrink:0;min-width:52px}
+  .tcard .code span{color:var(--slate)}
+  .tcard .trap{margin-top:auto;padding-top:15px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink);line-height:1.5}
+  .tcard .trap b{color:var(--wine);display:block;font-family:"JetBrains Mono";font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+
+  /* methode de recherche des contacts, en 4 temps numerotes */
+  .method{display:grid;gap:12px;margin-top:36px}
+  .mstep{display:flex;gap:18px;background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:12px;padding:20px 22px;align-items:flex-start}
+  .mstep .n{flex:0 0 auto;width:38px;height:38px;border-radius:11px;background:var(--wine);color:#fff;font-family:"Bricolage Grotesque";font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
+  .mstep h3{font-size:16.5px;color:#fff;margin-bottom:4px}
+  .mstep p{font-size:14.5px;color:#A6ACB6;line-height:1.55}
+  .mstep p code{font-family:"JetBrains Mono";font-size:13px;color:var(--green-bright)}
+
+  /* couverture reelle */
+  .cov{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:36px}
+  .cov th,.cov td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:14.5px;vertical-align:top}
+  .cov thead th{background:var(--ink);color:#fff;font-family:"Bricolage Grotesque";font-weight:600;font-size:14px}
+  .cov td:first-child{font-weight:600;color:var(--ink)}
+  .cov .pct{font-family:"JetBrains Mono";font-size:14px;color:var(--green);white-space:nowrap}
+  .cov .pct.low{color:#B0703F}
+  .cov tr:last-child td{border-bottom:none}
+  .honest{margin-top:22px;padding:20px 22px;border-left:3px solid var(--wine);background:#fff;border:1px solid var(--line);border-left-width:3px;border-radius:0 var(--radius) var(--radius) 0;font-size:15px;line-height:1.6}
+  .honest b{font-family:"Bricolage Grotesque"}
+
+  /* deroule jour par jour */
+  .timeline{margin-top:36px;display:grid;gap:0}
+  .tl{display:grid;grid-template-columns:96px 1fr;gap:22px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .tl:last-child{border-bottom:none}
+  .tl .when{font-family:"JetBrains Mono";font-size:12.5px;color:var(--wine);letter-spacing:.02em}
+  .tl h3{font-size:16.5px;margin-bottom:3px}
+  .tl p{font-size:14.5px;color:var(--slate);line-height:1.55}
+  .tl.recur{background:var(--paper-2);margin:0 -18px;padding:18px;border-radius:var(--radius);border-bottom:none}
+  .tl.recur .when{color:var(--green)}
+
+  /* pourquoi ce n est pas plus cher */
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px;margin-top:36px}
+  .wcard{background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:12px;padding:22px}
+  .wcard .k{font-family:"Bricolage Grotesque";font-weight:800;font-size:26px;color:var(--green-bright);line-height:1;margin-bottom:10px}
+  .wcard h3{font-size:16px;color:#fff;margin-bottom:6px}
+  .wcard p{font-size:14px;color:#A6ACB6;line-height:1.55}
+
+  /* ce que ProspectData ne fait pas */
+  .nots{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px;margin-top:36px}
+  .notc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+  .notc h3{font-size:16px;margin-bottom:6px;display:flex;align-items:baseline;gap:9px}
+  .notc h3::before{content:"\2715";color:#B04A3F;font-family:"JetBrains Mono";font-size:13px;flex-shrink:0}
+  .notc p{font-size:14px;color:var(--slate);line-height:1.55}
+  .notc p a{color:var(--wine);text-decoration:underline}
+
   /* onglets secteur */
   .sector-tabs{display:flex;gap:8px;margin-bottom:14px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
   .stab{font-family:"Bricolage Grotesque";font-weight:600;font-size:14px;padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--slate);cursor:pointer;white-space:nowrap;transition:background .18s ease,color .18s ease,border-color .18s ease}
@@ -210,7 +269,7 @@
   .sector-hint a{color:var(--wine);text-decoration:underline}
 
   /* grille exhaustive des colonnes livrees */
-  .allfields{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px;margin-top:38px}
+  .allfields{display:grid;grid-template-columns:repeat(auto-fit,minmax(318px,1fr));gap:14px;margin-top:38px}
   .fgroup{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
   .fgroup h3{font-size:14.5px;margin-bottom:11px;display:flex;align-items:center;gap:8px}
   .fgroup h3::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--green-bright);flex-shrink:0}
@@ -315,6 +374,7 @@
     <nav class="nav-links">
       <a href="#comment">Comment ça marche</a>
       <a href="#crm">Le CRM</a>
+      <a href="#couverture">Couverture</a>
       <a href="#prix">Prix</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -418,8 +478,52 @@
     </div>
   </section>
 
+  <!-- LE TRAVAIL DE TRADUCTION -->
+  <section id="traduction">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Le travail que vous payez</div>
+        <h2>Le ciblage se gagne ou se perd sur les codes APE.</h2>
+        <p>C'est la partie invisible du produit, et celle qui fait toute la différence entre une liste utile et une liste inutilisable. Trois exemples réels, avec le piège que presque tout le monde tombe dedans.</p>
+      </div>
+      <div class="trad">
+        <div class="tcard">
+          <div class="said">les garages</div>
+          <div class="arrow">se traduit par 4 codes</div>
+          <div class="codes">
+            <div class="code"><b>45.20A</b><span>entretien de véhicules légers</span></div>
+            <div class="code"><b>45.20B</b><span>entretien de véhicules lourds</span></div>
+            <div class="code"><b>45.11Z</b><span>commerce de voitures</span></div>
+            <div class="code"><b>45.32Z</b><span>commerce d'équipements automobiles</span></div>
+          </div>
+          <div class="trap"><b>Le piège</b>S'arrêter à 45.20A. C'est le réflexe naturel, et il coupe près de 60 % de la cible réelle, dont les carrossiers et les vendeurs qui font aussi de l'atelier.</div>
+        </div>
+        <div class="tcard">
+          <div class="said">les boulangeries</div>
+          <div class="arrow">se traduit par 3 codes, dont un à trancher</div>
+          <div class="codes">
+            <div class="code"><b>10.71C</b><span>boulangerie et boulangerie-pâtisserie</span></div>
+            <div class="code"><b>10.71B</b><span>cuisson de produits de boulangerie</span></div>
+            <div class="code"><b>47.24Z</b><span>commerce de détail de pain</span></div>
+          </div>
+          <div class="trap"><b>Le piège</b>47.24Z contient les dépôts de pain, qui ne fabriquent rien. À garder si vous vendez un logiciel de caisse, à écarter si vous vendez un four. On en décide ensemble avant de lancer.</div>
+        </div>
+        <div class="tcard">
+          <div class="said">les bureaux d'études thermiques</div>
+          <div class="arrow">aucun code ne leur est propre</div>
+          <div class="codes">
+            <div class="code"><b>71.12B</b><span>ingénierie et études techniques</span></div>
+            <div class="code"><b>74.90B</b><span>activités spécialisées diverses</span></div>
+          </div>
+          <div class="trap"><b>Le piège</b>71.12B est un fourre-tout qui rassemble des dizaines de milliers d'entreprises, du géomètre au bureau de contrôle. Seul un croisement avec la dénomination et les labels d'études énergétiques isole votre cible.</div>
+        </div>
+      </div>
+      <p class="formulas-note">Les codes retenus vous sont toujours soumis avant construction. Vous validez, ou vous corrigez : c'est votre métier que vous connaissez, pas la nomenclature.</p>
+    </div>
+  </section>
+
   <!-- LE CRM : CARTE + FICHES -->
-  <section id="crm">
+  <section class="sec-alt" id="crm">
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">Votre CRM, en vrai</div>
@@ -449,7 +553,7 @@
   </section>
 
   <!-- DANS CHAQUE FICHE -->
-  <section class="sec-alt" id="fiche">
+  <section id="fiche">
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">Dans chaque fiche</div>
@@ -482,6 +586,11 @@
           <h3>8 liens prêts à cliquer</h3>
           <p>Pour chaque entreprise : Pappers, Annuaire officiel, Google Maps, LinkedIn, Pages Jaunes, Trustpilot, site officiel, recherche Google. La recherche est déjà faite.</p>
         </div>
+        <div class="form-card">
+          <div class="vis"><div class="rowline"><span class="rl"><span>statut</span><span style="color:var(--wine)">RDV le 12</span></span><span class="rl"><span>relance</span><span>08/09</span></span><span class="rl" style="border:none"><span>vendu</span><span>1 490 €</span></span></div></div>
+          <h3>Et 11 colonnes à vous</h3>
+          <p>Statut, date de contact, canal, relance, notes, produit proposé, montant vendu, encaissé, livraison. Votre suivi commercial vit dans le même écran que la donnée.</p>
+        </div>
       </div>
       <div class="allfields reveal">
         <div class="fgroup"><h3>Identité, 12 colonnes</h3><ul><li>raison sociale</li><li>SIREN</li><li>SIRET</li><li>code APE</li><li>activité en clair</li><li>forme juridique</li><li>date de création</li><li>ancienneté</li><li>état actif ou radié</li><li>TVA intracommunautaire</li><li>convention collective</li><li>labels RGE, Qualiopi</li></ul></div>
@@ -499,7 +608,7 @@
   </section>
 
   <!-- MISE A JOUR -->
-  <section id="vivant">
+  <section class="sec-alt" id="vivant">
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">Sans rien demander</div>
@@ -522,6 +631,69 @@
           <h3>Les sociétés écartées</h3>
           <p>Liquidation, radiation, procédure collective : signalées et sorties avant que votre commercial y perde un appel. Vos statuts et notes, eux, ne bougent jamais.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT LES CONTACTS SONT RETROUVES -->
+  <section class="sec-dark" id="contacts">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">La partie difficile</div>
+        <h2 style="color:#fff">Aucune base publique ne contient les contacts.</h2>
+        <p>L'annuaire officiel donne l'identité de toutes les entreprises de France, gratuitement, mais jamais le téléphone ni l'email. Ils sont reconstitués, entreprise par entreprise, en quatre temps.</p>
+      </div>
+      <div class="method">
+        <div class="mstep"><div class="n">1</div><div><h3>Retrouver le site officiel</h3><p>À partir de la dénomination et de la commune, des domaines candidats sont générés puis testés. Un domaine n'est retenu que si la page confirme l'entreprise, par son SIREN, sa dénomination ou son adresse. C'est ce contrôle qui évite d'attribuer à un artisan le site de son homonyme.</p></div></div>
+        <div class="mstep"><div class="n">2</div><div><h3>Lire les pages qui portent l'information</h3><p>Les pages de contact et les mentions légales sont analysées, et l'email comme le téléphone en sont extraits. Ce sont les coordonnées que l'entreprise publie elle-même, celles qu'elle a choisi de rendre joignables.</p></div></div>
+        <div class="mstep"><div class="n">3</div><div><h3>Vérifier techniquement l'adresse</h3><p>Le domaine de chaque email est contrôlé au niveau de ses enregistrements de messagerie. Une adresse sur un domaine incapable de recevoir du courrier est écartée avant livraison, avec l'origine de l'information conservée dans la fiche.</p></div></div>
+        <div class="mstep"><div class="n">4</div><div><h3>Ne jamais fabriquer d'adresse</h3><p>Beaucoup de fournisseurs devinent <code>prenom.nom@societe.fr</code> et le vendent comme un contact. Ce sont ces adresses qui rebondissent en masse et qui font blacklister votre domaine d'envoi pour des mois. Aucune adresse nominative n'est inventée ici, jamais.</p></div></div>
+      </div>
+      <div class="sec-list" style="margin-top:34px">
+        <div class="it"><span class="g">&#8226;</span><div><h3>Uniquement du B2B</h3><p>Des coordonnées professionnelles d'entreprises, sur la base de l'intérêt légitime. Jamais de données de particuliers.</p></div></div>
+        <div class="it"><span class="g">&#8226;</span><div><h3>Sources publiques sous licence Etalab</h3><p>SIRENE, INPI, BODACC, nomenclature APE de l'INSEE, bases sectorielles. Rien acheté à un revendeur, rien aspiré d'un réseau social.</p></div></div>
+        <div class="it"><span class="g">&#8226;</span><div><h3>Chaque ligne est traçable</h3><p>L'origine de chaque information figure dans la fiche. Si un prospect vous demande d'où vient son adresse, vous pouvez répondre.</p></div></div>
+        <div class="it"><span class="g">&#8226;</span><div><h3>Opt-out respecté à chaque mise à jour</h3><p>Toute demande de suppression entre dans une liste qui est appliquée à chaque rafraîchissement mensuel, définitivement.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA COUVERTURE REELLE -->
+  <section class="sec-alt" id="couverture">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Sans enjoliver</div>
+        <h2>Aucune cible n'atteint 100 % de contacts.</h2>
+        <p>Quiconque vous promet un email sur chaque ligne vous vend des adresses fabriquées. Voici les taux réellement observés, selon le type de cible. Ils dépendent d'une seule chose : est-ce que ces entreprises publient leurs coordonnées quelque part.</p>
+      </div>
+      <table class="cov">
+        <thead><tr><th>Type de cible</th><th>Téléphone</th><th>Email</th><th>Pourquoi</th></tr></thead>
+        <tbody>
+          <tr><td>Métiers réglementés ou labellisés<br /><span style="font-weight:400;color:var(--slate);font-size:13.5px">artisans RGE, organismes Qualiopi, santé</span></td><td class="pct">90 à 95 %</td><td class="pct">95 à 100 %</td><td>Un annuaire officiel publie déjà leurs coordonnées, il suffit de le croiser.</td></tr>
+          <tr><td>Commerces et entreprises avec vitrine<br /><span style="font-weight:400;color:var(--slate);font-size:13.5px">garages, restaurants, boulangeries, agences</span></td><td class="pct">60 à 80 %</td><td class="pct">35 à 55 %</td><td>Ils ont souvent un site ou une fiche en ligne, mais pas toujours d'email publié.</td></tr>
+          <tr><td>Micro-entreprises sans présence en ligne<br /><span style="font-weight:400;color:var(--slate);font-size:13.5px">indépendants, activités récentes</span></td><td class="pct low">20 à 40 %</td><td class="pct low">5 à 15 %</td><td>Il n'y a rien à trouver : ces entreprises ne publient nulle part. Le téléphone reste souvent le seul canal.</td></tr>
+        </tbody>
+      </table>
+      <div class="honest"><b>Ce que ça change pour vous, concrètement.</b> Le comptage gratuit ne vous donne pas seulement le nombre d'entreprises : il vous annonce <b>la couverture attendue en téléphone et en email sur votre cible précise</b>, avant que vous commandiez quoi que ce soit. Si cette couverture est trop faible pour que l'opération soit rentable, je vous le dis et je vous déconseille l'achat. Une base de 3 000 lignes dont 200 sont joignables ne vaut rien, et vendre ça une fois coûte plus cher en réputation que ça ne rapporte.</div>
+    </div>
+  </section>
+
+  <!-- LE DEROULE -->
+  <section id="deroule">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Le déroulé</div>
+        <h2>Dix jours, et vous n'avez rien de technique à faire.</h2>
+        <p>De la première conversation jusqu'au CRM entre vos mains, voici exactement ce qui se passe et quand.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl"><div class="when">Jour 1</div><div><h3>Vingt minutes d'échange</h3><p>Vous décrivez le métier que vous visez, votre zone, la taille d'entreprise qui vous intéresse. Aucune préparation nécessaire, aucun document à fournir.</p></div></div>
+        <div class="tl"><div class="when">Jour 2</div><div><h3>Codes, volume et couverture</h3><p>Vous recevez les codes APE retenus avec leur libellé, le nombre exact d'entreprises concernées, le détail par département, et la couverture attendue en téléphone et en email. Gratuitement, sans engagement.</p></div></div>
+        <div class="tl"><div class="when">Jour 3</div><div><h3>Vous validez, ou vous corrigez</h3><p>C'est le moment où votre connaissance du métier compte. Un code en trop, un segment oublié, une zone à étendre : on ajuste, puis vous commandez. Ou vous ne commandez pas, et ça s'arrête là sans frais.</p></div></div>
+        <div class="tl"><div class="when">Jours 4 à 8</div><div><h3>Construction et enrichissement</h3><p>La base est constituée, les contacts reconstitués et vérifiés, le score de priorité calculé. Si vous avez un fichier de clients actuels, il est intégré comme liste d'exclusion pour qu'aucun commercial ne les appelle comme prospects.</p></div></div>
+        <div class="tl"><div class="when">Jour 9</div><div><h3>Contrôle avant livraison</h3><p>Un échantillon est vérifié à la main, numéro par numéro, pour valider que la cible correspond bien à ce qui était annoncé et que les coordonnées répondent.</p></div></div>
+        <div class="tl"><div class="when">Jour 10</div><div><h3>Livraison et prise en main</h3><p>Votre CRM est en ligne, rempli, avec vos accès. Une heure suffit pour que votre équipe soit autonome. Les 60 jours de garantie de correction commencent à cette date.</p></div></div>
+        <div class="tl recur"><div class="when">Chaque 1er du mois</div><div><h3>La mise à jour, sans rien demander</h3><p>Nouvelles entreprises ajoutées, contacts manquants complétés, sociétés radiées signalées. Vos statuts, vos notes et votre historique ne sont jamais touchés. Vous n'avez aucune démarche à faire, et rien de plus à payer.</p></div></div>
       </div>
     </div>
   </section>
@@ -585,6 +757,24 @@
     </div>
   </section>
 
+  <!-- POURQUOI CE N EST PAS PLUS CHER -->
+  <section class="sec-dark" id="pourquoi">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">La question qu'on n'ose pas poser</div>
+        <h2 style="color:#fff">490 euros pour tout ça, où est le piège ?</h2>
+        <p>Il n'y en a pas, et la réponse est structurelle. Voici précisément pourquoi ce prix est tenable, et ce qu'il implique en retour.</p>
+      </div>
+      <div class="why">
+        <div class="wcard"><div class="k">0 €</div><h3>Les données sources sont gratuites</h3><p>SIRENE, INPI, BODACC et la nomenclature APE sont des données publiques sous licence Etalab. Il n'y a aucune licence à répercuter sur vous, contrairement aux revendeurs de fichiers.</p></div>
+        <div class="wcard"><div class="k">×1</div><h3>Le travail est le même à toutes les tailles</h3><p>Construire une cible de 400 entreprises ou de 40 000 demande exactement le même temps : celui de définir les codes et de lancer la chaîne. C'est pour ça qu'il n'y a aucune limite de volume et aucune facturation à la ligne.</p></div>
+        <div class="wcard"><div class="k">1</div><h3>Une seule personne, aucune structure</h3><p>Pas de commerciaux à commissionner, pas de bureaux, pas de service marketing, pas d'investisseurs à rembourser. Vous ne payez que le travail, pas l'organisation qui l'entoure.</p></div>
+        <div class="wcard"><div class="k">&#8635;</div><h3>Le CRM est déployé, pas développé</h3><p>L'outil existe déjà et a été construit une fois. Chaque client reçoit sa propre instance en quelques heures. Et la mise à jour mensuelle est entièrement automatisée : elle ne coûte rien à faire tourner, donc elle n'est pas facturée.</p></div>
+      </div>
+      <div class="honest" style="background:rgba(255,255,255,.04);border-color:var(--line-dark);color:#ECEDEA;margin-top:30px"><b>Ce que ce prix implique, en toute franchise.</b> Un seul interlocuteur, donc pas de support téléphonique permanent : les échanges se font par email, avec une réponse sous 24 heures. Un périmètre volontairement étroit, aussi. ProspectData fait une chose et la fait bien, et refuse tout le reste. C'est exactement ce qui permet de tenir ce tarif.</div>
+    </div>
+  </section>
+
   <!-- COMPARISON -->
   <section>
     <div class="wrap">
@@ -608,25 +798,27 @@
     </div>
   </section>
 
-  <!-- CONFORMITE -->
-  <section class="sec-dark" id="sources">
+  <!-- CE QUE CA NE FAIT PAS -->
+  <section class="sec-alt" id="limites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="eyebrow">Sources et conformité</div>
-        <h2 style="color:#fff">Des données publiques, utilisées dans les règles.</h2>
-        <p>Tout part de bases officielles ouvertes sous licence Etalab : SIRENE, INPI, BODACC, nomenclature APE de l'INSEE. Rien n'est acheté à un revendeur, rien n'est aspiré d'un réseau social.</p>
+        <div class="eyebrow">Les limites, annoncées</div>
+        <h2>Ce que ProspectData ne fait pas.</h2>
+        <p>Mieux vaut le lire ici que le découvrir après avoir payé. Si l'un de ces points est essentiel pour vous, une autre solution vous servira mieux, et je vous le dirai dès le premier échange.</p>
       </div>
-      <div class="sec-list">
-        <div class="it"><span class="g">&#8226;</span><div><h3>Uniquement du B2B</h3><p>Des contacts professionnels d'entreprises, sur la base de l'intérêt légitime.</p></div></div>
-        <div class="it"><span class="g">&#8226;</span><div><h3>Aucune adresse devinée</h3><p>Des emails de contact publiés par l'entreprise elle-même, domaine vérifié. Jamais de prenom.nom fabriqué qui rebondit et fait blacklister.</p></div></div>
-        <div class="it"><span class="g">&#8226;</span><div><h3>Chaque ligne est tracée</h3><p>L'origine de chaque information est indiquée, vous pouvez la justifier.</p></div></div>
-        <div class="it"><span class="g">&#8226;</span><div><h3>Opt-out respecté</h3><p>Une liste de suppression est intégrée et appliquée à chaque mise à jour.</p></div></div>
+      <div class="nots">
+        <div class="notc"><h3>Envoyer vos campagnes</h3><p>Aucune séquence d'emails automatisée, aucun envoi de masse depuis l'outil. Le CRM vous donne les contacts et le suivi, l'envoi reste chez vous, avec l'outil que vous voulez.</p></div>
+        <div class="notc"><h3>Les contacts nominatifs LinkedIn</h3><p>Pas d'email personnel de directeur commercial extrait d'un réseau social. Vous obtenez le nom du dirigeant et l'adresse de contact de l'entreprise, pas l'adresse privée d'un salarié.</p></div>
+        <div class="notc"><h3>L'international</h3><p>Les sources sont françaises, la couverture s'arrête à la France. Pour une cible européenne ou mondiale, il faut une plateforme internationale.</p></div>
+        <div class="notc"><h3>Gérer votre entreprise</h3><p>Ni devis, ni factures, ni stock, ni comptabilité, ni campagnes marketing. C'est un outil de prospection, et c'est ce qui fait qu'il reste utilisé au bout de six mois.</p></div>
+        <div class="notc"><h3>Le temps réel</h3><p>La mise à jour est mensuelle, pas instantanée. Pour de la détection d'événement à la journée, ce n'est pas le bon outil.</p></div>
+        <div class="notc"><h3>Garantir vos ventes</h3><p>La liste est juste, qualifiée et joignable. Mais l'appel reste à passer, et l'argumentaire reste le vôtre. Personne ne peut vous promettre un résultat commercial, et méfiez-vous de qui le fait.</p></div>
       </div>
     </div>
   </section>
 
   <!-- POUR QUI -->
-  <section class="sec-alt">
+  <section>
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">Pour qui</div>
@@ -641,7 +833,7 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq">
+  <section class="sec-alt" id="faq">
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">Questions fréquentes</div>
@@ -656,6 +848,9 @@
         <div class="faq-item"><button class="faq-q">Y a-t-il une limite au nombre de lignes ?<span class="pm"></span></button><div class="faq-a"><p>Non. Que votre cible fasse 300 entreprises ou 40 000, le prix est le même. C'est la différence principale avec les plateformes qui vendent des crédits mensuels.</p></div></div>
         <div class="faq-item"><button class="faq-q">Combien de temps avant de recevoir mon CRM ?<span class="pm"></span></button><div class="faq-a"><p>Environ dix jours ouvrés après validation des codes APE. Sur une cible très large, l'accès est ouvert plus tôt sur une première tranche exploitable, pour que vos commerciaux commencent sans attendre.</p></div></div>
         <div class="faq-item"><button class="faq-q">Puis-je garder mon CRM actuel ?<span class="pm"></span></button><div class="faq-a"><p>Oui. Si vous avez déjà un outil qui vous convient, la base peut être livrée au format qu'il attend, et rafraîchie de la même manière. Cela relève de la formule Sur mesure quand la connexion doit être automatique.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Aurai-je un email sur chaque ligne ?<span class="pm"></span></button><div class="faq-a"><p>Non, et personne ne peut vous le promettre honnêtement. La couverture dépend du fait que ces entreprises publient leurs coordonnées : de 95 à 100 % sur les métiers labellisés, de 35 à 55 % sur les commerces avec vitrine, de 5 à 15 % sur les micro-entreprises sans présence en ligne. Le comptage gratuit vous annonce la couverture attendue sur votre cible précise, avant que vous commandiez. Si elle est trop faible pour être rentable, je vous déconseille l'achat.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Pourquoi est-ce si peu cher ?<span class="pm"></span></button><div class="faq-a"><p>Parce que les données sources sont publiques et gratuites, qu'une cible de 400 ou de 40 000 entreprises demande le même temps de travail, qu'il n'y a ni commerciaux ni bureaux ni investisseurs à rémunérer, et que le CRM est un outil déjà construit qui est déployé en quelques heures. En contrepartie, le périmètre est volontairement étroit et le support se fait par email sous 24 heures, pas au téléphone en permanence.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Et si la cible que je vise n'existe pas dans la nomenclature ?<span class="pm"></span></button><div class="faq-a"><p>C'est fréquent, les codes officiels sont parfois trop larges ou trop anciens pour coller à un métier réel. Dans ce cas on croise plusieurs critères : codes, dénomination, effectif, labels, zone. Vous pouvez aussi fournir une simple liste de noms d'entreprises ou de SIRET, les identifiants sont retrouvés et la base construite à partir de là.</p></div></div>
         <div class="faq-item"><button class="faq-q">Est-ce légal ?<span class="pm"></span></button><div class="faq-a"><p>Oui. Ciblage strictement B2B sur la base de l'intérêt légitime, à partir de sources publiques sous licence Etalab. L'origine de chaque information est tracée et une liste de suppression est respectée à chaque mise à jour.</p></div></div>
       </div>
     </div>
@@ -683,8 +878,12 @@
       </div>
       <nav class="foot-links">
         <a href="#comment">Comment ça marche</a>
+        <a href="#traduction">Le ciblage</a>
         <a href="#crm">Le CRM</a>
+        <a href="#couverture">Couverture</a>
+        <a href="#deroule">Déroulé</a>
         <a href="#prix">Prix</a>
+        <a href="#limites">Limites</a>
         <a href="#faq">FAQ</a>
         <a href="mailto:romtaug+prospectdata@gmail.com">Contact</a>
       </nav>
@@ -887,7 +1086,7 @@ var PD_START = 0;
 /* ---- apparition au defilement ---- */
 (function(){
   document.documentElement.classList.add('js');
-  var sel='.sec-head, .cols3, .steps, .forms, .formulas, .cmp, .sec-list, .fit, .ba, .split > div, .cockpit, .crm-note, .strip .wrap, .allfields, .allfields-note, .sector-tabs, .sector-hint';
+  var sel='.sec-head, .cols3, .steps, .forms, .formulas, .cmp, .sec-list, .fit, .ba, .split > div, .cockpit, .crm-note, .strip .wrap, .allfields, .allfields-note, .sector-tabs, .sector-hint, .trad, .method, .cov, .honest, .timeline, .why, .nots';
   document.querySelectorAll(sel).forEach(function(e){ e.classList.add('reveal'); });
   var all=document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)){ all.forEach(function(e){ e.classList.add('in'); }); return; }
@@ -1002,7 +1201,7 @@ var PD_START = 0;
   "@graph":[
     {"@type":"ProfessionalService","@id":"https://prospectdata.netlify.app/#org","name":"ProspectData","description":"Création de CRM de prospection sur mesure pour TPE et PME. Le client décrit sa cible, ProspectData la traduit en codes APE, remplit le CRM des entreprises concernées avec téléphones et emails vérifiés, et le met à jour automatiquement chaque mois. Paiement unique, sans abonnement.","url":"https://prospectdata.netlify.app/","email":"romtaug+prospectdata@gmail.com","image":"https://prospectdata.netlify.app/og-image.png","identifier":"882813660","priceRange":"490-2400 EUR","address":{"@type":"PostalAddress","addressLocality":"Lyon","addressRegion":"Auvergne-Rhône-Alpes","addressCountry":"FR"},"areaServed":[{"@type":"Country","name":"France"},{"@type":"City","name":"Lyon"},{"@type":"AdministrativeArea","name":"Auvergne-Rhône-Alpes"}],"knowsAbout":["Prospection B2B","Codes APE","SIRENE","Enrichissement de données","CRM sur mesure","Fichier de prospection"],"serviceType":"CRM de prospection sur mesure","slogan":"Décrivez votre cible, recevez un CRM vivant"},
     {"@type":"WebSite","@id":"https://prospectdata.netlify.app/#website","url":"https://prospectdata.netlify.app/","name":"ProspectData","inLanguage":"fr-FR","publisher":{"@id":"https://prospectdata.netlify.app/#org"}},
-    {"@type":"Service","name":"CRM de prospection rempli et mis à jour automatiquement","provider":{"@id":"https://prospectdata.netlify.app/#org"},"areaServed":{"@type":"Country","name":"France"},"description":"Traduction de la cible en codes APE, construction d'un CRM rempli de toutes les entreprises concernées avec contacts vérifiés, mise à jour mensuelle automatique. Paiement unique dès 490 euros."},
+    {"@type":"Service","name":"CRM de prospection rempli et mis à jour automatiquement","provider":{"@id":"https://prospectdata.netlify.app/#org"},"areaServed":{"@type":"Country","name":"France"},"description":"Traduction de la cible en codes APE, construction d'un CRM rempli de toutes les entreprises concernées avec contacts vérifiés, mise à jour mensuelle automatique. Paiement unique dès 490 euros.","offers":[{"@type":"Offer","name":"Une cible","price":"490","priceCurrency":"EUR","description":"1 cible, volume illimité, CRM déployé et rempli, mise à jour mensuelle, 2 utilisateurs. Paiement unique."},{"@type":"Offer","name":"Équipe","price":"990","priceCurrency":"EUR","description":"Cibles et utilisateurs illimités, carte des prospects, tableau de bord, exclusion des clients actuels, prise en main incluse. Paiement unique."},{"@type":"Offer","name":"Sur mesure","price":"2400","priceCurrency":"EUR","description":"Colonnes et scoring propres au métier, sources sectorielles, connexion aux outils existants, formation. Paiement unique à partir de 2 400 euros."}]},
     {"@type":"FAQPage","mainEntity":[
       {"@type":"Question","name":"Je ne connais pas mes codes APE, c'est un problème ?","acceptedAnswer":{"@type":"Answer","text":"Non. Vous décrivez le métier visé avec vos mots, la traduction dans la nomenclature officielle est faite pour vous, et les codes retenus vous sont soumis avant la construction du CRM."}},
       {"@type":"Question","name":"Comment un CRM peut-il se mettre à jour tout seul ?","acceptedAnswer":{"@type":"Answer","text":"Le lien avec les sources publiques reste actif. Chaque mois, le système recherche les entreprises des codes APE ciblés, ajoute les nouvelles, complète les contacts manquants et signale les sociétés fermées. Tout est automatisé et inclus."}},
@@ -1010,6 +1209,8 @@ var PD_START = 0;
       {"@type":"Question","name":"Combien ça coûte ?","acceptedAnswer":{"@type":"Answer","text":"Trois formules en paiement unique, sans abonnement et sans limite de volume : Une cible à 490 euros, Équipe à 990 euros, Sur mesure dès 2 400 euros. Le comptage de la cible est gratuit avant toute commande."}},
       {"@type":"Question","name":"Y a-t-il une limite au nombre de lignes ?","acceptedAnswer":{"@type":"Answer","text":"Non. Que la cible fasse 300 entreprises ou 40 000, le prix est le même."}},
       {"@type":"Question","name":"Mes statuts et notes sont-ils écrasés à la mise à jour ?","acceptedAnswer":{"@type":"Answer","text":"Jamais. La fusion se fait par identifiant d'entreprise : le suivi commercial est conservé intégralement."}},
+      {"@type":"Question","name":"Aurai-je un email sur chaque ligne ?","acceptedAnswer":{"@type":"Answer","text":"Non, et personne ne peut le promettre honnêtement. La couverture va de 95 à 100 pour cent sur les métiers labellisés, de 35 à 55 pour cent sur les commerces avec vitrine, et de 5 à 15 pour cent sur les micro-entreprises sans présence en ligne. Le comptage gratuit annonce la couverture attendue avant toute commande."}},
+      {"@type":"Question","name":"Pourquoi ProspectData est-il si peu cher ?","acceptedAnswer":{"@type":"Answer","text":"Les données sources sont publiques et gratuites, une cible de 400 ou de 40 000 entreprises demande le même temps de travail, il n'y a ni commerciaux ni bureaux ni investisseurs à rémunérer, et le CRM est un outil déjà construit qui est déployé en quelques heures."}},
       {"@type":"Question","name":"Est-ce légal ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Ciblage strictement B2B sur la base de l'intérêt légitime, à partir de sources publiques sous licence Etalab, avec traçabilité de chaque information et liste de suppression respectée."}}
     ]}
   ]
