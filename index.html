@@ -252,6 +252,21 @@
   .wcard h3{font-size:16px;color:#fff;margin-bottom:6px}
   .wcard p{font-size:14px;color:#A6ACB6;line-height:1.55}
 
+  /* les autres outils de l'atelier */
+  .shop{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:36px}
+  .scard{background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;transition:border-color .2s ease,transform .18s ease}
+  .scard:hover{border-color:var(--green-bright);transform:translateY(-3px)}
+  .scard .cat{font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-bright);margin-bottom:12px}
+  .scard h3{font-size:18px;color:#fff;margin-bottom:8px}
+  .scard p{font-size:14px;color:#A6ACB6;line-height:1.55;margin-bottom:16px}
+  .scard .go{margin-top:auto;font-family:"JetBrains Mono";font-size:12.5px;color:var(--green-bright);display:inline-flex;align-items:center;gap:7px}
+  .scard .go::after{content:"\2192"}
+  .scard a.go:hover{text-decoration:underline}
+  .scard .go.mute{color:#7C8492}
+  .scard .go.mute::after{content:""}
+  .shop-lead{font-size:15px;color:#A6ACB6;line-height:1.6;margin-top:30px;padding:20px 22px;background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-left:3px solid var(--green-bright);border-radius:0 var(--radius) var(--radius) 0}
+  .shop-lead b{color:#fff;font-family:"Bricolage Grotesque"}
+
   /* ce que ProspectData ne fait pas */
   .nots{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px;margin-top:36px}
   .notc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
@@ -455,7 +470,7 @@
         </div>
         <div class="ba">
           <div class="row before"><div class="tag">Avant</div><div>Deviner les bons codes NAF, exporter des listes, chercher chaque téléphone à la main, croiser dans Excel, recommencer chaque trimestre.</div></div>
-          <div class="row after"><div class="tag">Avec ProspectData</div><div class="txt">« les garages de moins de 20 salariés en Auvergne »</div></div>
+          <div class="row after"><div class="tag">Avec ProspectData</div><div class="txt">« Les garages de moins de 20 salariés en Auvergne-Rhône-Alpes »</div></div>
         </div>
       </div>
     </div>
@@ -832,6 +847,44 @@
     </div>
   </section>
 
+  <!-- LES AUTRES OUTILS -->
+  <section class="sec-dark" id="atelier">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Le reste de l'atelier</div>
+        <h2 style="color:#fff">ProspectData n'est pas un coup d'essai.</h2>
+        <p>Quatre autres outils existent, construits sur le même principe : partir de données publiques, automatiser entièrement la chaîne, livrer quelque chose qui tourne sans vous. Chacun garde son périmètre serré, comme ProspectData : ce sont des produits séparés, jamais des modules à activer. C'est ce qui permet à chacun de rester simple.</p>
+      </div>
+      <div class="shop">
+        <div class="scard">
+          <div class="cat">Rénovation énergétique</div>
+          <h3>ThermoData</h3>
+          <p>Prospection pour les artisans RGE. Les logements les plus mal isolés d'un secteur sont géolocalisés à partir des diagnostics énergétiques publics, puis transformés en plans de porte-à-porte optimisés. Les contacts proviennent de l'annuaire RGE officiel.</p>
+          <a class="go" href="https://thermodata.fr" target="_blank" rel="noopener">thermodata.fr</a>
+        </div>
+        <div class="scard">
+          <div class="cat">Service client</div>
+          <h3>SupportAI</h3>
+          <p>Un chatbot de service client clé en main pour PME. Il répond aux questions de vos clients 24 heures sur 24, à partir d'une simple FAQ que vous tenez dans un Google Sheets. Vous modifiez une ligne, il répond autrement dans la minute.</p>
+          <a class="go" href="https://supportai.fr" target="_blank" rel="noopener">supportai.fr</a>
+        </div>
+        <div class="scard">
+          <div class="cat">Présence en ligne</div>
+          <h3>Sites vitrine premium</h3>
+          <p>Des sites modernes et animés, construits à partir des informations publiques de l'entreprise pour vous éviter la corvée du contenu. Animations soignées comme en agence, mise en ligne immédiate, aucune maintenance à votre charge.</p>
+          <span class="go mute">sur demande</span>
+        </div>
+        <div class="scard">
+          <div class="cat">Équipes terrain</div>
+          <h3>Optimiseur de tournées</h3>
+          <p>Pour les techniciens, inspecteurs et livreurs. Vous importez vos interventions depuis Excel, l'outil calcule les tournées les plus courtes sur les distances routières réelles, affiche la carte, et sort les feuilles de route vers Google Maps ou Waze. L'export chiffre les kilomètres, le coût et le CO2 économisés. Livré en marque blanche à vos couleurs.</p>
+          <span class="go mute">sur demande</span>
+        </div>
+      </div>
+      <p class="shop-lead"><b>Pourquoi ça vous concerne.</b> Ces outils partagent le même moteur d'enrichissement que votre CRM. C'est précisément ce qui rend le tarif de ProspectData possible : le travail lourd a déjà été fait et payé une fois, il est réutilisé. Et c'est aussi votre garantie de continuité, l'outil ne s'arrêtera pas parce qu'un premier client s'en va.</p>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="sec-alt" id="faq">
     <div class="wrap">
@@ -884,8 +937,11 @@
         <a href="#deroule">Déroulé</a>
         <a href="#prix">Prix</a>
         <a href="#limites">Limites</a>
+        <a href="#atelier">Autres outils</a>
         <a href="#faq">FAQ</a>
         <a href="mailto:romtaug+prospectdata@gmail.com">Contact</a>
+        <a href="https://thermodata.fr" target="_blank" rel="noopener">ThermoData</a>
+        <a href="https://supportai.fr" target="_blank" rel="noopener">SupportAI</a>
       </nav>
     </div>
     <div class="foot-bot">
@@ -912,7 +968,7 @@
 ============================================================================= */
 var PD_SECTORS = [
   { id:"garages", tab:"Garages",
-    phrase:"les garages de moins de 20 salariés en Auvergne",
+    phrase:"les garages de moins de 20 salariés en Auvergne-Rhône-Alpes",
     apes:["45.20A","45.20B","45.11Z","45.32Z","effectif 10 à 19","12 départements"],
     n:4312, nA:1108,
     titre:"Garages - Auvergne-Rhône-Alpes", maj:"mise à jour du 1er août",
@@ -1086,7 +1142,7 @@ var PD_START = 0;
 /* ---- apparition au defilement ---- */
 (function(){
   document.documentElement.classList.add('js');
-  var sel='.sec-head, .cols3, .steps, .forms, .formulas, .cmp, .sec-list, .fit, .ba, .split > div, .cockpit, .crm-note, .strip .wrap, .allfields, .allfields-note, .sector-tabs, .sector-hint, .trad, .method, .cov, .honest, .timeline, .why, .nots';
+  var sel='.sec-head, .cols3, .steps, .forms, .formulas, .cmp, .sec-list, .fit, .ba, .split > div, .cockpit, .crm-note, .strip .wrap, .allfields, .allfields-note, .sector-tabs, .sector-hint, .trad, .method, .cov, .honest, .timeline, .why, .nots, .shop, .shop-lead';
   document.querySelectorAll(sel).forEach(function(e){ e.classList.add('reveal'); });
   var all=document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)){ all.forEach(function(e){ e.classList.add('in'); }); return; }
